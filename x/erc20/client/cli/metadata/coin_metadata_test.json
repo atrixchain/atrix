@@ -1,21 +1,21 @@
 {
   "metadata": [
     {
-      "description": "The native staking and governance token of the Evmos chain",
+      "description": "The native staking and governance token of the Atrix chain",
       "denom_units": [
         {
-          "denom": "aevmos",
+          "denom": "aAtrix",
           "exponent": 0
         },
         {
-          "denom": "evmos",
+          "denom": "Atrix",
           "exponent": 18
         }
       ],
-      "base": "aevmos",
-      "display": "aevmos",
-      "name": "aevmos",
-      "symbol": "EVMOS"
+      "base": "aAtrix",
+      "display": "aAtrix",
+      "name": "aAtrix",
+      "symbol": "Atrix"
     }
   ]
 }

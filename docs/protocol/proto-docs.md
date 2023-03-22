@@ -4,194 +4,194 @@
 
 ## Table of Contents
 
-- [evmos/claims/v1/claims.proto](#evmos/claims/v1/claims.proto)
-    - [Claim](#evmos.claims.v1.Claim)
-    - [ClaimsRecord](#evmos.claims.v1.ClaimsRecord)
-    - [ClaimsRecordAddress](#evmos.claims.v1.ClaimsRecordAddress)
+- [Atrix/claims/v1/claims.proto](#Atrix/claims/v1/claims.proto)
+    - [Claim](#Atrix.claims.v1.Claim)
+    - [ClaimsRecord](#Atrix.claims.v1.ClaimsRecord)
+    - [ClaimsRecordAddress](#Atrix.claims.v1.ClaimsRecordAddress)
   
-    - [Action](#evmos.claims.v1.Action)
+    - [Action](#Atrix.claims.v1.Action)
   
-- [evmos/claims/v1/genesis.proto](#evmos/claims/v1/genesis.proto)
-    - [GenesisState](#evmos.claims.v1.GenesisState)
-    - [Params](#evmos.claims.v1.Params)
+- [Atrix/claims/v1/genesis.proto](#Atrix/claims/v1/genesis.proto)
+    - [GenesisState](#Atrix.claims.v1.GenesisState)
+    - [Params](#Atrix.claims.v1.Params)
   
-- [evmos/claims/v1/query.proto](#evmos/claims/v1/query.proto)
-    - [QueryClaimsRecordRequest](#evmos.claims.v1.QueryClaimsRecordRequest)
-    - [QueryClaimsRecordResponse](#evmos.claims.v1.QueryClaimsRecordResponse)
-    - [QueryClaimsRecordsRequest](#evmos.claims.v1.QueryClaimsRecordsRequest)
-    - [QueryClaimsRecordsResponse](#evmos.claims.v1.QueryClaimsRecordsResponse)
-    - [QueryParamsRequest](#evmos.claims.v1.QueryParamsRequest)
-    - [QueryParamsResponse](#evmos.claims.v1.QueryParamsResponse)
-    - [QueryTotalUnclaimedRequest](#evmos.claims.v1.QueryTotalUnclaimedRequest)
-    - [QueryTotalUnclaimedResponse](#evmos.claims.v1.QueryTotalUnclaimedResponse)
+- [Atrix/claims/v1/query.proto](#Atrix/claims/v1/query.proto)
+    - [QueryClaimsRecordRequest](#Atrix.claims.v1.QueryClaimsRecordRequest)
+    - [QueryClaimsRecordResponse](#Atrix.claims.v1.QueryClaimsRecordResponse)
+    - [QueryClaimsRecordsRequest](#Atrix.claims.v1.QueryClaimsRecordsRequest)
+    - [QueryClaimsRecordsResponse](#Atrix.claims.v1.QueryClaimsRecordsResponse)
+    - [QueryParamsRequest](#Atrix.claims.v1.QueryParamsRequest)
+    - [QueryParamsResponse](#Atrix.claims.v1.QueryParamsResponse)
+    - [QueryTotalUnclaimedRequest](#Atrix.claims.v1.QueryTotalUnclaimedRequest)
+    - [QueryTotalUnclaimedResponse](#Atrix.claims.v1.QueryTotalUnclaimedResponse)
   
-    - [Query](#evmos.claims.v1.Query)
+    - [Query](#Atrix.claims.v1.Query)
   
-- [evmos/epochs/v1/genesis.proto](#evmos/epochs/v1/genesis.proto)
-    - [EpochInfo](#evmos.epochs.v1.EpochInfo)
-    - [GenesisState](#evmos.epochs.v1.GenesisState)
+- [Atrix/epochs/v1/genesis.proto](#Atrix/epochs/v1/genesis.proto)
+    - [EpochInfo](#Atrix.epochs.v1.EpochInfo)
+    - [GenesisState](#Atrix.epochs.v1.GenesisState)
   
-- [evmos/epochs/v1/query.proto](#evmos/epochs/v1/query.proto)
-    - [QueryCurrentEpochRequest](#evmos.epochs.v1.QueryCurrentEpochRequest)
-    - [QueryCurrentEpochResponse](#evmos.epochs.v1.QueryCurrentEpochResponse)
-    - [QueryEpochsInfoRequest](#evmos.epochs.v1.QueryEpochsInfoRequest)
-    - [QueryEpochsInfoResponse](#evmos.epochs.v1.QueryEpochsInfoResponse)
+- [Atrix/epochs/v1/query.proto](#Atrix/epochs/v1/query.proto)
+    - [QueryCurrentEpochRequest](#Atrix.epochs.v1.QueryCurrentEpochRequest)
+    - [QueryCurrentEpochResponse](#Atrix.epochs.v1.QueryCurrentEpochResponse)
+    - [QueryEpochsInfoRequest](#Atrix.epochs.v1.QueryEpochsInfoRequest)
+    - [QueryEpochsInfoResponse](#Atrix.epochs.v1.QueryEpochsInfoResponse)
   
-    - [Query](#evmos.epochs.v1.Query)
+    - [Query](#Atrix.epochs.v1.Query)
   
-- [evmos/erc20/v1/erc20.proto](#evmos/erc20/v1/erc20.proto)
-    - [ProposalMetadata](#evmos.erc20.v1.ProposalMetadata)
-    - [RegisterCoinProposal](#evmos.erc20.v1.RegisterCoinProposal)
-    - [RegisterERC20Proposal](#evmos.erc20.v1.RegisterERC20Proposal)
-    - [ToggleTokenConversionProposal](#evmos.erc20.v1.ToggleTokenConversionProposal)
-    - [TokenPair](#evmos.erc20.v1.TokenPair)
+- [Atrix/erc20/v1/erc20.proto](#Atrix/erc20/v1/erc20.proto)
+    - [ProposalMetadata](#Atrix.erc20.v1.ProposalMetadata)
+    - [RegisterCoinProposal](#Atrix.erc20.v1.RegisterCoinProposal)
+    - [RegisterERC20Proposal](#Atrix.erc20.v1.RegisterERC20Proposal)
+    - [ToggleTokenConversionProposal](#Atrix.erc20.v1.ToggleTokenConversionProposal)
+    - [TokenPair](#Atrix.erc20.v1.TokenPair)
   
-    - [Owner](#evmos.erc20.v1.Owner)
+    - [Owner](#Atrix.erc20.v1.Owner)
   
-- [evmos/erc20/v1/genesis.proto](#evmos/erc20/v1/genesis.proto)
-    - [GenesisState](#evmos.erc20.v1.GenesisState)
-    - [Params](#evmos.erc20.v1.Params)
+- [Atrix/erc20/v1/genesis.proto](#Atrix/erc20/v1/genesis.proto)
+    - [GenesisState](#Atrix.erc20.v1.GenesisState)
+    - [Params](#Atrix.erc20.v1.Params)
   
-- [evmos/erc20/v1/query.proto](#evmos/erc20/v1/query.proto)
-    - [QueryParamsRequest](#evmos.erc20.v1.QueryParamsRequest)
-    - [QueryParamsResponse](#evmos.erc20.v1.QueryParamsResponse)
-    - [QueryTokenPairRequest](#evmos.erc20.v1.QueryTokenPairRequest)
-    - [QueryTokenPairResponse](#evmos.erc20.v1.QueryTokenPairResponse)
-    - [QueryTokenPairsRequest](#evmos.erc20.v1.QueryTokenPairsRequest)
-    - [QueryTokenPairsResponse](#evmos.erc20.v1.QueryTokenPairsResponse)
+- [Atrix/erc20/v1/query.proto](#Atrix/erc20/v1/query.proto)
+    - [QueryParamsRequest](#Atrix.erc20.v1.QueryParamsRequest)
+    - [QueryParamsResponse](#Atrix.erc20.v1.QueryParamsResponse)
+    - [QueryTokenPairRequest](#Atrix.erc20.v1.QueryTokenPairRequest)
+    - [QueryTokenPairResponse](#Atrix.erc20.v1.QueryTokenPairResponse)
+    - [QueryTokenPairsRequest](#Atrix.erc20.v1.QueryTokenPairsRequest)
+    - [QueryTokenPairsResponse](#Atrix.erc20.v1.QueryTokenPairsResponse)
   
-    - [Query](#evmos.erc20.v1.Query)
+    - [Query](#Atrix.erc20.v1.Query)
   
-- [evmos/erc20/v1/tx.proto](#evmos/erc20/v1/tx.proto)
-    - [MsgConvertCoin](#evmos.erc20.v1.MsgConvertCoin)
-    - [MsgConvertCoinResponse](#evmos.erc20.v1.MsgConvertCoinResponse)
-    - [MsgConvertERC20](#evmos.erc20.v1.MsgConvertERC20)
-    - [MsgConvertERC20Response](#evmos.erc20.v1.MsgConvertERC20Response)
+- [Atrix/erc20/v1/tx.proto](#Atrix/erc20/v1/tx.proto)
+    - [MsgConvertCoin](#Atrix.erc20.v1.MsgConvertCoin)
+    - [MsgConvertCoinResponse](#Atrix.erc20.v1.MsgConvertCoinResponse)
+    - [MsgConvertERC20](#Atrix.erc20.v1.MsgConvertERC20)
+    - [MsgConvertERC20Response](#Atrix.erc20.v1.MsgConvertERC20Response)
   
-    - [Msg](#evmos.erc20.v1.Msg)
+    - [Msg](#Atrix.erc20.v1.Msg)
   
-- [evmos/incentives/v1/incentives.proto](#evmos/incentives/v1/incentives.proto)
-    - [CancelIncentiveProposal](#evmos.incentives.v1.CancelIncentiveProposal)
-    - [GasMeter](#evmos.incentives.v1.GasMeter)
-    - [Incentive](#evmos.incentives.v1.Incentive)
-    - [RegisterIncentiveProposal](#evmos.incentives.v1.RegisterIncentiveProposal)
+- [Atrix/incentives/v1/incentives.proto](#Atrix/incentives/v1/incentives.proto)
+    - [CancelIncentiveProposal](#Atrix.incentives.v1.CancelIncentiveProposal)
+    - [GasMeter](#Atrix.incentives.v1.GasMeter)
+    - [Incentive](#Atrix.incentives.v1.Incentive)
+    - [RegisterIncentiveProposal](#Atrix.incentives.v1.RegisterIncentiveProposal)
   
-- [evmos/incentives/v1/genesis.proto](#evmos/incentives/v1/genesis.proto)
-    - [GenesisState](#evmos.incentives.v1.GenesisState)
-    - [Params](#evmos.incentives.v1.Params)
+- [Atrix/incentives/v1/genesis.proto](#Atrix/incentives/v1/genesis.proto)
+    - [GenesisState](#Atrix.incentives.v1.GenesisState)
+    - [Params](#Atrix.incentives.v1.Params)
   
-- [evmos/incentives/v1/query.proto](#evmos/incentives/v1/query.proto)
-    - [QueryAllocationMeterRequest](#evmos.incentives.v1.QueryAllocationMeterRequest)
-    - [QueryAllocationMeterResponse](#evmos.incentives.v1.QueryAllocationMeterResponse)
-    - [QueryAllocationMetersRequest](#evmos.incentives.v1.QueryAllocationMetersRequest)
-    - [QueryAllocationMetersResponse](#evmos.incentives.v1.QueryAllocationMetersResponse)
-    - [QueryGasMeterRequest](#evmos.incentives.v1.QueryGasMeterRequest)
-    - [QueryGasMeterResponse](#evmos.incentives.v1.QueryGasMeterResponse)
-    - [QueryGasMetersRequest](#evmos.incentives.v1.QueryGasMetersRequest)
-    - [QueryGasMetersResponse](#evmos.incentives.v1.QueryGasMetersResponse)
-    - [QueryIncentiveRequest](#evmos.incentives.v1.QueryIncentiveRequest)
-    - [QueryIncentiveResponse](#evmos.incentives.v1.QueryIncentiveResponse)
-    - [QueryIncentivesRequest](#evmos.incentives.v1.QueryIncentivesRequest)
-    - [QueryIncentivesResponse](#evmos.incentives.v1.QueryIncentivesResponse)
-    - [QueryParamsRequest](#evmos.incentives.v1.QueryParamsRequest)
-    - [QueryParamsResponse](#evmos.incentives.v1.QueryParamsResponse)
+- [Atrix/incentives/v1/query.proto](#Atrix/incentives/v1/query.proto)
+    - [QueryAllocationMeterRequest](#Atrix.incentives.v1.QueryAllocationMeterRequest)
+    - [QueryAllocationMeterResponse](#Atrix.incentives.v1.QueryAllocationMeterResponse)
+    - [QueryAllocationMetersRequest](#Atrix.incentives.v1.QueryAllocationMetersRequest)
+    - [QueryAllocationMetersResponse](#Atrix.incentives.v1.QueryAllocationMetersResponse)
+    - [QueryGasMeterRequest](#Atrix.incentives.v1.QueryGasMeterRequest)
+    - [QueryGasMeterResponse](#Atrix.incentives.v1.QueryGasMeterResponse)
+    - [QueryGasMetersRequest](#Atrix.incentives.v1.QueryGasMetersRequest)
+    - [QueryGasMetersResponse](#Atrix.incentives.v1.QueryGasMetersResponse)
+    - [QueryIncentiveRequest](#Atrix.incentives.v1.QueryIncentiveRequest)
+    - [QueryIncentiveResponse](#Atrix.incentives.v1.QueryIncentiveResponse)
+    - [QueryIncentivesRequest](#Atrix.incentives.v1.QueryIncentivesRequest)
+    - [QueryIncentivesResponse](#Atrix.incentives.v1.QueryIncentivesResponse)
+    - [QueryParamsRequest](#Atrix.incentives.v1.QueryParamsRequest)
+    - [QueryParamsResponse](#Atrix.incentives.v1.QueryParamsResponse)
   
-    - [Query](#evmos.incentives.v1.Query)
+    - [Query](#Atrix.incentives.v1.Query)
   
-- [evmos/inflation/v1/inflation.proto](#evmos/inflation/v1/inflation.proto)
-    - [ExponentialCalculation](#evmos.inflation.v1.ExponentialCalculation)
-    - [InflationDistribution](#evmos.inflation.v1.InflationDistribution)
+- [Atrix/inflation/v1/inflation.proto](#Atrix/inflation/v1/inflation.proto)
+    - [ExponentialCalculation](#Atrix.inflation.v1.ExponentialCalculation)
+    - [InflationDistribution](#Atrix.inflation.v1.InflationDistribution)
   
-- [evmos/inflation/v1/genesis.proto](#evmos/inflation/v1/genesis.proto)
-    - [GenesisState](#evmos.inflation.v1.GenesisState)
-    - [Params](#evmos.inflation.v1.Params)
+- [Atrix/inflation/v1/genesis.proto](#Atrix/inflation/v1/genesis.proto)
+    - [GenesisState](#Atrix.inflation.v1.GenesisState)
+    - [Params](#Atrix.inflation.v1.Params)
   
-- [evmos/inflation/v1/query.proto](#evmos/inflation/v1/query.proto)
-    - [QueryCirculatingSupplyRequest](#evmos.inflation.v1.QueryCirculatingSupplyRequest)
-    - [QueryCirculatingSupplyResponse](#evmos.inflation.v1.QueryCirculatingSupplyResponse)
-    - [QueryEpochMintProvisionRequest](#evmos.inflation.v1.QueryEpochMintProvisionRequest)
-    - [QueryEpochMintProvisionResponse](#evmos.inflation.v1.QueryEpochMintProvisionResponse)
-    - [QueryInflationRateRequest](#evmos.inflation.v1.QueryInflationRateRequest)
-    - [QueryInflationRateResponse](#evmos.inflation.v1.QueryInflationRateResponse)
-    - [QueryParamsRequest](#evmos.inflation.v1.QueryParamsRequest)
-    - [QueryParamsResponse](#evmos.inflation.v1.QueryParamsResponse)
-    - [QueryPeriodRequest](#evmos.inflation.v1.QueryPeriodRequest)
-    - [QueryPeriodResponse](#evmos.inflation.v1.QueryPeriodResponse)
-    - [QuerySkippedEpochsRequest](#evmos.inflation.v1.QuerySkippedEpochsRequest)
-    - [QuerySkippedEpochsResponse](#evmos.inflation.v1.QuerySkippedEpochsResponse)
+- [Atrix/inflation/v1/query.proto](#Atrix/inflation/v1/query.proto)
+    - [QueryCirculatingSupplyRequest](#Atrix.inflation.v1.QueryCirculatingSupplyRequest)
+    - [QueryCirculatingSupplyResponse](#Atrix.inflation.v1.QueryCirculatingSupplyResponse)
+    - [QueryEpochMintProvisionRequest](#Atrix.inflation.v1.QueryEpochMintProvisionRequest)
+    - [QueryEpochMintProvisionResponse](#Atrix.inflation.v1.QueryEpochMintProvisionResponse)
+    - [QueryInflationRateRequest](#Atrix.inflation.v1.QueryInflationRateRequest)
+    - [QueryInflationRateResponse](#Atrix.inflation.v1.QueryInflationRateResponse)
+    - [QueryParamsRequest](#Atrix.inflation.v1.QueryParamsRequest)
+    - [QueryParamsResponse](#Atrix.inflation.v1.QueryParamsResponse)
+    - [QueryPeriodRequest](#Atrix.inflation.v1.QueryPeriodRequest)
+    - [QueryPeriodResponse](#Atrix.inflation.v1.QueryPeriodResponse)
+    - [QuerySkippedEpochsRequest](#Atrix.inflation.v1.QuerySkippedEpochsRequest)
+    - [QuerySkippedEpochsResponse](#Atrix.inflation.v1.QuerySkippedEpochsResponse)
   
-    - [Query](#evmos.inflation.v1.Query)
+    - [Query](#Atrix.inflation.v1.Query)
   
-- [evmos/recovery/v1/genesis.proto](#evmos/recovery/v1/genesis.proto)
-    - [GenesisState](#evmos.recovery.v1.GenesisState)
-    - [Params](#evmos.recovery.v1.Params)
+- [Atrix/recovery/v1/genesis.proto](#Atrix/recovery/v1/genesis.proto)
+    - [GenesisState](#Atrix.recovery.v1.GenesisState)
+    - [Params](#Atrix.recovery.v1.Params)
   
-- [evmos/recovery/v1/query.proto](#evmos/recovery/v1/query.proto)
-    - [QueryParamsRequest](#evmos.recovery.v1.QueryParamsRequest)
-    - [QueryParamsResponse](#evmos.recovery.v1.QueryParamsResponse)
+- [Atrix/recovery/v1/query.proto](#Atrix/recovery/v1/query.proto)
+    - [QueryParamsRequest](#Atrix.recovery.v1.QueryParamsRequest)
+    - [QueryParamsResponse](#Atrix.recovery.v1.QueryParamsResponse)
   
-    - [Query](#evmos.recovery.v1.Query)
+    - [Query](#Atrix.recovery.v1.Query)
   
-- [evmos/revenue/v1/revenue.proto](#evmos/revenue/v1/revenue.proto)
-    - [Revenue](#evmos.revenue.v1.Revenue)
+- [Atrix/revenue/v1/revenue.proto](#Atrix/revenue/v1/revenue.proto)
+    - [Revenue](#Atrix.revenue.v1.Revenue)
   
-- [evmos/revenue/v1/genesis.proto](#evmos/revenue/v1/genesis.proto)
-    - [GenesisState](#evmos.revenue.v1.GenesisState)
-    - [Params](#evmos.revenue.v1.Params)
+- [Atrix/revenue/v1/genesis.proto](#Atrix/revenue/v1/genesis.proto)
+    - [GenesisState](#Atrix.revenue.v1.GenesisState)
+    - [Params](#Atrix.revenue.v1.Params)
   
-- [evmos/revenue/v1/query.proto](#evmos/revenue/v1/query.proto)
-    - [QueryDeployerRevenuesRequest](#evmos.revenue.v1.QueryDeployerRevenuesRequest)
-    - [QueryDeployerRevenuesResponse](#evmos.revenue.v1.QueryDeployerRevenuesResponse)
-    - [QueryParamsRequest](#evmos.revenue.v1.QueryParamsRequest)
-    - [QueryParamsResponse](#evmos.revenue.v1.QueryParamsResponse)
-    - [QueryRevenueRequest](#evmos.revenue.v1.QueryRevenueRequest)
-    - [QueryRevenueResponse](#evmos.revenue.v1.QueryRevenueResponse)
-    - [QueryRevenuesRequest](#evmos.revenue.v1.QueryRevenuesRequest)
-    - [QueryRevenuesResponse](#evmos.revenue.v1.QueryRevenuesResponse)
-    - [QueryWithdrawerRevenuesRequest](#evmos.revenue.v1.QueryWithdrawerRevenuesRequest)
-    - [QueryWithdrawerRevenuesResponse](#evmos.revenue.v1.QueryWithdrawerRevenuesResponse)
+- [Atrix/revenue/v1/query.proto](#Atrix/revenue/v1/query.proto)
+    - [QueryDeployerRevenuesRequest](#Atrix.revenue.v1.QueryDeployerRevenuesRequest)
+    - [QueryDeployerRevenuesResponse](#Atrix.revenue.v1.QueryDeployerRevenuesResponse)
+    - [QueryParamsRequest](#Atrix.revenue.v1.QueryParamsRequest)
+    - [QueryParamsResponse](#Atrix.revenue.v1.QueryParamsResponse)
+    - [QueryRevenueRequest](#Atrix.revenue.v1.QueryRevenueRequest)
+    - [QueryRevenueResponse](#Atrix.revenue.v1.QueryRevenueResponse)
+    - [QueryRevenuesRequest](#Atrix.revenue.v1.QueryRevenuesRequest)
+    - [QueryRevenuesResponse](#Atrix.revenue.v1.QueryRevenuesResponse)
+    - [QueryWithdrawerRevenuesRequest](#Atrix.revenue.v1.QueryWithdrawerRevenuesRequest)
+    - [QueryWithdrawerRevenuesResponse](#Atrix.revenue.v1.QueryWithdrawerRevenuesResponse)
   
-    - [Query](#evmos.revenue.v1.Query)
+    - [Query](#Atrix.revenue.v1.Query)
   
-- [evmos/revenue/v1/tx.proto](#evmos/revenue/v1/tx.proto)
-    - [MsgCancelRevenue](#evmos.revenue.v1.MsgCancelRevenue)
-    - [MsgCancelRevenueResponse](#evmos.revenue.v1.MsgCancelRevenueResponse)
-    - [MsgRegisterRevenue](#evmos.revenue.v1.MsgRegisterRevenue)
-    - [MsgRegisterRevenueResponse](#evmos.revenue.v1.MsgRegisterRevenueResponse)
-    - [MsgUpdateRevenue](#evmos.revenue.v1.MsgUpdateRevenue)
-    - [MsgUpdateRevenueResponse](#evmos.revenue.v1.MsgUpdateRevenueResponse)
+- [Atrix/revenue/v1/tx.proto](#Atrix/revenue/v1/tx.proto)
+    - [MsgCancelRevenue](#Atrix.revenue.v1.MsgCancelRevenue)
+    - [MsgCancelRevenueResponse](#Atrix.revenue.v1.MsgCancelRevenueResponse)
+    - [MsgRegisterRevenue](#Atrix.revenue.v1.MsgRegisterRevenue)
+    - [MsgRegisterRevenueResponse](#Atrix.revenue.v1.MsgRegisterRevenueResponse)
+    - [MsgUpdateRevenue](#Atrix.revenue.v1.MsgUpdateRevenue)
+    - [MsgUpdateRevenueResponse](#Atrix.revenue.v1.MsgUpdateRevenueResponse)
   
-    - [Msg](#evmos.revenue.v1.Msg)
+    - [Msg](#Atrix.revenue.v1.Msg)
   
-- [evmos/vesting/v1/query.proto](#evmos/vesting/v1/query.proto)
-    - [QueryBalancesRequest](#evmos.vesting.v1.QueryBalancesRequest)
-    - [QueryBalancesResponse](#evmos.vesting.v1.QueryBalancesResponse)
+- [Atrix/vesting/v1/query.proto](#Atrix/vesting/v1/query.proto)
+    - [QueryBalancesRequest](#Atrix.vesting.v1.QueryBalancesRequest)
+    - [QueryBalancesResponse](#Atrix.vesting.v1.QueryBalancesResponse)
   
-    - [Query](#evmos.vesting.v1.Query)
+    - [Query](#Atrix.vesting.v1.Query)
   
-- [evmos/vesting/v1/tx.proto](#evmos/vesting/v1/tx.proto)
-    - [MsgClawback](#evmos.vesting.v1.MsgClawback)
-    - [MsgClawbackResponse](#evmos.vesting.v1.MsgClawbackResponse)
-    - [MsgCreateClawbackVestingAccount](#evmos.vesting.v1.MsgCreateClawbackVestingAccount)
-    - [MsgCreateClawbackVestingAccountResponse](#evmos.vesting.v1.MsgCreateClawbackVestingAccountResponse)
+- [Atrix/vesting/v1/tx.proto](#Atrix/vesting/v1/tx.proto)
+    - [MsgClawback](#Atrix.vesting.v1.MsgClawback)
+    - [MsgClawbackResponse](#Atrix.vesting.v1.MsgClawbackResponse)
+    - [MsgCreateClawbackVestingAccount](#Atrix.vesting.v1.MsgCreateClawbackVestingAccount)
+    - [MsgCreateClawbackVestingAccountResponse](#Atrix.vesting.v1.MsgCreateClawbackVestingAccountResponse)
   
-    - [Msg](#evmos.vesting.v1.Msg)
+    - [Msg](#Atrix.vesting.v1.Msg)
   
-- [evmos/vesting/v1/vesting.proto](#evmos/vesting/v1/vesting.proto)
-    - [ClawbackVestingAccount](#evmos.vesting.v1.ClawbackVestingAccount)
+- [Atrix/vesting/v1/vesting.proto](#Atrix/vesting/v1/vesting.proto)
+    - [ClawbackVestingAccount](#Atrix.vesting.v1.ClawbackVestingAccount)
   
 - [Scalar Value Types](#scalar-value-types)
 
 
 
-<a name="evmos/claims/v1/claims.proto"></a>
+<a name="Atrix/claims/v1/claims.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## evmos/claims/v1/claims.proto
+## Atrix/claims/v1/claims.proto
 
 
 
-<a name="evmos.claims.v1.Claim"></a>
+<a name="Atrix.claims.v1.Claim"></a>
 
 ### Claim
 Claim defines the action, completed flag and the remaining claimable amount
@@ -200,7 +200,7 @@ for a given user. This is only used during client queries.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `action` | [Action](#evmos.claims.v1.Action) |  | action enum |
+| `action` | [Action](#Atrix.claims.v1.Action) |  | action enum |
 | `completed` | [bool](#bool) |  | true if the action has been completed |
 | `claimable_amount` | [string](#string) |  | claimable token amount for the action. Zero if completed |
 
@@ -209,7 +209,7 @@ for a given user. This is only used during client queries.
 
 
 
-<a name="evmos.claims.v1.ClaimsRecord"></a>
+<a name="Atrix.claims.v1.ClaimsRecord"></a>
 
 ### ClaimsRecord
 ClaimsRecord defines the initial claimable airdrop amount and the list of
@@ -226,7 +226,7 @@ completed actions to claim the tokens.
 
 
 
-<a name="evmos.claims.v1.ClaimsRecordAddress"></a>
+<a name="Atrix.claims.v1.ClaimsRecordAddress"></a>
 
 ### ClaimsRecordAddress
 ClaimsRecordAddress is the claims metadata per address that is used at
@@ -246,7 +246,7 @@ Genesis.
  <!-- end messages -->
 
 
-<a name="evmos.claims.v1.Action"></a>
+<a name="Atrix.claims.v1.Action"></a>
 
 ### Action
 Action defines the list of available actions to claim the airdrop tokens.
@@ -268,14 +268,14 @@ Action defines the list of available actions to claim the airdrop tokens.
 
 
 
-<a name="evmos/claims/v1/genesis.proto"></a>
+<a name="Atrix/claims/v1/genesis.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## evmos/claims/v1/genesis.proto
+## Atrix/claims/v1/genesis.proto
 
 
 
-<a name="evmos.claims.v1.GenesisState"></a>
+<a name="Atrix.claims.v1.GenesisState"></a>
 
 ### GenesisState
 GenesisState define the claims module's genesis state.
@@ -283,15 +283,15 @@ GenesisState define the claims module's genesis state.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `params` | [Params](#evmos.claims.v1.Params) |  | params defines all the parameters of the module. |
-| `claims_records` | [ClaimsRecordAddress](#evmos.claims.v1.ClaimsRecordAddress) | repeated | list of claim records with the corresponding airdrop recipient |
+| `params` | [Params](#Atrix.claims.v1.Params) |  | params defines all the parameters of the module. |
+| `claims_records` | [ClaimsRecordAddress](#Atrix.claims.v1.ClaimsRecordAddress) | repeated | list of claim records with the corresponding airdrop recipient |
 
 
 
 
 
 
-<a name="evmos.claims.v1.Params"></a>
+<a name="Atrix.claims.v1.Params"></a>
 
 ### Params
 Params defines the claims module's parameters.
@@ -321,14 +321,14 @@ Params defines the claims module's parameters.
 
 
 
-<a name="evmos/claims/v1/query.proto"></a>
+<a name="Atrix/claims/v1/query.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## evmos/claims/v1/query.proto
+## Atrix/claims/v1/query.proto
 
 
 
-<a name="evmos.claims.v1.QueryClaimsRecordRequest"></a>
+<a name="Atrix.claims.v1.QueryClaimsRecordRequest"></a>
 
 ### QueryClaimsRecordRequest
 QueryClaimsRecordRequest is the request type for the Query/ClaimsRecord RPC
@@ -344,7 +344,7 @@ method.
 
 
 
-<a name="evmos.claims.v1.QueryClaimsRecordResponse"></a>
+<a name="Atrix.claims.v1.QueryClaimsRecordResponse"></a>
 
 ### QueryClaimsRecordResponse
 QueryClaimsRecordResponse is the response type for the Query/ClaimsRecord RPC
@@ -354,14 +354,14 @@ method.
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | `initial_claimable_amount` | [string](#string) |  | total initial claimable amount for the user |
-| `claims` | [Claim](#evmos.claims.v1.Claim) | repeated | the claims of the user |
+| `claims` | [Claim](#Atrix.claims.v1.Claim) | repeated | the claims of the user |
 
 
 
 
 
 
-<a name="evmos.claims.v1.QueryClaimsRecordsRequest"></a>
+<a name="Atrix.claims.v1.QueryClaimsRecordsRequest"></a>
 
 ### QueryClaimsRecordsRequest
 QueryClaimsRecordsRequest is the request type for the Query/ClaimsRecords RPC
@@ -377,7 +377,7 @@ method.
 
 
 
-<a name="evmos.claims.v1.QueryClaimsRecordsResponse"></a>
+<a name="Atrix.claims.v1.QueryClaimsRecordsResponse"></a>
 
 ### QueryClaimsRecordsResponse
 QueryClaimsRecordsResponse is the response type for the Query/ClaimsRecords
@@ -386,7 +386,7 @@ RPC method.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `claims` | [ClaimsRecordAddress](#evmos.claims.v1.ClaimsRecordAddress) | repeated | claims defines all claims records |
+| `claims` | [ClaimsRecordAddress](#Atrix.claims.v1.ClaimsRecordAddress) | repeated | claims defines all claims records |
 | `pagination` | [cosmos.base.query.v1beta1.PageResponse](#cosmos.base.query.v1beta1.PageResponse) |  | pagination defines the pagination in the response. |
 
 
@@ -394,7 +394,7 @@ RPC method.
 
 
 
-<a name="evmos.claims.v1.QueryParamsRequest"></a>
+<a name="Atrix.claims.v1.QueryParamsRequest"></a>
 
 ### QueryParamsRequest
 QueryParamsRequest is the request type for the Query/Params RPC method.
@@ -404,7 +404,7 @@ QueryParamsRequest is the request type for the Query/Params RPC method.
 
 
 
-<a name="evmos.claims.v1.QueryParamsResponse"></a>
+<a name="Atrix.claims.v1.QueryParamsResponse"></a>
 
 ### QueryParamsResponse
 QueryParamsResponse is the response type for the Query/Params RPC method.
@@ -412,14 +412,14 @@ QueryParamsResponse is the response type for the Query/Params RPC method.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `params` | [Params](#evmos.claims.v1.Params) |  | params defines the parameters of the module. |
+| `params` | [Params](#Atrix.claims.v1.Params) |  | params defines the parameters of the module. |
 
 
 
 
 
 
-<a name="evmos.claims.v1.QueryTotalUnclaimedRequest"></a>
+<a name="Atrix.claims.v1.QueryTotalUnclaimedRequest"></a>
 
 ### QueryTotalUnclaimedRequest
 QueryTotalUnclaimedRequest is the request type for the Query/TotalUnclaimed
@@ -430,7 +430,7 @@ RPC method.
 
 
 
-<a name="evmos.claims.v1.QueryTotalUnclaimedResponse"></a>
+<a name="Atrix.claims.v1.QueryTotalUnclaimedResponse"></a>
 
 ### QueryTotalUnclaimedResponse
 QueryTotalUnclaimedResponse is the response type for the Query/TotalUnclaimed
@@ -452,30 +452,30 @@ RPC method.
  <!-- end HasExtensions -->
 
 
-<a name="evmos.claims.v1.Query"></a>
+<a name="Atrix.claims.v1.Query"></a>
 
 ### Query
 Query defines the gRPC querier service.
 
 | Method Name | Request Type | Response Type | Description | HTTP Verb | Endpoint |
 | ----------- | ------------ | ------------- | ------------| ------- | -------- |
-| `TotalUnclaimed` | [QueryTotalUnclaimedRequest](#evmos.claims.v1.QueryTotalUnclaimedRequest) | [QueryTotalUnclaimedResponse](#evmos.claims.v1.QueryTotalUnclaimedResponse) | TotalUnclaimed queries the total unclaimed tokens from the airdrop | GET|/evmos/claims/v1/total_unclaimed|
-| `Params` | [QueryParamsRequest](#evmos.claims.v1.QueryParamsRequest) | [QueryParamsResponse](#evmos.claims.v1.QueryParamsResponse) | Params returns the claims module parameters | GET|/evmos/claims/v1/params|
-| `ClaimsRecords` | [QueryClaimsRecordsRequest](#evmos.claims.v1.QueryClaimsRecordsRequest) | [QueryClaimsRecordsResponse](#evmos.claims.v1.QueryClaimsRecordsResponse) | ClaimsRecords returns all claims records | GET|/evmos/claims/v1/claims_records|
-| `ClaimsRecord` | [QueryClaimsRecordRequest](#evmos.claims.v1.QueryClaimsRecordRequest) | [QueryClaimsRecordResponse](#evmos.claims.v1.QueryClaimsRecordResponse) | ClaimsRecord returns the claims record for a given address | GET|/evmos/claims/v1/claims_records/{address}|
+| `TotalUnclaimed` | [QueryTotalUnclaimedRequest](#Atrix.claims.v1.QueryTotalUnclaimedRequest) | [QueryTotalUnclaimedResponse](#Atrix.claims.v1.QueryTotalUnclaimedResponse) | TotalUnclaimed queries the total unclaimed tokens from the airdrop | GET|/Atrix/claims/v1/total_unclaimed|
+| `Params` | [QueryParamsRequest](#Atrix.claims.v1.QueryParamsRequest) | [QueryParamsResponse](#Atrix.claims.v1.QueryParamsResponse) | Params returns the claims module parameters | GET|/Atrix/claims/v1/params|
+| `ClaimsRecords` | [QueryClaimsRecordsRequest](#Atrix.claims.v1.QueryClaimsRecordsRequest) | [QueryClaimsRecordsResponse](#Atrix.claims.v1.QueryClaimsRecordsResponse) | ClaimsRecords returns all claims records | GET|/Atrix/claims/v1/claims_records|
+| `ClaimsRecord` | [QueryClaimsRecordRequest](#Atrix.claims.v1.QueryClaimsRecordRequest) | [QueryClaimsRecordResponse](#Atrix.claims.v1.QueryClaimsRecordResponse) | ClaimsRecord returns the claims record for a given address | GET|/Atrix/claims/v1/claims_records/{address}|
 
  <!-- end services -->
 
 
 
-<a name="evmos/epochs/v1/genesis.proto"></a>
+<a name="Atrix/epochs/v1/genesis.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## evmos/epochs/v1/genesis.proto
+## Atrix/epochs/v1/genesis.proto
 
 
 
-<a name="evmos.epochs.v1.EpochInfo"></a>
+<a name="Atrix.epochs.v1.EpochInfo"></a>
 
 ### EpochInfo
 
@@ -496,7 +496,7 @@ Query defines the gRPC querier service.
 
 
 
-<a name="evmos.epochs.v1.GenesisState"></a>
+<a name="Atrix.epochs.v1.GenesisState"></a>
 
 ### GenesisState
 GenesisState defines the epochs module's genesis state.
@@ -504,7 +504,7 @@ GenesisState defines the epochs module's genesis state.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `epochs` | [EpochInfo](#evmos.epochs.v1.EpochInfo) | repeated |  |
+| `epochs` | [EpochInfo](#Atrix.epochs.v1.EpochInfo) | repeated |  |
 
 
 
@@ -520,14 +520,14 @@ GenesisState defines the epochs module's genesis state.
 
 
 
-<a name="evmos/epochs/v1/query.proto"></a>
+<a name="Atrix/epochs/v1/query.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## evmos/epochs/v1/query.proto
+## Atrix/epochs/v1/query.proto
 
 
 
-<a name="evmos.epochs.v1.QueryCurrentEpochRequest"></a>
+<a name="Atrix.epochs.v1.QueryCurrentEpochRequest"></a>
 
 ### QueryCurrentEpochRequest
 
@@ -542,7 +542,7 @@ GenesisState defines the epochs module's genesis state.
 
 
 
-<a name="evmos.epochs.v1.QueryCurrentEpochResponse"></a>
+<a name="Atrix.epochs.v1.QueryCurrentEpochResponse"></a>
 
 ### QueryCurrentEpochResponse
 
@@ -557,7 +557,7 @@ GenesisState defines the epochs module's genesis state.
 
 
 
-<a name="evmos.epochs.v1.QueryEpochsInfoRequest"></a>
+<a name="Atrix.epochs.v1.QueryEpochsInfoRequest"></a>
 
 ### QueryEpochsInfoRequest
 
@@ -572,7 +572,7 @@ GenesisState defines the epochs module's genesis state.
 
 
 
-<a name="evmos.epochs.v1.QueryEpochsInfoResponse"></a>
+<a name="Atrix.epochs.v1.QueryEpochsInfoResponse"></a>
 
 ### QueryEpochsInfoResponse
 
@@ -580,7 +580,7 @@ GenesisState defines the epochs module's genesis state.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `epochs` | [EpochInfo](#evmos.epochs.v1.EpochInfo) | repeated |  |
+| `epochs` | [EpochInfo](#Atrix.epochs.v1.EpochInfo) | repeated |  |
 | `pagination` | [cosmos.base.query.v1beta1.PageResponse](#cosmos.base.query.v1beta1.PageResponse) |  |  |
 
 
@@ -594,28 +594,28 @@ GenesisState defines the epochs module's genesis state.
  <!-- end HasExtensions -->
 
 
-<a name="evmos.epochs.v1.Query"></a>
+<a name="Atrix.epochs.v1.Query"></a>
 
 ### Query
 Query defines the gRPC querier service.
 
 | Method Name | Request Type | Response Type | Description | HTTP Verb | Endpoint |
 | ----------- | ------------ | ------------- | ------------| ------- | -------- |
-| `EpochInfos` | [QueryEpochsInfoRequest](#evmos.epochs.v1.QueryEpochsInfoRequest) | [QueryEpochsInfoResponse](#evmos.epochs.v1.QueryEpochsInfoResponse) | EpochInfos provide running epochInfos | GET|/evmos/epochs/v1/epochs|
-| `CurrentEpoch` | [QueryCurrentEpochRequest](#evmos.epochs.v1.QueryCurrentEpochRequest) | [QueryCurrentEpochResponse](#evmos.epochs.v1.QueryCurrentEpochResponse) | CurrentEpoch provide current epoch of specified identifier | GET|/evmos/epochs/v1/current_epoch|
+| `EpochInfos` | [QueryEpochsInfoRequest](#Atrix.epochs.v1.QueryEpochsInfoRequest) | [QueryEpochsInfoResponse](#Atrix.epochs.v1.QueryEpochsInfoResponse) | EpochInfos provide running epochInfos | GET|/Atrix/epochs/v1/epochs|
+| `CurrentEpoch` | [QueryCurrentEpochRequest](#Atrix.epochs.v1.QueryCurrentEpochRequest) | [QueryCurrentEpochResponse](#Atrix.epochs.v1.QueryCurrentEpochResponse) | CurrentEpoch provide current epoch of specified identifier | GET|/Atrix/epochs/v1/current_epoch|
 
  <!-- end services -->
 
 
 
-<a name="evmos/erc20/v1/erc20.proto"></a>
+<a name="Atrix/erc20/v1/erc20.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## evmos/erc20/v1/erc20.proto
+## Atrix/erc20/v1/erc20.proto
 
 
 
-<a name="evmos.erc20.v1.ProposalMetadata"></a>
+<a name="Atrix.erc20.v1.ProposalMetadata"></a>
 
 ### ProposalMetadata
 ProposalMetadata is used to parse a slice of denom metadata and generate
@@ -631,7 +631,7 @@ the RegisterCoinProposal content.
 
 
 
-<a name="evmos.erc20.v1.RegisterCoinProposal"></a>
+<a name="Atrix.erc20.v1.RegisterCoinProposal"></a>
 
 ### RegisterCoinProposal
 RegisterCoinProposal is a gov Content type to register a token pair for a
@@ -649,7 +649,7 @@ native Cosmos coin.
 
 
 
-<a name="evmos.erc20.v1.RegisterERC20Proposal"></a>
+<a name="Atrix.erc20.v1.RegisterERC20Proposal"></a>
 
 ### RegisterERC20Proposal
 RegisterERC20Proposal is a gov Content type to register a token pair for an
@@ -667,7 +667,7 @@ ERC20 token
 
 
 
-<a name="evmos.erc20.v1.ToggleTokenConversionProposal"></a>
+<a name="Atrix.erc20.v1.ToggleTokenConversionProposal"></a>
 
 ### ToggleTokenConversionProposal
 ToggleTokenConversionProposal is a gov Content type to toggle the conversion
@@ -685,7 +685,7 @@ of a token pair.
 
 
 
-<a name="evmos.erc20.v1.TokenPair"></a>
+<a name="Atrix.erc20.v1.TokenPair"></a>
 
 ### TokenPair
 TokenPair defines an instance that records a pairing consisting of a native
@@ -697,7 +697,7 @@ TokenPair defines an instance that records a pairing consisting of a native
 | `erc20_address` | [string](#string) |  | address of ERC20 contract token |
 | `denom` | [string](#string) |  | cosmos base denomination to be mapped to |
 | `enabled` | [bool](#bool) |  | shows token mapping enable status |
-| `contract_owner` | [Owner](#evmos.erc20.v1.Owner) |  | ERC20 owner address ENUM (0 invalid, 1 ModuleAccount, 2 external address) |
+| `contract_owner` | [Owner](#Atrix.erc20.v1.Owner) |  | ERC20 owner address ENUM (0 invalid, 1 ModuleAccount, 2 external address) |
 
 
 
@@ -706,7 +706,7 @@ TokenPair defines an instance that records a pairing consisting of a native
  <!-- end messages -->
 
 
-<a name="evmos.erc20.v1.Owner"></a>
+<a name="Atrix.erc20.v1.Owner"></a>
 
 ### Owner
 Owner enumerates the ownership of a ERC20 contract.
@@ -726,14 +726,14 @@ Owner enumerates the ownership of a ERC20 contract.
 
 
 
-<a name="evmos/erc20/v1/genesis.proto"></a>
+<a name="Atrix/erc20/v1/genesis.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## evmos/erc20/v1/genesis.proto
+## Atrix/erc20/v1/genesis.proto
 
 
 
-<a name="evmos.erc20.v1.GenesisState"></a>
+<a name="Atrix.erc20.v1.GenesisState"></a>
 
 ### GenesisState
 GenesisState defines the module's genesis state.
@@ -741,15 +741,15 @@ GenesisState defines the module's genesis state.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `params` | [Params](#evmos.erc20.v1.Params) |  | module parameters |
-| `token_pairs` | [TokenPair](#evmos.erc20.v1.TokenPair) | repeated | registered token pairs |
+| `params` | [Params](#Atrix.erc20.v1.Params) |  | module parameters |
+| `token_pairs` | [TokenPair](#Atrix.erc20.v1.TokenPair) | repeated | registered token pairs |
 
 
 
 
 
 
-<a name="evmos.erc20.v1.Params"></a>
+<a name="Atrix.erc20.v1.Params"></a>
 
 ### Params
 Params defines the erc20 module params
@@ -774,14 +774,14 @@ Params defines the erc20 module params
 
 
 
-<a name="evmos/erc20/v1/query.proto"></a>
+<a name="Atrix/erc20/v1/query.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## evmos/erc20/v1/query.proto
+## Atrix/erc20/v1/query.proto
 
 
 
-<a name="evmos.erc20.v1.QueryParamsRequest"></a>
+<a name="Atrix.erc20.v1.QueryParamsRequest"></a>
 
 ### QueryParamsRequest
 QueryParamsRequest is the request type for the Query/Params RPC method.
@@ -791,7 +791,7 @@ QueryParamsRequest is the request type for the Query/Params RPC method.
 
 
 
-<a name="evmos.erc20.v1.QueryParamsResponse"></a>
+<a name="Atrix.erc20.v1.QueryParamsResponse"></a>
 
 ### QueryParamsResponse
 QueryParamsResponse is the response type for the Query/Params RPC
@@ -800,14 +800,14 @@ method.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `params` | [Params](#evmos.erc20.v1.Params) |  |  |
+| `params` | [Params](#Atrix.erc20.v1.Params) |  |  |
 
 
 
 
 
 
-<a name="evmos.erc20.v1.QueryTokenPairRequest"></a>
+<a name="Atrix.erc20.v1.QueryTokenPairRequest"></a>
 
 ### QueryTokenPairRequest
 QueryTokenPairRequest is the request type for the Query/TokenPair RPC method.
@@ -822,7 +822,7 @@ QueryTokenPairRequest is the request type for the Query/TokenPair RPC method.
 
 
 
-<a name="evmos.erc20.v1.QueryTokenPairResponse"></a>
+<a name="Atrix.erc20.v1.QueryTokenPairResponse"></a>
 
 ### QueryTokenPairResponse
 QueryTokenPairResponse is the response type for the Query/TokenPair RPC
@@ -831,14 +831,14 @@ method.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `token_pair` | [TokenPair](#evmos.erc20.v1.TokenPair) |  |  |
+| `token_pair` | [TokenPair](#Atrix.erc20.v1.TokenPair) |  |  |
 
 
 
 
 
 
-<a name="evmos.erc20.v1.QueryTokenPairsRequest"></a>
+<a name="Atrix.erc20.v1.QueryTokenPairsRequest"></a>
 
 ### QueryTokenPairsRequest
 QueryTokenPairsRequest is the request type for the Query/TokenPairs RPC
@@ -854,7 +854,7 @@ method.
 
 
 
-<a name="evmos.erc20.v1.QueryTokenPairsResponse"></a>
+<a name="Atrix.erc20.v1.QueryTokenPairsResponse"></a>
 
 ### QueryTokenPairsResponse
 QueryTokenPairsResponse is the response type for the Query/TokenPairs RPC
@@ -863,7 +863,7 @@ method.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `token_pairs` | [TokenPair](#evmos.erc20.v1.TokenPair) | repeated |  |
+| `token_pairs` | [TokenPair](#Atrix.erc20.v1.TokenPair) | repeated |  |
 | `pagination` | [cosmos.base.query.v1beta1.PageResponse](#cosmos.base.query.v1beta1.PageResponse) |  | pagination defines the pagination in the response. |
 
 
@@ -877,29 +877,29 @@ method.
  <!-- end HasExtensions -->
 
 
-<a name="evmos.erc20.v1.Query"></a>
+<a name="Atrix.erc20.v1.Query"></a>
 
 ### Query
 Query defines the gRPC querier service.
 
 | Method Name | Request Type | Response Type | Description | HTTP Verb | Endpoint |
 | ----------- | ------------ | ------------- | ------------| ------- | -------- |
-| `TokenPairs` | [QueryTokenPairsRequest](#evmos.erc20.v1.QueryTokenPairsRequest) | [QueryTokenPairsResponse](#evmos.erc20.v1.QueryTokenPairsResponse) | TokenPairs retrieves registered token pairs | GET|/evmos/erc20/v1/token_pairs|
-| `TokenPair` | [QueryTokenPairRequest](#evmos.erc20.v1.QueryTokenPairRequest) | [QueryTokenPairResponse](#evmos.erc20.v1.QueryTokenPairResponse) | TokenPair retrieves a registered token pair | GET|/evmos/erc20/v1/token_pairs/{token}|
-| `Params` | [QueryParamsRequest](#evmos.erc20.v1.QueryParamsRequest) | [QueryParamsResponse](#evmos.erc20.v1.QueryParamsResponse) | Params retrieves the erc20 module params | GET|/evmos/erc20/v1/params|
+| `TokenPairs` | [QueryTokenPairsRequest](#Atrix.erc20.v1.QueryTokenPairsRequest) | [QueryTokenPairsResponse](#Atrix.erc20.v1.QueryTokenPairsResponse) | TokenPairs retrieves registered token pairs | GET|/Atrix/erc20/v1/token_pairs|
+| `TokenPair` | [QueryTokenPairRequest](#Atrix.erc20.v1.QueryTokenPairRequest) | [QueryTokenPairResponse](#Atrix.erc20.v1.QueryTokenPairResponse) | TokenPair retrieves a registered token pair | GET|/Atrix/erc20/v1/token_pairs/{token}|
+| `Params` | [QueryParamsRequest](#Atrix.erc20.v1.QueryParamsRequest) | [QueryParamsResponse](#Atrix.erc20.v1.QueryParamsResponse) | Params retrieves the erc20 module params | GET|/Atrix/erc20/v1/params|
 
  <!-- end services -->
 
 
 
-<a name="evmos/erc20/v1/tx.proto"></a>
+<a name="Atrix/erc20/v1/tx.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## evmos/erc20/v1/tx.proto
+## Atrix/erc20/v1/tx.proto
 
 
 
-<a name="evmos.erc20.v1.MsgConvertCoin"></a>
+<a name="Atrix.erc20.v1.MsgConvertCoin"></a>
 
 ### MsgConvertCoin
 MsgConvertCoin defines a Msg to convert a native Cosmos coin to a ERC20 token
@@ -916,7 +916,7 @@ MsgConvertCoin defines a Msg to convert a native Cosmos coin to a ERC20 token
 
 
 
-<a name="evmos.erc20.v1.MsgConvertCoinResponse"></a>
+<a name="Atrix.erc20.v1.MsgConvertCoinResponse"></a>
 
 ### MsgConvertCoinResponse
 MsgConvertCoinResponse returns no fields
@@ -926,7 +926,7 @@ MsgConvertCoinResponse returns no fields
 
 
 
-<a name="evmos.erc20.v1.MsgConvertERC20"></a>
+<a name="Atrix.erc20.v1.MsgConvertERC20"></a>
 
 ### MsgConvertERC20
 MsgConvertERC20 defines a Msg to convert a ERC20 token to a native Cosmos
@@ -945,7 +945,7 @@ coin.
 
 
 
-<a name="evmos.erc20.v1.MsgConvertERC20Response"></a>
+<a name="Atrix.erc20.v1.MsgConvertERC20Response"></a>
 
 ### MsgConvertERC20Response
 MsgConvertERC20Response returns no fields
@@ -961,28 +961,28 @@ MsgConvertERC20Response returns no fields
  <!-- end HasExtensions -->
 
 
-<a name="evmos.erc20.v1.Msg"></a>
+<a name="Atrix.erc20.v1.Msg"></a>
 
 ### Msg
 Msg defines the erc20 Msg service.
 
 | Method Name | Request Type | Response Type | Description | HTTP Verb | Endpoint |
 | ----------- | ------------ | ------------- | ------------| ------- | -------- |
-| `ConvertCoin` | [MsgConvertCoin](#evmos.erc20.v1.MsgConvertCoin) | [MsgConvertCoinResponse](#evmos.erc20.v1.MsgConvertCoinResponse) | ConvertCoin mints a ERC20 representation of the native Cosmos coin denom that is registered on the token mapping. | GET|/evmos/erc20/v1/tx/convert_coin|
-| `ConvertERC20` | [MsgConvertERC20](#evmos.erc20.v1.MsgConvertERC20) | [MsgConvertERC20Response](#evmos.erc20.v1.MsgConvertERC20Response) | ConvertERC20 mints a native Cosmos coin representation of the ERC20 token contract that is registered on the token mapping. | GET|/evmos/erc20/v1/tx/convert_erc20|
+| `ConvertCoin` | [MsgConvertCoin](#Atrix.erc20.v1.MsgConvertCoin) | [MsgConvertCoinResponse](#Atrix.erc20.v1.MsgConvertCoinResponse) | ConvertCoin mints a ERC20 representation of the native Cosmos coin denom that is registered on the token mapping. | GET|/Atrix/erc20/v1/tx/convert_coin|
+| `ConvertERC20` | [MsgConvertERC20](#Atrix.erc20.v1.MsgConvertERC20) | [MsgConvertERC20Response](#Atrix.erc20.v1.MsgConvertERC20Response) | ConvertERC20 mints a native Cosmos coin representation of the ERC20 token contract that is registered on the token mapping. | GET|/Atrix/erc20/v1/tx/convert_erc20|
 
  <!-- end services -->
 
 
 
-<a name="evmos/incentives/v1/incentives.proto"></a>
+<a name="Atrix/incentives/v1/incentives.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## evmos/incentives/v1/incentives.proto
+## Atrix/incentives/v1/incentives.proto
 
 
 
-<a name="evmos.incentives.v1.CancelIncentiveProposal"></a>
+<a name="Atrix.incentives.v1.CancelIncentiveProposal"></a>
 
 ### CancelIncentiveProposal
 CancelIncentiveProposal is a gov Content type to cancel an incentive
@@ -999,7 +999,7 @@ CancelIncentiveProposal is a gov Content type to cancel an incentive
 
 
 
-<a name="evmos.incentives.v1.GasMeter"></a>
+<a name="Atrix.incentives.v1.GasMeter"></a>
 
 ### GasMeter
 GasMeter tracks the cumulative gas spent per participant in one epoch
@@ -1016,7 +1016,7 @@ GasMeter tracks the cumulative gas spent per participant in one epoch
 
 
 
-<a name="evmos.incentives.v1.Incentive"></a>
+<a name="Atrix.incentives.v1.Incentive"></a>
 
 ### Incentive
 Incentive defines an instance that organizes distribution conditions for a
@@ -1036,7 +1036,7 @@ given smart contract
 
 
 
-<a name="evmos.incentives.v1.RegisterIncentiveProposal"></a>
+<a name="Atrix.incentives.v1.RegisterIncentiveProposal"></a>
 
 ### RegisterIncentiveProposal
 RegisterIncentiveProposal is a gov Content type to register an incentive
@@ -1064,14 +1064,14 @@ RegisterIncentiveProposal is a gov Content type to register an incentive
 
 
 
-<a name="evmos/incentives/v1/genesis.proto"></a>
+<a name="Atrix/incentives/v1/genesis.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## evmos/incentives/v1/genesis.proto
+## Atrix/incentives/v1/genesis.proto
 
 
 
-<a name="evmos.incentives.v1.GenesisState"></a>
+<a name="Atrix.incentives.v1.GenesisState"></a>
 
 ### GenesisState
 GenesisState defines the module's genesis state.
@@ -1079,16 +1079,16 @@ GenesisState defines the module's genesis state.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `params` | [Params](#evmos.incentives.v1.Params) |  | module parameters |
-| `incentives` | [Incentive](#evmos.incentives.v1.Incentive) | repeated | active incentives |
-| `gas_meters` | [GasMeter](#evmos.incentives.v1.GasMeter) | repeated | active Gasmeters |
+| `params` | [Params](#Atrix.incentives.v1.Params) |  | module parameters |
+| `incentives` | [Incentive](#Atrix.incentives.v1.Incentive) | repeated | active incentives |
+| `gas_meters` | [GasMeter](#Atrix.incentives.v1.GasMeter) | repeated | active Gasmeters |
 
 
 
 
 
 
-<a name="evmos.incentives.v1.Params"></a>
+<a name="Atrix.incentives.v1.Params"></a>
 
 ### Params
 Params defines the incentives module params
@@ -1115,14 +1115,14 @@ Params defines the incentives module params
 
 
 
-<a name="evmos/incentives/v1/query.proto"></a>
+<a name="Atrix/incentives/v1/query.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## evmos/incentives/v1/query.proto
+## Atrix/incentives/v1/query.proto
 
 
 
-<a name="evmos.incentives.v1.QueryAllocationMeterRequest"></a>
+<a name="Atrix.incentives.v1.QueryAllocationMeterRequest"></a>
 
 ### QueryAllocationMeterRequest
 QueryAllocationMeterRequest is the request type for the Query/AllocationMeter
@@ -1138,7 +1138,7 @@ RPC method.
 
 
 
-<a name="evmos.incentives.v1.QueryAllocationMeterResponse"></a>
+<a name="Atrix.incentives.v1.QueryAllocationMeterResponse"></a>
 
 ### QueryAllocationMeterResponse
 QueryAllocationMeterResponse is the response type for the
@@ -1154,7 +1154,7 @@ Query/AllocationMeter RPC method.
 
 
 
-<a name="evmos.incentives.v1.QueryAllocationMetersRequest"></a>
+<a name="Atrix.incentives.v1.QueryAllocationMetersRequest"></a>
 
 ### QueryAllocationMetersRequest
 QueryAllocationMetersRequest is the request type for the
@@ -1170,7 +1170,7 @@ Query/AllocationMeters RPC method.
 
 
 
-<a name="evmos.incentives.v1.QueryAllocationMetersResponse"></a>
+<a name="Atrix.incentives.v1.QueryAllocationMetersResponse"></a>
 
 ### QueryAllocationMetersResponse
 QueryAllocationMetersResponse is the response type for the
@@ -1187,7 +1187,7 @@ Query/AllocationMeters RPC method.
 
 
 
-<a name="evmos.incentives.v1.QueryGasMeterRequest"></a>
+<a name="Atrix.incentives.v1.QueryGasMeterRequest"></a>
 
 ### QueryGasMeterRequest
 QueryGasMeterRequest is the request type for the Query/Incentive RPC method.
@@ -1203,7 +1203,7 @@ QueryGasMeterRequest is the request type for the Query/Incentive RPC method.
 
 
 
-<a name="evmos.incentives.v1.QueryGasMeterResponse"></a>
+<a name="Atrix.incentives.v1.QueryGasMeterResponse"></a>
 
 ### QueryGasMeterResponse
 QueryGasMeterResponse is the response type for the Query/Incentive RPC
@@ -1219,7 +1219,7 @@ method.
 
 
 
-<a name="evmos.incentives.v1.QueryGasMetersRequest"></a>
+<a name="Atrix.incentives.v1.QueryGasMetersRequest"></a>
 
 ### QueryGasMetersRequest
 QueryGasMetersRequest is the request type for the Query/Incentives RPC
@@ -1236,7 +1236,7 @@ method.
 
 
 
-<a name="evmos.incentives.v1.QueryGasMetersResponse"></a>
+<a name="Atrix.incentives.v1.QueryGasMetersResponse"></a>
 
 ### QueryGasMetersResponse
 QueryGasMetersResponse is the response type for the Query/Incentives RPC
@@ -1245,7 +1245,7 @@ method.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `gas_meters` | [GasMeter](#evmos.incentives.v1.GasMeter) | repeated |  |
+| `gas_meters` | [GasMeter](#Atrix.incentives.v1.GasMeter) | repeated |  |
 | `pagination` | [cosmos.base.query.v1beta1.PageResponse](#cosmos.base.query.v1beta1.PageResponse) |  | pagination defines the pagination in the response. |
 
 
@@ -1253,7 +1253,7 @@ method.
 
 
 
-<a name="evmos.incentives.v1.QueryIncentiveRequest"></a>
+<a name="Atrix.incentives.v1.QueryIncentiveRequest"></a>
 
 ### QueryIncentiveRequest
 QueryIncentiveRequest is the request type for the Query/Incentive RPC method.
@@ -1268,7 +1268,7 @@ QueryIncentiveRequest is the request type for the Query/Incentive RPC method.
 
 
 
-<a name="evmos.incentives.v1.QueryIncentiveResponse"></a>
+<a name="Atrix.incentives.v1.QueryIncentiveResponse"></a>
 
 ### QueryIncentiveResponse
 QueryIncentiveResponse is the response type for the Query/Incentive RPC
@@ -1277,14 +1277,14 @@ method.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `incentive` | [Incentive](#evmos.incentives.v1.Incentive) |  |  |
+| `incentive` | [Incentive](#Atrix.incentives.v1.Incentive) |  |  |
 
 
 
 
 
 
-<a name="evmos.incentives.v1.QueryIncentivesRequest"></a>
+<a name="Atrix.incentives.v1.QueryIncentivesRequest"></a>
 
 ### QueryIncentivesRequest
 QueryIncentivesRequest is the request type for the Query/Incentives RPC
@@ -1300,7 +1300,7 @@ method.
 
 
 
-<a name="evmos.incentives.v1.QueryIncentivesResponse"></a>
+<a name="Atrix.incentives.v1.QueryIncentivesResponse"></a>
 
 ### QueryIncentivesResponse
 QueryIncentivesResponse is the response type for the Query/Incentives RPC
@@ -1309,7 +1309,7 @@ method.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `incentives` | [Incentive](#evmos.incentives.v1.Incentive) | repeated |  |
+| `incentives` | [Incentive](#Atrix.incentives.v1.Incentive) | repeated |  |
 | `pagination` | [cosmos.base.query.v1beta1.PageResponse](#cosmos.base.query.v1beta1.PageResponse) |  | pagination defines the pagination in the response. |
 
 
@@ -1317,7 +1317,7 @@ method.
 
 
 
-<a name="evmos.incentives.v1.QueryParamsRequest"></a>
+<a name="Atrix.incentives.v1.QueryParamsRequest"></a>
 
 ### QueryParamsRequest
 QueryParamsRequest is the request type for the Query/Params RPC method.
@@ -1327,7 +1327,7 @@ QueryParamsRequest is the request type for the Query/Params RPC method.
 
 
 
-<a name="evmos.incentives.v1.QueryParamsResponse"></a>
+<a name="Atrix.incentives.v1.QueryParamsResponse"></a>
 
 ### QueryParamsResponse
 QueryParamsResponse is the response type for the Query/Params RPC
@@ -1336,7 +1336,7 @@ method.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `params` | [Params](#evmos.incentives.v1.Params) |  |  |
+| `params` | [Params](#Atrix.incentives.v1.Params) |  |  |
 
 
 
@@ -1349,33 +1349,33 @@ method.
  <!-- end HasExtensions -->
 
 
-<a name="evmos.incentives.v1.Query"></a>
+<a name="Atrix.incentives.v1.Query"></a>
 
 ### Query
 Query defines the gRPC querier service.
 
 | Method Name | Request Type | Response Type | Description | HTTP Verb | Endpoint |
 | ----------- | ------------ | ------------- | ------------| ------- | -------- |
-| `Incentives` | [QueryIncentivesRequest](#evmos.incentives.v1.QueryIncentivesRequest) | [QueryIncentivesResponse](#evmos.incentives.v1.QueryIncentivesResponse) | Incentives retrieves registered incentives | GET|/evmos/incentives/v1/incentives|
-| `Incentive` | [QueryIncentiveRequest](#evmos.incentives.v1.QueryIncentiveRequest) | [QueryIncentiveResponse](#evmos.incentives.v1.QueryIncentiveResponse) | Incentive retrieves a registered incentive | GET|/evmos/incentives/v1/incentives/{contract}|
-| `GasMeters` | [QueryGasMetersRequest](#evmos.incentives.v1.QueryGasMetersRequest) | [QueryGasMetersResponse](#evmos.incentives.v1.QueryGasMetersResponse) | GasMeters retrieves active gas meters for a given contract | GET|/evmos/incentives/v1/gas_meters/{contract}|
-| `GasMeter` | [QueryGasMeterRequest](#evmos.incentives.v1.QueryGasMeterRequest) | [QueryGasMeterResponse](#evmos.incentives.v1.QueryGasMeterResponse) | GasMeter Retrieves a active gas meter | GET|/evmos/incentives/v1/gas_meters/{contract}/{participant}|
-| `AllocationMeters` | [QueryAllocationMetersRequest](#evmos.incentives.v1.QueryAllocationMetersRequest) | [QueryAllocationMetersResponse](#evmos.incentives.v1.QueryAllocationMetersResponse) | AllocationMeters retrieves active allocation meters for a given denomination | GET|/evmos/incentives/v1/allocation_meters|
-| `AllocationMeter` | [QueryAllocationMeterRequest](#evmos.incentives.v1.QueryAllocationMeterRequest) | [QueryAllocationMeterResponse](#evmos.incentives.v1.QueryAllocationMeterResponse) | AllocationMeter Retrieves a active gas meter | GET|/evmos/incentives/v1/allocation_meters/{denom}|
-| `Params` | [QueryParamsRequest](#evmos.incentives.v1.QueryParamsRequest) | [QueryParamsResponse](#evmos.incentives.v1.QueryParamsResponse) | Params retrieves the incentives module params | GET|/evmos/incentives/v1/params|
+| `Incentives` | [QueryIncentivesRequest](#Atrix.incentives.v1.QueryIncentivesRequest) | [QueryIncentivesResponse](#Atrix.incentives.v1.QueryIncentivesResponse) | Incentives retrieves registered incentives | GET|/Atrix/incentives/v1/incentives|
+| `Incentive` | [QueryIncentiveRequest](#Atrix.incentives.v1.QueryIncentiveRequest) | [QueryIncentiveResponse](#Atrix.incentives.v1.QueryIncentiveResponse) | Incentive retrieves a registered incentive | GET|/Atrix/incentives/v1/incentives/{contract}|
+| `GasMeters` | [QueryGasMetersRequest](#Atrix.incentives.v1.QueryGasMetersRequest) | [QueryGasMetersResponse](#Atrix.incentives.v1.QueryGasMetersResponse) | GasMeters retrieves active gas meters for a given contract | GET|/Atrix/incentives/v1/gas_meters/{contract}|
+| `GasMeter` | [QueryGasMeterRequest](#Atrix.incentives.v1.QueryGasMeterRequest) | [QueryGasMeterResponse](#Atrix.incentives.v1.QueryGasMeterResponse) | GasMeter Retrieves a active gas meter | GET|/Atrix/incentives/v1/gas_meters/{contract}/{participant}|
+| `AllocationMeters` | [QueryAllocationMetersRequest](#Atrix.incentives.v1.QueryAllocationMetersRequest) | [QueryAllocationMetersResponse](#Atrix.incentives.v1.QueryAllocationMetersResponse) | AllocationMeters retrieves active allocation meters for a given denomination | GET|/Atrix/incentives/v1/allocation_meters|
+| `AllocationMeter` | [QueryAllocationMeterRequest](#Atrix.incentives.v1.QueryAllocationMeterRequest) | [QueryAllocationMeterResponse](#Atrix.incentives.v1.QueryAllocationMeterResponse) | AllocationMeter Retrieves a active gas meter | GET|/Atrix/incentives/v1/allocation_meters/{denom}|
+| `Params` | [QueryParamsRequest](#Atrix.incentives.v1.QueryParamsRequest) | [QueryParamsResponse](#Atrix.incentives.v1.QueryParamsResponse) | Params retrieves the incentives module params | GET|/Atrix/incentives/v1/params|
 
  <!-- end services -->
 
 
 
-<a name="evmos/inflation/v1/inflation.proto"></a>
+<a name="Atrix/inflation/v1/inflation.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## evmos/inflation/v1/inflation.proto
+## Atrix/inflation/v1/inflation.proto
 
 
 
-<a name="evmos.inflation.v1.ExponentialCalculation"></a>
+<a name="Atrix.inflation.v1.ExponentialCalculation"></a>
 
 ### ExponentialCalculation
 ExponentialCalculation holds factors to calculate exponential inflation on
@@ -1398,13 +1398,13 @@ f(x)            = (a * (1 - r) ^ x + c)  *  (1 + max_variance - bondedRatio *
 
 
 
-<a name="evmos.inflation.v1.InflationDistribution"></a>
+<a name="Atrix.inflation.v1.InflationDistribution"></a>
 
 ### InflationDistribution
 InflationDistribution defines the distribution in which inflation is
 allocated through minting on each epoch (staking, incentives, community). It
 excludes the team vesting distribution, as this is minted once at genesis.
-The initial InflationDistribution can be calculated from the Evmos Token
+The initial InflationDistribution can be calculated from the Atrix Token
 Model like this:
 mintDistribution1 = distribution1 / (1 - teamVestingDistribution)
 0.5333333         = 40%           / (1 - 25%)
@@ -1430,14 +1430,14 @@ mintDistribution1 = distribution1 / (1 - teamVestingDistribution)
 
 
 
-<a name="evmos/inflation/v1/genesis.proto"></a>
+<a name="Atrix/inflation/v1/genesis.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## evmos/inflation/v1/genesis.proto
+## Atrix/inflation/v1/genesis.proto
 
 
 
-<a name="evmos.inflation.v1.GenesisState"></a>
+<a name="Atrix.inflation.v1.GenesisState"></a>
 
 ### GenesisState
 GenesisState defines the inflation module's genesis state.
@@ -1445,7 +1445,7 @@ GenesisState defines the inflation module's genesis state.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `params` | [Params](#evmos.inflation.v1.Params) |  | params defines all the paramaters of the module. |
+| `params` | [Params](#Atrix.inflation.v1.Params) |  | params defines all the paramaters of the module. |
 | `period` | [uint64](#uint64) |  | amount of past periods, based on the epochs per period param |
 | `epoch_identifier` | [string](#string) |  | inflation epoch identifier |
 | `epochs_per_period` | [int64](#int64) |  | number of epochs after which inflation is recalculated |
@@ -1456,7 +1456,7 @@ GenesisState defines the inflation module's genesis state.
 
 
 
-<a name="evmos.inflation.v1.Params"></a>
+<a name="Atrix.inflation.v1.Params"></a>
 
 ### Params
 Params holds parameters for the inflation module.
@@ -1465,8 +1465,8 @@ Params holds parameters for the inflation module.
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | `mint_denom` | [string](#string) |  | type of coin to mint |
-| `exponential_calculation` | [ExponentialCalculation](#evmos.inflation.v1.ExponentialCalculation) |  | variables to calculate exponential inflation |
-| `inflation_distribution` | [InflationDistribution](#evmos.inflation.v1.InflationDistribution) |  | inflation distribution of the minted denom |
+| `exponential_calculation` | [ExponentialCalculation](#Atrix.inflation.v1.ExponentialCalculation) |  | variables to calculate exponential inflation |
+| `inflation_distribution` | [InflationDistribution](#Atrix.inflation.v1.InflationDistribution) |  | inflation distribution of the minted denom |
 | `enable_inflation` | [bool](#bool) |  | parameter to enable inflation and halt increasing the skipped_epochs |
 
 
@@ -1483,14 +1483,14 @@ Params holds parameters for the inflation module.
 
 
 
-<a name="evmos/inflation/v1/query.proto"></a>
+<a name="Atrix/inflation/v1/query.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## evmos/inflation/v1/query.proto
+## Atrix/inflation/v1/query.proto
 
 
 
-<a name="evmos.inflation.v1.QueryCirculatingSupplyRequest"></a>
+<a name="Atrix.inflation.v1.QueryCirculatingSupplyRequest"></a>
 
 ### QueryCirculatingSupplyRequest
 QueryCirculatingSupplyRequest is the request type for the
@@ -1501,7 +1501,7 @@ Query/CirculatingSupply RPC method.
 
 
 
-<a name="evmos.inflation.v1.QueryCirculatingSupplyResponse"></a>
+<a name="Atrix.inflation.v1.QueryCirculatingSupplyResponse"></a>
 
 ### QueryCirculatingSupplyResponse
 QueryCirculatingSupplyResponse is the response type for the
@@ -1517,7 +1517,7 @@ Query/CirculatingSupply RPC method.
 
 
 
-<a name="evmos.inflation.v1.QueryEpochMintProvisionRequest"></a>
+<a name="Atrix.inflation.v1.QueryEpochMintProvisionRequest"></a>
 
 ### QueryEpochMintProvisionRequest
 QueryEpochMintProvisionRequest is the request type for the
@@ -1528,7 +1528,7 @@ Query/EpochMintProvision RPC method.
 
 
 
-<a name="evmos.inflation.v1.QueryEpochMintProvisionResponse"></a>
+<a name="Atrix.inflation.v1.QueryEpochMintProvisionResponse"></a>
 
 ### QueryEpochMintProvisionResponse
 QueryEpochMintProvisionResponse is the response type for the
@@ -1544,7 +1544,7 @@ Query/EpochMintProvision RPC method.
 
 
 
-<a name="evmos.inflation.v1.QueryInflationRateRequest"></a>
+<a name="Atrix.inflation.v1.QueryInflationRateRequest"></a>
 
 ### QueryInflationRateRequest
 QueryInflationRateRequest is the request type for the Query/InflationRate RPC
@@ -1555,7 +1555,7 @@ method.
 
 
 
-<a name="evmos.inflation.v1.QueryInflationRateResponse"></a>
+<a name="Atrix.inflation.v1.QueryInflationRateResponse"></a>
 
 ### QueryInflationRateResponse
 QueryInflationRateResponse is the response type for the Query/InflationRate
@@ -1571,7 +1571,7 @@ RPC method.
 
 
 
-<a name="evmos.inflation.v1.QueryParamsRequest"></a>
+<a name="Atrix.inflation.v1.QueryParamsRequest"></a>
 
 ### QueryParamsRequest
 QueryParamsRequest is the request type for the Query/Params RPC method.
@@ -1581,7 +1581,7 @@ QueryParamsRequest is the request type for the Query/Params RPC method.
 
 
 
-<a name="evmos.inflation.v1.QueryParamsResponse"></a>
+<a name="Atrix.inflation.v1.QueryParamsResponse"></a>
 
 ### QueryParamsResponse
 QueryParamsResponse is the response type for the Query/Params RPC method.
@@ -1589,14 +1589,14 @@ QueryParamsResponse is the response type for the Query/Params RPC method.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `params` | [Params](#evmos.inflation.v1.Params) |  | params defines the parameters of the module. |
+| `params` | [Params](#Atrix.inflation.v1.Params) |  | params defines the parameters of the module. |
 
 
 
 
 
 
-<a name="evmos.inflation.v1.QueryPeriodRequest"></a>
+<a name="Atrix.inflation.v1.QueryPeriodRequest"></a>
 
 ### QueryPeriodRequest
 QueryPeriodRequest is the request type for the Query/Period RPC method.
@@ -1606,7 +1606,7 @@ QueryPeriodRequest is the request type for the Query/Period RPC method.
 
 
 
-<a name="evmos.inflation.v1.QueryPeriodResponse"></a>
+<a name="Atrix.inflation.v1.QueryPeriodResponse"></a>
 
 ### QueryPeriodResponse
 QueryPeriodResponse is the response type for the Query/Period RPC method.
@@ -1621,7 +1621,7 @@ QueryPeriodResponse is the response type for the Query/Period RPC method.
 
 
 
-<a name="evmos.inflation.v1.QuerySkippedEpochsRequest"></a>
+<a name="Atrix.inflation.v1.QuerySkippedEpochsRequest"></a>
 
 ### QuerySkippedEpochsRequest
 QuerySkippedEpochsRequest is the request type for the Query/SkippedEpochs RPC
@@ -1632,7 +1632,7 @@ method.
 
 
 
-<a name="evmos.inflation.v1.QuerySkippedEpochsResponse"></a>
+<a name="Atrix.inflation.v1.QuerySkippedEpochsResponse"></a>
 
 ### QuerySkippedEpochsResponse
 QuerySkippedEpochsResponse is the response type for the Query/SkippedEpochs
@@ -1654,32 +1654,32 @@ RPC method.
  <!-- end HasExtensions -->
 
 
-<a name="evmos.inflation.v1.Query"></a>
+<a name="Atrix.inflation.v1.Query"></a>
 
 ### Query
 Query provides defines the gRPC querier service.
 
 | Method Name | Request Type | Response Type | Description | HTTP Verb | Endpoint |
 | ----------- | ------------ | ------------- | ------------| ------- | -------- |
-| `Period` | [QueryPeriodRequest](#evmos.inflation.v1.QueryPeriodRequest) | [QueryPeriodResponse](#evmos.inflation.v1.QueryPeriodResponse) | Period retrieves current period. | GET|/evmos/inflation/v1/period|
-| `EpochMintProvision` | [QueryEpochMintProvisionRequest](#evmos.inflation.v1.QueryEpochMintProvisionRequest) | [QueryEpochMintProvisionResponse](#evmos.inflation.v1.QueryEpochMintProvisionResponse) | EpochMintProvision retrieves current minting epoch provision value. | GET|/evmos/inflation/v1/epoch_mint_provision|
-| `SkippedEpochs` | [QuerySkippedEpochsRequest](#evmos.inflation.v1.QuerySkippedEpochsRequest) | [QuerySkippedEpochsResponse](#evmos.inflation.v1.QuerySkippedEpochsResponse) | SkippedEpochs retrieves the total number of skipped epochs. | GET|/evmos/inflation/v1/skipped_epochs|
-| `CirculatingSupply` | [QueryCirculatingSupplyRequest](#evmos.inflation.v1.QueryCirculatingSupplyRequest) | [QueryCirculatingSupplyResponse](#evmos.inflation.v1.QueryCirculatingSupplyResponse) | CirculatingSupply retrieves the total number of tokens that are in circulation (i.e. excluding unvested tokens). | GET|/evmos/inflation/v1/circulating_supply|
-| `InflationRate` | [QueryInflationRateRequest](#evmos.inflation.v1.QueryInflationRateRequest) | [QueryInflationRateResponse](#evmos.inflation.v1.QueryInflationRateResponse) | InflationRate retrieves the inflation rate of the current period. | GET|/evmos/inflation/v1/inflation_rate|
-| `Params` | [QueryParamsRequest](#evmos.inflation.v1.QueryParamsRequest) | [QueryParamsResponse](#evmos.inflation.v1.QueryParamsResponse) | Params retrieves the total set of minting parameters. | GET|/evmos/inflation/v1/params|
+| `Period` | [QueryPeriodRequest](#Atrix.inflation.v1.QueryPeriodRequest) | [QueryPeriodResponse](#Atrix.inflation.v1.QueryPeriodResponse) | Period retrieves current period. | GET|/Atrix/inflation/v1/period|
+| `EpochMintProvision` | [QueryEpochMintProvisionRequest](#Atrix.inflation.v1.QueryEpochMintProvisionRequest) | [QueryEpochMintProvisionResponse](#Atrix.inflation.v1.QueryEpochMintProvisionResponse) | EpochMintProvision retrieves current minting epoch provision value. | GET|/Atrix/inflation/v1/epoch_mint_provision|
+| `SkippedEpochs` | [QuerySkippedEpochsRequest](#Atrix.inflation.v1.QuerySkippedEpochsRequest) | [QuerySkippedEpochsResponse](#Atrix.inflation.v1.QuerySkippedEpochsResponse) | SkippedEpochs retrieves the total number of skipped epochs. | GET|/Atrix/inflation/v1/skipped_epochs|
+| `CirculatingSupply` | [QueryCirculatingSupplyRequest](#Atrix.inflation.v1.QueryCirculatingSupplyRequest) | [QueryCirculatingSupplyResponse](#Atrix.inflation.v1.QueryCirculatingSupplyResponse) | CirculatingSupply retrieves the total number of tokens that are in circulation (i.e. excluding unvested tokens). | GET|/Atrix/inflation/v1/circulating_supply|
+| `InflationRate` | [QueryInflationRateRequest](#Atrix.inflation.v1.QueryInflationRateRequest) | [QueryInflationRateResponse](#Atrix.inflation.v1.QueryInflationRateResponse) | InflationRate retrieves the inflation rate of the current period. | GET|/Atrix/inflation/v1/inflation_rate|
+| `Params` | [QueryParamsRequest](#Atrix.inflation.v1.QueryParamsRequest) | [QueryParamsResponse](#Atrix.inflation.v1.QueryParamsResponse) | Params retrieves the total set of minting parameters. | GET|/Atrix/inflation/v1/params|
 
  <!-- end services -->
 
 
 
-<a name="evmos/recovery/v1/genesis.proto"></a>
+<a name="Atrix/recovery/v1/genesis.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## evmos/recovery/v1/genesis.proto
+## Atrix/recovery/v1/genesis.proto
 
 
 
-<a name="evmos.recovery.v1.GenesisState"></a>
+<a name="Atrix.recovery.v1.GenesisState"></a>
 
 ### GenesisState
 GenesisState defines the recovery module's genesis state.
@@ -1687,14 +1687,14 @@ GenesisState defines the recovery module's genesis state.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `params` | [Params](#evmos.recovery.v1.Params) |  | params defines all the paramaters of the module. |
+| `params` | [Params](#Atrix.recovery.v1.Params) |  | params defines all the paramaters of the module. |
 
 
 
 
 
 
-<a name="evmos.recovery.v1.Params"></a>
+<a name="Atrix.recovery.v1.Params"></a>
 
 ### Params
 Params holds parameters for the recovery module
@@ -1719,14 +1719,14 @@ Params holds parameters for the recovery module
 
 
 
-<a name="evmos/recovery/v1/query.proto"></a>
+<a name="Atrix/recovery/v1/query.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## evmos/recovery/v1/query.proto
+## Atrix/recovery/v1/query.proto
 
 
 
-<a name="evmos.recovery.v1.QueryParamsRequest"></a>
+<a name="Atrix.recovery.v1.QueryParamsRequest"></a>
 
 ### QueryParamsRequest
 QueryParamsRequest is the request type for the Query/Params RPC method.
@@ -1736,7 +1736,7 @@ QueryParamsRequest is the request type for the Query/Params RPC method.
 
 
 
-<a name="evmos.recovery.v1.QueryParamsResponse"></a>
+<a name="Atrix.recovery.v1.QueryParamsResponse"></a>
 
 ### QueryParamsResponse
 QueryParamsResponse is the response type for the Query/Params RPC method.
@@ -1744,7 +1744,7 @@ QueryParamsResponse is the response type for the Query/Params RPC method.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `params` | [Params](#evmos.recovery.v1.Params) |  | params defines the parameters of the module. |
+| `params` | [Params](#Atrix.recovery.v1.Params) |  | params defines the parameters of the module. |
 
 
 
@@ -1757,27 +1757,27 @@ QueryParamsResponse is the response type for the Query/Params RPC method.
  <!-- end HasExtensions -->
 
 
-<a name="evmos.recovery.v1.Query"></a>
+<a name="Atrix.recovery.v1.Query"></a>
 
 ### Query
 Query defines the gRPC querier service.
 
 | Method Name | Request Type | Response Type | Description | HTTP Verb | Endpoint |
 | ----------- | ------------ | ------------- | ------------| ------- | -------- |
-| `Params` | [QueryParamsRequest](#evmos.recovery.v1.QueryParamsRequest) | [QueryParamsResponse](#evmos.recovery.v1.QueryParamsResponse) | Params retrieves the total set of recovery parameters. | GET|/evmos/recovery/v1/params|
+| `Params` | [QueryParamsRequest](#Atrix.recovery.v1.QueryParamsRequest) | [QueryParamsResponse](#Atrix.recovery.v1.QueryParamsResponse) | Params retrieves the total set of recovery parameters. | GET|/Atrix/recovery/v1/params|
 
  <!-- end services -->
 
 
 
-<a name="evmos/revenue/v1/revenue.proto"></a>
+<a name="Atrix/revenue/v1/revenue.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## evmos/revenue/v1/revenue.proto
+## Atrix/revenue/v1/revenue.proto
 
 
 
-<a name="evmos.revenue.v1.Revenue"></a>
+<a name="Atrix.revenue.v1.Revenue"></a>
 
 ### Revenue
 Revenue defines an instance that organizes fee distribution conditions for
@@ -1804,14 +1804,14 @@ the owner of a given smart contract
 
 
 
-<a name="evmos/revenue/v1/genesis.proto"></a>
+<a name="Atrix/revenue/v1/genesis.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## evmos/revenue/v1/genesis.proto
+## Atrix/revenue/v1/genesis.proto
 
 
 
-<a name="evmos.revenue.v1.GenesisState"></a>
+<a name="Atrix.revenue.v1.GenesisState"></a>
 
 ### GenesisState
 GenesisState defines the module's genesis state.
@@ -1819,15 +1819,15 @@ GenesisState defines the module's genesis state.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `params` | [Params](#evmos.revenue.v1.Params) |  | module parameters |
-| `revenues` | [Revenue](#evmos.revenue.v1.Revenue) | repeated | active registered contracts for fee distribution |
+| `params` | [Params](#Atrix.revenue.v1.Params) |  | module parameters |
+| `revenues` | [Revenue](#Atrix.revenue.v1.Revenue) | repeated | active registered contracts for fee distribution |
 
 
 
 
 
 
-<a name="evmos.revenue.v1.Params"></a>
+<a name="Atrix.revenue.v1.Params"></a>
 
 ### Params
 Params defines the revenue module params
@@ -1853,14 +1853,14 @@ Params defines the revenue module params
 
 
 
-<a name="evmos/revenue/v1/query.proto"></a>
+<a name="Atrix/revenue/v1/query.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## evmos/revenue/v1/query.proto
+## Atrix/revenue/v1/query.proto
 
 
 
-<a name="evmos.revenue.v1.QueryDeployerRevenuesRequest"></a>
+<a name="Atrix.revenue.v1.QueryDeployerRevenuesRequest"></a>
 
 ### QueryDeployerRevenuesRequest
 QueryDeployerRevenuesRequest is the request type for the
@@ -1877,7 +1877,7 @@ Query/DeployerRevenues RPC method.
 
 
 
-<a name="evmos.revenue.v1.QueryDeployerRevenuesResponse"></a>
+<a name="Atrix.revenue.v1.QueryDeployerRevenuesResponse"></a>
 
 ### QueryDeployerRevenuesResponse
 QueryDeployerRevenuesResponse is the response type for the
@@ -1894,7 +1894,7 @@ Query/DeployerRevenues RPC method.
 
 
 
-<a name="evmos.revenue.v1.QueryParamsRequest"></a>
+<a name="Atrix.revenue.v1.QueryParamsRequest"></a>
 
 ### QueryParamsRequest
 QueryParamsRequest is the request type for the Query/Params RPC method.
@@ -1904,7 +1904,7 @@ QueryParamsRequest is the request type for the Query/Params RPC method.
 
 
 
-<a name="evmos.revenue.v1.QueryParamsResponse"></a>
+<a name="Atrix.revenue.v1.QueryParamsResponse"></a>
 
 ### QueryParamsResponse
 QueryParamsResponse is the response type for the Query/Params RPC method.
@@ -1912,14 +1912,14 @@ QueryParamsResponse is the response type for the Query/Params RPC method.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `params` | [Params](#evmos.revenue.v1.Params) |  |  |
+| `params` | [Params](#Atrix.revenue.v1.Params) |  |  |
 
 
 
 
 
 
-<a name="evmos.revenue.v1.QueryRevenueRequest"></a>
+<a name="Atrix.revenue.v1.QueryRevenueRequest"></a>
 
 ### QueryRevenueRequest
 QueryRevenueRequest is the request type for the Query/Revenue RPC method.
@@ -1934,7 +1934,7 @@ QueryRevenueRequest is the request type for the Query/Revenue RPC method.
 
 
 
-<a name="evmos.revenue.v1.QueryRevenueResponse"></a>
+<a name="Atrix.revenue.v1.QueryRevenueResponse"></a>
 
 ### QueryRevenueResponse
 QueryRevenueResponse is the response type for the Query/Revenue RPC method.
@@ -1942,14 +1942,14 @@ QueryRevenueResponse is the response type for the Query/Revenue RPC method.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `revenue` | [Revenue](#evmos.revenue.v1.Revenue) |  |  |
+| `revenue` | [Revenue](#Atrix.revenue.v1.Revenue) |  |  |
 
 
 
 
 
 
-<a name="evmos.revenue.v1.QueryRevenuesRequest"></a>
+<a name="Atrix.revenue.v1.QueryRevenuesRequest"></a>
 
 ### QueryRevenuesRequest
 QueryRevenuesRequest is the request type for the Query/Revenues RPC method.
@@ -1964,7 +1964,7 @@ QueryRevenuesRequest is the request type for the Query/Revenues RPC method.
 
 
 
-<a name="evmos.revenue.v1.QueryRevenuesResponse"></a>
+<a name="Atrix.revenue.v1.QueryRevenuesResponse"></a>
 
 ### QueryRevenuesResponse
 QueryRevenuesResponse is the response type for the Query/Revenues RPC method.
@@ -1972,7 +1972,7 @@ QueryRevenuesResponse is the response type for the Query/Revenues RPC method.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `revenues` | [Revenue](#evmos.revenue.v1.Revenue) | repeated |  |
+| `revenues` | [Revenue](#Atrix.revenue.v1.Revenue) | repeated |  |
 | `pagination` | [cosmos.base.query.v1beta1.PageResponse](#cosmos.base.query.v1beta1.PageResponse) |  | pagination defines the pagination in the response. |
 
 
@@ -1980,7 +1980,7 @@ QueryRevenuesResponse is the response type for the Query/Revenues RPC method.
 
 
 
-<a name="evmos.revenue.v1.QueryWithdrawerRevenuesRequest"></a>
+<a name="Atrix.revenue.v1.QueryWithdrawerRevenuesRequest"></a>
 
 ### QueryWithdrawerRevenuesRequest
 QueryWithdrawerRevenuesRequest is the request type for the
@@ -1997,7 +1997,7 @@ Query/WithdrawerRevenues RPC method.
 
 
 
-<a name="evmos.revenue.v1.QueryWithdrawerRevenuesResponse"></a>
+<a name="Atrix.revenue.v1.QueryWithdrawerRevenuesResponse"></a>
 
 ### QueryWithdrawerRevenuesResponse
 QueryWithdrawerRevenuesResponse is the response type for the
@@ -2020,31 +2020,31 @@ Query/WithdrawerRevenues RPC method.
  <!-- end HasExtensions -->
 
 
-<a name="evmos.revenue.v1.Query"></a>
+<a name="Atrix.revenue.v1.Query"></a>
 
 ### Query
 Query defines the gRPC querier service.
 
 | Method Name | Request Type | Response Type | Description | HTTP Verb | Endpoint |
 | ----------- | ------------ | ------------- | ------------| ------- | -------- |
-| `Revenues` | [QueryRevenuesRequest](#evmos.revenue.v1.QueryRevenuesRequest) | [QueryRevenuesResponse](#evmos.revenue.v1.QueryRevenuesResponse) | Revenues retrieves all registered revenues | GET|/evmos/revenue/v1/revenues|
-| `Revenue` | [QueryRevenueRequest](#evmos.revenue.v1.QueryRevenueRequest) | [QueryRevenueResponse](#evmos.revenue.v1.QueryRevenueResponse) | Revenue retrieves a registered revenue for a given contract address | GET|/evmos/revenue/v1/revenues/{contract_address}|
-| `Params` | [QueryParamsRequest](#evmos.revenue.v1.QueryParamsRequest) | [QueryParamsResponse](#evmos.revenue.v1.QueryParamsResponse) | Params retrieves the revenue module params | GET|/evmos/revenue/v1/params|
-| `DeployerRevenues` | [QueryDeployerRevenuesRequest](#evmos.revenue.v1.QueryDeployerRevenuesRequest) | [QueryDeployerRevenuesResponse](#evmos.revenue.v1.QueryDeployerRevenuesResponse) | DeployerRevenues retrieves all revenues that a given deployer has registered | GET|/evmos/revenue/v1/revenues/{deployer_address}|
-| `WithdrawerRevenues` | [QueryWithdrawerRevenuesRequest](#evmos.revenue.v1.QueryWithdrawerRevenuesRequest) | [QueryWithdrawerRevenuesResponse](#evmos.revenue.v1.QueryWithdrawerRevenuesResponse) | WithdrawerRevenues retrieves all revenues with a given withdrawer address | GET|/evmos/revenue/v1/revenues/{withdrawer_address}|
+| `Revenues` | [QueryRevenuesRequest](#Atrix.revenue.v1.QueryRevenuesRequest) | [QueryRevenuesResponse](#Atrix.revenue.v1.QueryRevenuesResponse) | Revenues retrieves all registered revenues | GET|/Atrix/revenue/v1/revenues|
+| `Revenue` | [QueryRevenueRequest](#Atrix.revenue.v1.QueryRevenueRequest) | [QueryRevenueResponse](#Atrix.revenue.v1.QueryRevenueResponse) | Revenue retrieves a registered revenue for a given contract address | GET|/Atrix/revenue/v1/revenues/{contract_address}|
+| `Params` | [QueryParamsRequest](#Atrix.revenue.v1.QueryParamsRequest) | [QueryParamsResponse](#Atrix.revenue.v1.QueryParamsResponse) | Params retrieves the revenue module params | GET|/Atrix/revenue/v1/params|
+| `DeployerRevenues` | [QueryDeployerRevenuesRequest](#Atrix.revenue.v1.QueryDeployerRevenuesRequest) | [QueryDeployerRevenuesResponse](#Atrix.revenue.v1.QueryDeployerRevenuesResponse) | DeployerRevenues retrieves all revenues that a given deployer has registered | GET|/Atrix/revenue/v1/revenues/{deployer_address}|
+| `WithdrawerRevenues` | [QueryWithdrawerRevenuesRequest](#Atrix.revenue.v1.QueryWithdrawerRevenuesRequest) | [QueryWithdrawerRevenuesResponse](#Atrix.revenue.v1.QueryWithdrawerRevenuesResponse) | WithdrawerRevenues retrieves all revenues with a given withdrawer address | GET|/Atrix/revenue/v1/revenues/{withdrawer_address}|
 
  <!-- end services -->
 
 
 
-<a name="evmos/revenue/v1/tx.proto"></a>
+<a name="Atrix/revenue/v1/tx.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## evmos/revenue/v1/tx.proto
+## Atrix/revenue/v1/tx.proto
 
 
 
-<a name="evmos.revenue.v1.MsgCancelRevenue"></a>
+<a name="Atrix.revenue.v1.MsgCancelRevenue"></a>
 
 ### MsgCancelRevenue
 MsgCancelRevenue defines a message that cancels a registered Revenue
@@ -2060,7 +2060,7 @@ MsgCancelRevenue defines a message that cancels a registered Revenue
 
 
 
-<a name="evmos.revenue.v1.MsgCancelRevenueResponse"></a>
+<a name="Atrix.revenue.v1.MsgCancelRevenueResponse"></a>
 
 ### MsgCancelRevenueResponse
 MsgCancelRevenueResponse defines the MsgCancelRevenue response type
@@ -2070,7 +2070,7 @@ MsgCancelRevenueResponse defines the MsgCancelRevenue response type
 
 
 
-<a name="evmos.revenue.v1.MsgRegisterRevenue"></a>
+<a name="Atrix.revenue.v1.MsgRegisterRevenue"></a>
 
 ### MsgRegisterRevenue
 MsgRegisterRevenue defines a message that registers a Revenue
@@ -2088,7 +2088,7 @@ MsgRegisterRevenue defines a message that registers a Revenue
 
 
 
-<a name="evmos.revenue.v1.MsgRegisterRevenueResponse"></a>
+<a name="Atrix.revenue.v1.MsgRegisterRevenueResponse"></a>
 
 ### MsgRegisterRevenueResponse
 MsgRegisterRevenueResponse defines the MsgRegisterRevenue response type
@@ -2098,7 +2098,7 @@ MsgRegisterRevenueResponse defines the MsgRegisterRevenue response type
 
 
 
-<a name="evmos.revenue.v1.MsgUpdateRevenue"></a>
+<a name="Atrix.revenue.v1.MsgUpdateRevenue"></a>
 
 ### MsgUpdateRevenue
 MsgUpdateRevenue defines a message that updates the withdrawer address for a
@@ -2116,7 +2116,7 @@ registered Revenue
 
 
 
-<a name="evmos.revenue.v1.MsgUpdateRevenueResponse"></a>
+<a name="Atrix.revenue.v1.MsgUpdateRevenueResponse"></a>
 
 ### MsgUpdateRevenueResponse
 MsgUpdateRevenueResponse defines the MsgUpdateRevenue response type
@@ -2132,29 +2132,29 @@ MsgUpdateRevenueResponse defines the MsgUpdateRevenue response type
  <!-- end HasExtensions -->
 
 
-<a name="evmos.revenue.v1.Msg"></a>
+<a name="Atrix.revenue.v1.Msg"></a>
 
 ### Msg
 Msg defines the fees Msg service.
 
 | Method Name | Request Type | Response Type | Description | HTTP Verb | Endpoint |
 | ----------- | ------------ | ------------- | ------------| ------- | -------- |
-| `RegisterRevenue` | [MsgRegisterRevenue](#evmos.revenue.v1.MsgRegisterRevenue) | [MsgRegisterRevenueResponse](#evmos.revenue.v1.MsgRegisterRevenueResponse) | RegisterRevenue registers a new contract for receiving transaction fees | POST|/evmos/revenue/v1/tx/register_revenue|
-| `UpdateRevenue` | [MsgUpdateRevenue](#evmos.revenue.v1.MsgUpdateRevenue) | [MsgUpdateRevenueResponse](#evmos.revenue.v1.MsgUpdateRevenueResponse) | UpdateRevenue updates the withdrawer address of a revenue | POST|/evmos/revenue/v1/tx/update_revenue|
-| `CancelRevenue` | [MsgCancelRevenue](#evmos.revenue.v1.MsgCancelRevenue) | [MsgCancelRevenueResponse](#evmos.revenue.v1.MsgCancelRevenueResponse) | CancelRevenue cancels a contract's fee registration and further receival of transaction fees | POST|/evmos/revenue/v1/tx/cancel_revenue|
+| `RegisterRevenue` | [MsgRegisterRevenue](#Atrix.revenue.v1.MsgRegisterRevenue) | [MsgRegisterRevenueResponse](#Atrix.revenue.v1.MsgRegisterRevenueResponse) | RegisterRevenue registers a new contract for receiving transaction fees | POST|/Atrix/revenue/v1/tx/register_revenue|
+| `UpdateRevenue` | [MsgUpdateRevenue](#Atrix.revenue.v1.MsgUpdateRevenue) | [MsgUpdateRevenueResponse](#Atrix.revenue.v1.MsgUpdateRevenueResponse) | UpdateRevenue updates the withdrawer address of a revenue | POST|/Atrix/revenue/v1/tx/update_revenue|
+| `CancelRevenue` | [MsgCancelRevenue](#Atrix.revenue.v1.MsgCancelRevenue) | [MsgCancelRevenueResponse](#Atrix.revenue.v1.MsgCancelRevenueResponse) | CancelRevenue cancels a contract's fee registration and further receival of transaction fees | POST|/Atrix/revenue/v1/tx/cancel_revenue|
 
  <!-- end services -->
 
 
 
-<a name="evmos/vesting/v1/query.proto"></a>
+<a name="Atrix/vesting/v1/query.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## evmos/vesting/v1/query.proto
+## Atrix/vesting/v1/query.proto
 
 
 
-<a name="evmos.vesting.v1.QueryBalancesRequest"></a>
+<a name="Atrix.vesting.v1.QueryBalancesRequest"></a>
 
 ### QueryBalancesRequest
 QueryBalancesRequest is the request type for the Query/Balances RPC method.
@@ -2169,7 +2169,7 @@ QueryBalancesRequest is the request type for the Query/Balances RPC method.
 
 
 
-<a name="evmos.vesting.v1.QueryBalancesResponse"></a>
+<a name="Atrix.vesting.v1.QueryBalancesResponse"></a>
 
 ### QueryBalancesResponse
 QueryBalancesResponse is the response type for the Query/Balances RPC
@@ -2193,27 +2193,27 @@ method.
  <!-- end HasExtensions -->
 
 
-<a name="evmos.vesting.v1.Query"></a>
+<a name="Atrix.vesting.v1.Query"></a>
 
 ### Query
 Query defines the gRPC querier service.
 
 | Method Name | Request Type | Response Type | Description | HTTP Verb | Endpoint |
 | ----------- | ------------ | ------------- | ------------| ------- | -------- |
-| `Balances` | [QueryBalancesRequest](#evmos.vesting.v1.QueryBalancesRequest) | [QueryBalancesResponse](#evmos.vesting.v1.QueryBalancesResponse) | Retrieves the unvested, vested and locked tokens for a vesting account | GET|/evmos/vesting/v1/balances/{address}|
+| `Balances` | [QueryBalancesRequest](#Atrix.vesting.v1.QueryBalancesRequest) | [QueryBalancesResponse](#Atrix.vesting.v1.QueryBalancesResponse) | Retrieves the unvested, vested and locked tokens for a vesting account | GET|/Atrix/vesting/v1/balances/{address}|
 
  <!-- end services -->
 
 
 
-<a name="evmos/vesting/v1/tx.proto"></a>
+<a name="Atrix/vesting/v1/tx.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## evmos/vesting/v1/tx.proto
+## Atrix/vesting/v1/tx.proto
 
 
 
-<a name="evmos.vesting.v1.MsgClawback"></a>
+<a name="Atrix.vesting.v1.MsgClawback"></a>
 
 ### MsgClawback
 MsgClawback defines a message that removes unvested tokens from a
@@ -2231,7 +2231,7 @@ ClawbackVestingAccount.
 
 
 
-<a name="evmos.vesting.v1.MsgClawbackResponse"></a>
+<a name="Atrix.vesting.v1.MsgClawbackResponse"></a>
 
 ### MsgClawbackResponse
 MsgClawbackResponse defines the MsgClawback response type.
@@ -2241,7 +2241,7 @@ MsgClawbackResponse defines the MsgClawback response type.
 
 
 
-<a name="evmos.vesting.v1.MsgCreateClawbackVestingAccount"></a>
+<a name="Atrix.vesting.v1.MsgCreateClawbackVestingAccount"></a>
 
 ### MsgCreateClawbackVestingAccount
 MsgCreateClawbackVestingAccount defines a message that enables creating a
@@ -2262,7 +2262,7 @@ ClawbackVestingAccount.
 
 
 
-<a name="evmos.vesting.v1.MsgCreateClawbackVestingAccountResponse"></a>
+<a name="Atrix.vesting.v1.MsgCreateClawbackVestingAccountResponse"></a>
 
 ### MsgCreateClawbackVestingAccountResponse
 MsgCreateClawbackVestingAccountResponse defines the
@@ -2279,28 +2279,28 @@ MsgCreateClawbackVestingAccount response type.
  <!-- end HasExtensions -->
 
 
-<a name="evmos.vesting.v1.Msg"></a>
+<a name="Atrix.vesting.v1.Msg"></a>
 
 ### Msg
 Msg defines the vesting Msg service.
 
 | Method Name | Request Type | Response Type | Description | HTTP Verb | Endpoint |
 | ----------- | ------------ | ------------- | ------------| ------- | -------- |
-| `CreateClawbackVestingAccount` | [MsgCreateClawbackVestingAccount](#evmos.vesting.v1.MsgCreateClawbackVestingAccount) | [MsgCreateClawbackVestingAccountResponse](#evmos.vesting.v1.MsgCreateClawbackVestingAccountResponse) | CreateClawbackVestingAccount creats a vesting account that is subject to clawback and the configuration of vesting and lockup schedules. | GET|/evmos/vesting/v1/tx/create_clawback_vesting_account|
-| `Clawback` | [MsgClawback](#evmos.vesting.v1.MsgClawback) | [MsgClawbackResponse](#evmos.vesting.v1.MsgClawbackResponse) | Clawback removes the unvested tokens from a ClawbackVestingAccount. | GET|/evmos/vesting/v1/tx/clawback|
+| `CreateClawbackVestingAccount` | [MsgCreateClawbackVestingAccount](#Atrix.vesting.v1.MsgCreateClawbackVestingAccount) | [MsgCreateClawbackVestingAccountResponse](#Atrix.vesting.v1.MsgCreateClawbackVestingAccountResponse) | CreateClawbackVestingAccount creats a vesting account that is subject to clawback and the configuration of vesting and lockup schedules. | GET|/Atrix/vesting/v1/tx/create_clawback_vesting_account|
+| `Clawback` | [MsgClawback](#Atrix.vesting.v1.MsgClawback) | [MsgClawbackResponse](#Atrix.vesting.v1.MsgClawbackResponse) | Clawback removes the unvested tokens from a ClawbackVestingAccount. | GET|/Atrix/vesting/v1/tx/clawback|
 
  <!-- end services -->
 
 
 
-<a name="evmos/vesting/v1/vesting.proto"></a>
+<a name="Atrix/vesting/v1/vesting.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## evmos/vesting/v1/vesting.proto
+## Atrix/vesting/v1/vesting.proto
 
 
 
-<a name="evmos.vesting.v1.ClawbackVestingAccount"></a>
+<a name="Atrix.vesting.v1.ClawbackVestingAccount"></a>
 
 ### ClawbackVestingAccount
 ClawbackVestingAccount implements the VestingAccount interface. It provides

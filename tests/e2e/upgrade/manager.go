@@ -1,18 +1,18 @@
-// Copyright 2022 Evmos Foundation
-// This file is part of the Evmos Network packages.
+// Copyright 2022 Atrix Foundation
+// This file is part of the Atrix Network packages.
 //
-// Evmos is free software: you can redistribute it and/or modify
+// Atrix is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
 //
-// The Evmos packages are distributed in the hope that it will be useful,
+// The Atrix packages are distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 // GNU Lesser General Public License for more details.
 //
 // You should have received a copy of the GNU Lesser General Public License
-// along with the Evmos packages. If not, see https://github.com/evmos/evmos/blob/main/LICENSE
+// along with the Atrix packages. If not, see https://github.com/Atrix/Atrix/blob/main/LICENSE
 
 package upgrade
 
@@ -31,7 +31,7 @@ import (
 	"github.com/ory/dockertest/v3/docker"
 )
 
-// Manager defines a docker pool instance, used to run and interact with evmos
+// Manager defines a docker pool instance, used to run and interact with Atrix
 // node containers. It enables run, query, execute cli commands and purge.
 type Manager struct {
 	pool    *dockertest.Pool
@@ -73,7 +73,7 @@ func (m *Manager) BuildImage(name, version, dockerFile, contextDir string, args 
 		// local Dockerfile path
 		Dockerfile: dockerFile,
 		BuildArgs:  buildArgs,
-		// name with tag, e.g. evmos:v9.0.0
+		// name with tag, e.g. Atrix:v9.0.0
 		Name:         fmt.Sprintf("%s:%s", name, version),
 		OutputStream: io.Discard,
 		ErrorStream:  os.Stdout,
@@ -121,7 +121,7 @@ func (m *Manager) RunNode(node *Node) error {
 					Stderr:       true,
 				})
 				return fmt.Errorf(
-					"can't start evmos node, container exit code: %d\n\n[error stream]:\n\n%s\n\n[output stream]:\n\n%s",
+					"can't start Atrix node, container exit code: %d\n\n[error stream]:\n\n%s\n\n[output stream]:\n\n%s",
 					c.State.ExitCode,
 					errBuf.String(),
 					outBuf.String(),
@@ -145,7 +145,7 @@ func (m *Manager) RunNode(node *Node) error {
 	return nil
 }
 
-// WaitForHeight query evmos node every second until node will reach specified height
+// WaitForHeight query Atrix node every second until node will reach specified height
 // for 5 minutes, after time exceed returns error
 func (m *Manager) WaitForHeight(ctx context.Context, height int) error {
 	var currentHeight int
@@ -165,9 +165,9 @@ func (m *Manager) WaitForHeight(ctx context.Context, height int) error {
 	}
 }
 
-// Makes system call to current node container environment with evmosd cli command to get current block height
+// Makes system call to current node container environment with Atrixd cli command to get current block height
 func (m *Manager) nodeHeight(ctx context.Context) (int, error) {
-	exec, err := m.CreateExec([]string{"evmosd", "q", "block"}, m.ContainerID())
+	exec, err := m.CreateExec([]string{"Atrixd", "q", "block"}, m.ContainerID())
 	if err != nil {
 		return 0, fmt.Errorf("create exec error: %w", err)
 	}
@@ -184,7 +184,7 @@ func (m *Manager) nodeHeight(ctx context.Context) (int, error) {
 		h, _ = strconv.Atoi(qq)
 	}
 	if errBuff.String() != "" {
-		return 0, fmt.Errorf("evmos query error: %s", errBuff.String())
+		return 0, fmt.Errorf("Atrix query error: %s", errBuff.String())
 	}
 	return h, nil
 }

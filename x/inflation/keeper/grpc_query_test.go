@@ -5,8 +5,8 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	ethermint "github.com/evmos/ethermint/types"
-	"github.com/evmos/evmos/v11/x/inflation/types"
+	ethermint "github.com/Atrix/ethermint/types"
+	"github.com/Atrix/Atrix/v11/x/inflation/types"
 )
 
 func (suite *KeeperTestSuite) TestPeriod() {

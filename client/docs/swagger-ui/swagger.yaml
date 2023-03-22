@@ -1,10 +1,10 @@
 swagger: '2.0'
 info:
-  title: Evmos Chain - gRPC Gateway docs
+  title: Atrix Chain - gRPC Gateway docs
   description: A REST interface for state queries and transactions
   version: 1.0.0
 paths:
-  /evmos/claims/v1/claims_records:
+  /Atrix/claims/v1/claims_records:
     get:
       summary: ClaimsRecords returns all claims records
       operationId: ClaimsRecords
@@ -140,7 +140,7 @@ paths:
           type: boolean
       tags:
         - Query
-  /evmos/claims/v1/claims_records/{address}:
+  /Atrix/claims/v1/claims_records/{address}:
     get:
       summary: ClaimsRecord returns the claims record for a given address
       operationId: ClaimsRecord
@@ -224,7 +224,7 @@ paths:
           type: string
       tags:
         - Query
-  /evmos/claims/v1/params:
+  /Atrix/claims/v1/params:
     get:
       summary: Params returns the claims module parameters
       operationId: ClaimsParams
@@ -295,7 +295,7 @@ paths:
                       format: byte
       tags:
         - Query
-  /evmos/claims/v1/total_unclaimed:
+  /Atrix/claims/v1/total_unclaimed:
     get:
       summary: TotalUnclaimed queries the total unclaimed tokens from the airdrop
       operationId: TotalUnclaimed
@@ -352,7 +352,7 @@ paths:
                       format: byte
       tags:
         - Query
-  /evmos/epochs/v1/current_epoch:
+  /Atrix/epochs/v1/current_epoch:
     get:
       summary: CurrentEpoch provide current epoch of specified identifier
       operationId: CurrentEpoch
@@ -394,7 +394,7 @@ paths:
           type: string
       tags:
         - Query
-  /evmos/epochs/v1/epochs:
+  /Atrix/epochs/v1/epochs:
     get:
       summary: EpochInfos provide running epochInfos
       operationId: EpochInfos
@@ -535,7 +535,7 @@ paths:
           type: boolean
       tags:
         - Query
-  /evmos/erc20/v1/params:
+  /Atrix/erc20/v1/params:
     get:
       summary: Params retrieves the erc20 module params
       operationId: ERC20Params
@@ -591,7 +591,7 @@ paths:
                       format: byte
       tags:
         - Query
-  /evmos/erc20/v1/token_pairs:
+  /Atrix/erc20/v1/token_pairs:
     get:
       summary: TokenPairs retrieves registered token pairs
       operationId: TokenPairs
@@ -739,7 +739,7 @@ paths:
           type: boolean
       tags:
         - Query
-  /evmos/erc20/v1/token_pairs/{token}:
+  /Atrix/erc20/v1/token_pairs/{token}:
     get:
       summary: TokenPair retrieves a registered token pair
       operationId: TokenPair
@@ -820,7 +820,7 @@ paths:
           type: string
       tags:
         - Query
-  /evmos/incentives/v1/allocation_meters:
+  /Atrix/incentives/v1/allocation_meters:
     get:
       summary: |-
         AllocationMeters retrieves active allocation meters for a given
@@ -952,7 +952,7 @@ paths:
           type: boolean
       tags:
         - Query
-  /evmos/incentives/v1/allocation_meters/{denom}:
+  /Atrix/incentives/v1/allocation_meters/{denom}:
     get:
       summary: AllocationMeter Retrieves a active gas meter
       operationId: AllocationMeter
@@ -1011,7 +1011,7 @@ paths:
           type: string
       tags:
         - Query
-  /evmos/incentives/v1/gas_meters/{contract}:
+  /Atrix/incentives/v1/gas_meters/{contract}:
     get:
       summary: GasMeters retrieves active gas meters for a given contract
       operationId: GasMeters
@@ -1150,7 +1150,7 @@ paths:
           type: boolean
       tags:
         - Query
-  /evmos/incentives/v1/gas_meters/{contract}/{participant}:
+  /Atrix/incentives/v1/gas_meters/{contract}/{participant}:
     get:
       summary: GasMeter Retrieves a active gas meter
       operationId: GasMeter
@@ -1203,7 +1203,7 @@ paths:
           type: string
       tags:
         - Query
-  /evmos/incentives/v1/incentives:
+  /Atrix/incentives/v1/incentives:
     get:
       summary: Incentives retrieves registered incentives
       operationId: Incentives
@@ -1363,7 +1363,7 @@ paths:
           type: boolean
       tags:
         - Query
-  /evmos/incentives/v1/incentives/{contract}:
+  /Atrix/incentives/v1/incentives/{contract}:
     get:
       summary: Incentive retrieves a registered incentive
       operationId: Incentive
@@ -1452,7 +1452,7 @@ paths:
           type: string
       tags:
         - Query
-  /evmos/incentives/v1/params:
+  /Atrix/incentives/v1/params:
     get:
       summary: Params retrieves the incentives module params
       operationId: IncentivesParams
@@ -1507,7 +1507,7 @@ paths:
                       format: byte
       tags:
         - Query
-  /evmos/inflation/v1/circulating_supply:
+  /Atrix/inflation/v1/circulating_supply:
     get:
       summary: |-
         CirculatingSupply retrieves the total number of tokens that are in
@@ -1563,7 +1563,7 @@ paths:
                       format: byte
       tags:
         - Query
-  /evmos/inflation/v1/epoch_mint_provision:
+  /Atrix/inflation/v1/epoch_mint_provision:
     get:
       summary: EpochMintProvision retrieves current minting epoch provision value.
       operationId: EpochMintProvision
@@ -1610,7 +1610,7 @@ paths:
                       format: byte
       tags:
         - Query
-  /evmos/inflation/v1/inflation_rate:
+  /Atrix/inflation/v1/inflation_rate:
     get:
       summary: InflationRate retrieves the inflation rate of the current period.
       operationId: InflationRate
@@ -1652,7 +1652,7 @@ paths:
                       format: byte
       tags:
         - Query
-  /evmos/inflation/v1/params:
+  /Atrix/inflation/v1/params:
     get:
       summary: Params retrieves the total set of minting parameters.
       operationId: InflationParams
@@ -1745,7 +1745,7 @@ paths:
                       format: byte
       tags:
         - Query
-  /evmos/inflation/v1/period:
+  /Atrix/inflation/v1/period:
     get:
       summary: Period retrieves current period.
       operationId: Period
@@ -1786,7 +1786,7 @@ paths:
                       format: byte
       tags:
         - Query
-  /evmos/inflation/v1/skipped_epochs:
+  /Atrix/inflation/v1/skipped_epochs:
     get:
       summary: SkippedEpochs retrieves the total number of skipped epochs.
       operationId: SkippedEpochs
@@ -1829,7 +1829,7 @@ paths:
                       format: byte
       tags:
         - Query
-  /evmos/vesting/v1/balances/{address}:
+  /Atrix/vesting/v1/balances/{address}:
     get:
       summary: Retrieves the unvested, vested and locked tokens for a vesting account
       operationId: Balances
@@ -1928,7 +1928,7 @@ paths:
           type: string
       tags:
         - Query
-  /evmos/recovery/v1/params:
+  /Atrix/recovery/v1/params:
     get:
       summary: Params retrieves the total set of recovery parameters.
       operationId: RecoveryParams
@@ -33905,7 +33905,7 @@ definitions:
 
       NOTE: The amount field is an Int which implements the custom method
       signatures required by gogoproto.
-  evmos.claims.v1.Action:
+  Atrix.claims.v1.Action:
     type: string
     enum:
       - ACTION_UNSPECIFIED
@@ -33922,7 +33922,7 @@ definitions:
        - ACTION_DELEGATE: DELEGATE defines an staking delegation.
        - ACTION_EVM: EVM defines an EVM transaction.
        - ACTION_IBC_TRANSFER: IBC Transfer defines a fungible token transfer transaction via IBC.
-  evmos.claims.v1.Claim:
+  Atrix.claims.v1.Claim:
     type: object
     properties:
       action:
@@ -33955,7 +33955,7 @@ definitions:
       amount
 
       for a given user. This is only used during client queries.
-  evmos.claims.v1.ClaimsRecordAddress:
+  Atrix.claims.v1.ClaimsRecordAddress:
     type: object
     properties:
       address:
@@ -33972,7 +33972,7 @@ definitions:
     description: |-
       ClaimsRecordAddress is the claims metadata per address that is used at
       Genesis.
-  evmos.claims.v1.Params:
+  Atrix.claims.v1.Params:
     type: object
     properties:
       enable_claims:
@@ -34004,7 +34004,7 @@ definitions:
           type: string
         title: list of channel identifiers from EVM compatible chains
     description: Params defines the claims module's parameters.
-  evmos.claims.v1.QueryClaimsRecordResponse:
+  Atrix.claims.v1.QueryClaimsRecordResponse:
     type: object
     properties:
       initial_claimable_amount:
@@ -34051,7 +34051,7 @@ definitions:
       RPC
 
       method.
-  evmos.claims.v1.QueryClaimsRecordsResponse:
+  Atrix.claims.v1.QueryClaimsRecordsResponse:
     type: object
     properties:
       claims:
@@ -34099,7 +34099,7 @@ definitions:
       Query/ClaimsRecords
 
       RPC method.
-  evmos.claims.v1.QueryParamsResponse:
+  Atrix.claims.v1.QueryParamsResponse:
     type: object
     properties:
       params:
@@ -34135,7 +34135,7 @@ definitions:
               type: string
             title: list of channel identifiers from EVM compatible chains
     description: QueryParamsResponse is the response type for the Query/Params RPC method.
-  evmos.claims.v1.QueryTotalUnclaimedResponse:
+  Atrix.claims.v1.QueryTotalUnclaimedResponse:
     type: object
     properties:
       coins:
@@ -34491,7 +34491,7 @@ definitions:
                   "@type": "type.googleapis.com/google.protobuf.Duration",
                   "value": "1.212s"
                 }
-  evmos.epochs.v1.EpochInfo:
+  Atrix.epochs.v1.EpochInfo:
     type: object
     properties:
       identifier:
@@ -34512,13 +34512,13 @@ definitions:
       current_epoch_start_height:
         type: string
         format: int64
-  evmos.epochs.v1.QueryCurrentEpochResponse:
+  Atrix.epochs.v1.QueryCurrentEpochResponse:
     type: object
     properties:
       current_epoch:
         type: string
         format: int64
-  evmos.epochs.v1.QueryEpochsInfoResponse:
+  Atrix.epochs.v1.QueryEpochsInfoResponse:
     type: object
     properties:
       epochs:
@@ -34569,7 +34569,7 @@ definitions:
                    repeated Bar results = 1;
                    PageResponse page = 2;
            }
-  evmos.erc20.v1.Owner:
+  Atrix.erc20.v1.Owner:
     type: string
     enum:
       - OWNER_UNSPECIFIED
@@ -34582,7 +34582,7 @@ definitions:
        - OWNER_UNSPECIFIED: OWNER_UNSPECIFIED defines an invalid/undefined owner.
        - OWNER_MODULE: OWNER_MODULE erc20 is owned by the erc20 module account.
        - OWNER_EXTERNAL: EXTERNAL erc20 is owned by an external account.
-  evmos.erc20.v1.Params:
+  Atrix.erc20.v1.Params:
     type: object
     properties:
       enable_erc20:
@@ -34598,7 +34598,7 @@ definitions:
 
           ModuleAddress Ethereum address.
     title: Params defines the erc20 module params
-  evmos.erc20.v1.QueryParamsResponse:
+  Atrix.erc20.v1.QueryParamsResponse:
     type: object
     properties:
       params:
@@ -34622,7 +34622,7 @@ definitions:
     description: |-
       QueryParamsResponse is the response type for the Query/Params RPC
       method.
-  evmos.erc20.v1.QueryTokenPairResponse:
+  Atrix.erc20.v1.QueryTokenPairResponse:
     type: object
     properties:
       token_pair:
@@ -34660,7 +34660,7 @@ definitions:
     description: |-
       QueryTokenPairResponse is the response type for the Query/TokenPair RPC
       method.
-  evmos.erc20.v1.QueryTokenPairsResponse:
+  Atrix.erc20.v1.QueryTokenPairsResponse:
     type: object
     properties:
       token_pairs:
@@ -34718,7 +34718,7 @@ definitions:
     description: |-
       QueryTokenPairsResponse is the response type for the Query/TokenPairs RPC
       method.
-  evmos.erc20.v1.TokenPair:
+  Atrix.erc20.v1.TokenPair:
     type: object
     properties:
       erc20_address:
@@ -34762,7 +34762,7 @@ definitions:
 
       NOTE: The amount field is an Dec which implements the custom method
       signatures required by gogoproto.
-  evmos.incentives.v1.GasMeter:
+  Atrix.incentives.v1.GasMeter:
     type: object
     properties:
       contract:
@@ -34776,7 +34776,7 @@ definitions:
         format: uint64
         title: cumulative gas spent during the epoch
     title: GasMeter tracks the cumulative gas spent per participant in one epoch
-  evmos.incentives.v1.Incentive:
+  Atrix.incentives.v1.Incentive:
     type: object
     properties:
       contract:
@@ -34814,7 +34814,7 @@ definitions:
     title: |-
       Incentive defines an instance that organizes distribution conditions for a
       given smart contract
-  evmos.incentives.v1.Params:
+  Atrix.incentives.v1.Params:
     type: object
     properties:
       enable_incentives:
@@ -34830,7 +34830,7 @@ definitions:
         type: string
         title: scaling factor for capping rewards
     title: Params defines the incentives module params
-  evmos.incentives.v1.QueryAllocationMeterResponse:
+  Atrix.incentives.v1.QueryAllocationMeterResponse:
     type: object
     properties:
       allocation_meter:
@@ -34848,7 +34848,7 @@ definitions:
     description: |-
       QueryAllocationMeterResponse is the response type for the
       Query/AllocationMeter RPC method.
-  evmos.incentives.v1.QueryAllocationMetersResponse:
+  Atrix.incentives.v1.QueryAllocationMetersResponse:
     type: object
     properties:
       allocation_meters:
@@ -34886,7 +34886,7 @@ definitions:
     description: |-
       QueryAllocationMetersResponse is the response type for the
       Query/AllocationMeters RPC method.
-  evmos.incentives.v1.QueryGasMeterResponse:
+  Atrix.incentives.v1.QueryGasMeterResponse:
     type: object
     properties:
       gas_meter:
@@ -34895,7 +34895,7 @@ definitions:
     description: |-
       QueryGasMeterResponse is the response type for the Query/Incentive RPC
       method.
-  evmos.incentives.v1.QueryGasMetersResponse:
+  Atrix.incentives.v1.QueryGasMetersResponse:
     type: object
     properties:
       gas_meters:
@@ -34937,7 +34937,7 @@ definitions:
     description: |-
       QueryGasMetersResponse is the response type for the Query/Incentives RPC
       method.
-  evmos.incentives.v1.QueryIncentiveResponse:
+  Atrix.incentives.v1.QueryIncentiveResponse:
     type: object
     properties:
       incentive:
@@ -34987,7 +34987,7 @@ definitions:
     description: |-
       QueryIncentiveResponse is the response type for the Query/Incentive RPC
       method.
-  evmos.incentives.v1.QueryIncentivesResponse:
+  Atrix.incentives.v1.QueryIncentivesResponse:
     type: object
     properties:
       incentives:
@@ -35057,7 +35057,7 @@ definitions:
     description: |-
       QueryIncentivesResponse is the response type for the Query/Incentives RPC
       method.
-  evmos.incentives.v1.QueryParamsResponse:
+  Atrix.incentives.v1.QueryParamsResponse:
     type: object
     properties:
       params:
@@ -35079,7 +35079,7 @@ definitions:
     description: |-
       QueryParamsResponse is the response type for the Query/Params RPC
       method.
-  evmos.inflation.v1.ExponentialCalculation:
+  Atrix.inflation.v1.ExponentialCalculation:
     type: object
     properties:
       a:
@@ -35108,7 +35108,7 @@ definitions:
       bondedRatio *
 
       (max_variance / bonding_target))
-  evmos.inflation.v1.InflationDistribution:
+  Atrix.inflation.v1.InflationDistribution:
     type: object
     properties:
       staking_rewards:
@@ -35140,14 +35140,14 @@ definitions:
 
       excludes the team vesting distribution, as this is minted once at genesis.
 
-      The initial InflationDistribution can be calculated from the Evmos Token
+      The initial InflationDistribution can be calculated from the Atrix Token
 
       Model like this:
 
       mintDistribution1 = distribution1 / (1 - teamVestingDistribution)
 
       0.5333333         = 40%           / (1 - 25%)
-  evmos.inflation.v1.Params:
+  Atrix.inflation.v1.Params:
     type: object
     properties:
       mint_denom:
@@ -35201,7 +35201,7 @@ definitions:
         type: boolean
         title: parameter to enable inflation and halt increasing the skipped_epochs
     description: Params holds parameters for the inflation module.
-  evmos.inflation.v1.QueryCirculatingSupplyResponse:
+  Atrix.inflation.v1.QueryCirculatingSupplyResponse:
     type: object
     properties:
       circulating_supply:
@@ -35220,7 +35220,7 @@ definitions:
     description: |-
       QueryCirculatingSupplyResponse is the response type for the
       Query/CirculatingSupply RPC method.
-  evmos.inflation.v1.QueryEpochMintProvisionResponse:
+  Atrix.inflation.v1.QueryEpochMintProvisionResponse:
     type: object
     properties:
       epoch_mint_provision:
@@ -35234,7 +35234,7 @@ definitions:
     description: |-
       QueryEpochMintProvisionResponse is the response type for the
       Query/EpochMintProvision RPC method.
-  evmos.inflation.v1.QueryInflationRateResponse:
+  Atrix.inflation.v1.QueryInflationRateResponse:
     type: object
     properties:
       inflation_rate:
@@ -35245,7 +35245,7 @@ definitions:
       Query/InflationRate
 
       RPC method.
-  evmos.inflation.v1.QueryParamsResponse:
+  Atrix.inflation.v1.QueryParamsResponse:
     type: object
     properties:
       params:
@@ -35305,7 +35305,7 @@ definitions:
               parameter to enable inflation and halt increasing the
               skipped_epochs
     description: QueryParamsResponse is the response type for the Query/Params RPC method.
-  evmos.inflation.v1.QueryPeriodResponse:
+  Atrix.inflation.v1.QueryPeriodResponse:
     type: object
     properties:
       period:
@@ -35313,7 +35313,7 @@ definitions:
         format: uint64
         description: period is the current minting per epoch provision value.
     description: QueryPeriodResponse is the response type for the Query/Period RPC method.
-  evmos.inflation.v1.QuerySkippedEpochsResponse:
+  Atrix.inflation.v1.QuerySkippedEpochsResponse:
     type: object
     properties:
       skipped_epochs:
@@ -35325,7 +35325,7 @@ definitions:
       Query/SkippedEpochs
 
       RPC method.
-  evmos.vesting.v1.QueryBalancesResponse:
+  Atrix.vesting.v1.QueryBalancesResponse:
     type: object
     properties:
       locked:
@@ -35376,7 +35376,7 @@ definitions:
     description: |-
       QueryBalancesResponse is the response type for the Query/Balances RPC
       method.
-  evmos.recovery.v1.Params:
+  Atrix.recovery.v1.Params:
     type: object
     properties:
       enable_recovery:
@@ -35388,7 +35388,7 @@ definitions:
           duration added to timeout timestamp for balances recovered via IBC
           packets
     title: Params holds parameters for the recovery module
-  evmos.recovery.v1.QueryParamsResponse:
+  Atrix.recovery.v1.QueryParamsResponse:
     type: object
     properties:
       params:

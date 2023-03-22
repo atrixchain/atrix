@@ -1,12 +1,12 @@
-# argument to provide specific version of evmos node
+# argument to provide specific version of Atrix node
 ARG INITIAL_VERSION
-FROM tharsishq/evmos:$INITIAL_VERSION
+FROM tharsishq/Atrix:$INITIAL_VERSION
 
 RUN apt-get update -y
 # jq needs to perform changes of node parameters
 RUN apt-get install ca-certificates jq -y
 
-WORKDIR /go/src/github.com/evmos/evmos
+WORKDIR /go/src/github.com/Atrix/Atrix
 
 COPY ./upgrade/upgrade-init.sh .
 

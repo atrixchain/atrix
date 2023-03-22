@@ -1,18 +1,18 @@
-// Copyright 2022 Evmos Foundation
-// This file is part of the Evmos Network packages.
+// Copyright 2022 Atrix Foundation
+// This file is part of the Atrix Network packages.
 //
-// Evmos is free software: you can redistribute it and/or modify
+// Atrix is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
 //
-// The Evmos packages are distributed in the hope that it will be useful,
+// The Atrix packages are distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 // GNU Lesser General Public License for more details.
 //
 // You should have received a copy of the GNU Lesser General Public License
-// along with the Evmos packages. If not, see https://github.com/evmos/evmos/blob/main/LICENSE
+// along with the Atrix packages. If not, see https://github.com/Atrix/Atrix/blob/main/LICENSE
 
 package main
 
@@ -36,13 +36,13 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/genutil"
 	genutiltypes "github.com/cosmos/cosmos-sdk/x/genutil/types"
 
-	ethermint "github.com/evmos/ethermint/types"
-	evmtypes "github.com/evmos/ethermint/x/evm/types"
+	ethermint "github.com/Atrix/ethermint/types"
+	evmtypes "github.com/Atrix/ethermint/x/evm/types"
 
-	evmoskr "github.com/evmos/evmos/v11/crypto/keyring"
+	Atrixkr "github.com/Atrix/Atrix/v11/crypto/keyring"
 
-	vestingcli "github.com/evmos/evmos/v11/x/vesting/client/cli"
-	vestingtypes "github.com/evmos/evmos/v11/x/vesting/types"
+	vestingcli "github.com/Atrix/Atrix/v11/x/vesting/client/cli"
+	vestingtypes "github.com/Atrix/Atrix/v11/x/vesting/types"
 )
 
 const (
@@ -82,7 +82,7 @@ contain valid denominations. Accounts may optionally be supplied with vesting pa
 						clientCtx.HomeDir,
 						inBuf,
 						clientCtx.Codec,
-						evmoskr.Option(),
+						Atrixkr.Option(),
 					)
 					if err != nil {
 						return err

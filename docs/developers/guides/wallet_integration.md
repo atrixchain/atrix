@@ -4,7 +4,7 @@ order: 1
 
 # Wallet Integration
 
-Learn how to properly integrate [Metamask](https://metamask.io/) or [Keplr](https://www.keplr.app/) with a dApp on Evmos. {synopsis}
+Learn how to properly integrate [Metamask](https://metamask.io/) or [Keplr](https://www.keplr.app/) with a dApp on Atrix. {synopsis}
 
 :::tip
 **Note**: want to learn more about wallet integration beyond what's covered here? Check out both the [MetaMask Wallet documentation](https://docs.metamask.io/guide/) and [Keplr Wallet documentation](https://docs.keplr.app/).
@@ -25,7 +25,7 @@ The integration implementation checklist for dApp developers consists of three c
 
 ### Frontend
 
-Make sure to create a wallet-connection button for Metamask and/or Keplr on the frontend of the application. For instance, consider the "Connect to a wallet" button on the interface of [Diffusion Finance](https://app.diffusion.fi/) or the analagous button on the interface of [EvmoSwap](https://app.evmoswap.org/).
+Make sure to create a wallet-connection button for Metamask and/or Keplr on the frontend of the application. For instance, consider the "Connect to a wallet" button on the interface of [Diffusion Finance](https://app.diffusion.fi/) or the analagous button on the interface of [Atrixwap](https://app.Atrixwap.org/).
 
 ### Transactions
 
@@ -45,21 +45,21 @@ After the user's wallet type has been determined, developers can proceed with cr
 #### Create the Transaction
 
 :::tip
-**Note**: The example below uses the Evmos Testnet `chainID`. For more info, check the Evmos Chain IDs reference document [here](../../users/technical_concepts/chain_id.md).
+**Note**: The example below uses the Atrix Testnet `chainID`. For more info, check the Atrix Chain IDs reference document [here](../../users/technical_concepts/chain_id.md).
 :::
 
-Developers can create `MsgSend` transactions using the [evmosjs](../libraries/evmosjs.md) library.
+Developers can create `MsgSend` transactions using the [Atrixjs](../libraries/Atrixjs.md) library.
 
 ```js
 import { createMessageSend } from @tharsis/transactions
 
 const chain = {
     chainId: 9000,
-    cosmosChainId: 'evmos_9000-4',
+    cosmosChainId: 'Atrix_9000-4',
 }
 
 const sender = {
-    accountAddress: 'evmos1mx9nqk5agvlsvt2yc8259nwztmxq7zjq50mxkp',
+    accountAddress: 'Atrix1mx9nqk5agvlsvt2yc8259nwztmxq7zjq50mxkp',
     sequence: 1,
     accountNumber: 9,
     pubkey: 'AgTw+4v0daIrxsNSW4FcQ+IoingPseFwHO1DnssyoOqZ',
@@ -67,16 +67,16 @@ const sender = {
 
 const fee = {
     amount: '20',
-    denom: 'aevmos',
+    denom: 'aAtrix',
     gas: '200000',
 }
 
 const memo = ''
 
 const params = {
-    destinationAddress: 'evmos1pmk2r32ssqwps42y3c9d4clqlca403yd9wymgr',
+    destinationAddress: 'Atrix1pmk2r32ssqwps42y3c9d4clqlca403yd9wymgr',
     amount: '1',
-    denom: 'aevmos',
+    denom: 'aAtrix',
 }
 
 const msg = createMessageSend(chain, sender, fee, memo, params)
@@ -91,14 +91,14 @@ const msg = createMessageSend(chain, sender, fee, memo, params)
 <!-- textlint-disable -->
 After creating the transaction, developers need to send the payload to the appropriate wallet to be signed ([`msg.signDirect`](https://docs.keplr.app/api/#sign-direct-protobuf) is the transaction in Keplr format, and `msg.eipToSign` is the [`EIP712`](https://eips.ethereum.org/EIPS/eip-712) data to sign with MetaMask).
 
-With the signature, we add a Web3Extension to the transaction and broadcast it to the Evmos node.
+With the signature, we add a Web3Extension to the transaction and broadcast it to the Atrix node.
 
 <!-- textlint-enable -->
 ```js
-// Note that this example is for MetaMask, using evmosjs
+// Note that this example is for MetaMask, using Atrixjs
 
 // Follow the previous code block to generate the msg object
-import { evmosToEth } from '@tharsis/address-converter'
+import { AtrixToEth } from '@tharsis/address-converter'
 import { generateEndpointBroadcast, generatePostBodyBroadcast } from '@tharsis/provider'
 import { createTxRawEIP712, signatureToWeb3Extension } from '@tharsis/transactions'
 
@@ -108,7 +108,7 @@ await window.ethereum.enable();
 // Request the signature
 let signature = await window.ethereum.request({
     method: 'eth_signTypedData_v4',
-    params: [evmosToEth(sender.accountAddress), JSON.stringify(msg.eipToSign)],
+    params: [AtrixToEth(sender.accountAddress), JSON.stringify(msg.eipToSign)],
 });
 
 // The chain and sender objects are the same as the previous example
@@ -125,7 +125,7 @@ const postOptions = {
 };
 
 let broadcastPost = await fetch(
-    `https://eth.bd.evmos.dev:8545${generateEndpointBroadcast()}`,
+    `https://eth.bd.Atrix.dev:8545${generateEndpointBroadcast()}`,
     postOptions
 );
 let response = await broadcastPost.json();
@@ -137,14 +137,14 @@ Developers can use Metamask or Keplr to help users sign off on EVM transactions 
 
 ```js
 import { JsonRpcProvider } from '@ethersproject/providers';
-import { evmosToEth } from "@tharsis/address-converter"
-const provider = new JsonRpcProvider('https://eth.bd.evmos.org:8545');
-const chainId = 'evmos_9001-1';
+import { AtrixToEth } from "@tharsis/address-converter"
+const provider = new JsonRpcProvider('https://eth.bd.Atrix.org:8545');
+const chainId = 'Atrix_9001-1';
 
 // EIP-1559
 async function signAndBroadcastEthereumTx() {
 
-  // Enable access to Evmos on Keplr
+  // Enable access to Atrix on Keplr
   await window.keplr.enable(chainId);
   
   // Get Keplr signer address
@@ -153,7 +153,7 @@ async function signAndBroadcastEthereumTx() {
   const signerAddressBech32 = wallets[0].address;
 
   // Get Keplr signer address in hex
-  const signerAddressEth = evmosToEth(signerAddressBech32);
+  const signerAddressEth = AtrixToEth(signerAddressBech32);
 
   // Define Ethereum Tx
   let ethSendTx = {
@@ -219,4 +219,4 @@ async function signAndBroadcastEthereumTx() {
 
 ### Connections
 
-For Ethereum RPC, Evmos gRPC, and/or REST queries, dApp developers should implement providers client-side, and store RPC details in the environment variable as secrets.
+For Ethereum RPC, Atrix gRPC, and/or REST queries, dApp developers should implement providers client-side, and store RPC details in the environment variable as secrets.

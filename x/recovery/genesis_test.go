@@ -12,12 +12,12 @@ import (
 	tmversion "github.com/tendermint/tendermint/proto/tendermint/version"
 	"github.com/tendermint/tendermint/version"
 
-	"github.com/evmos/ethermint/tests"
-	feemarkettypes "github.com/evmos/ethermint/x/feemarket/types"
+	"github.com/Atrix/ethermint/tests"
+	feemarkettypes "github.com/Atrix/ethermint/x/feemarket/types"
 
-	"github.com/evmos/evmos/v11/app"
-	"github.com/evmos/evmos/v11/x/recovery"
-	"github.com/evmos/evmos/v11/x/recovery/types"
+	"github.com/Atrix/Atrix/v11/app"
+	"github.com/Atrix/Atrix/v11/x/recovery"
+	"github.com/Atrix/Atrix/v11/x/recovery/types"
 )
 
 type GenesisTestSuite struct {
@@ -25,7 +25,7 @@ type GenesisTestSuite struct {
 
 	ctx sdk.Context
 
-	app     *app.Evmos
+	app     *app.Atrix
 	genesis types.GenesisState
 }
 
@@ -36,7 +36,7 @@ func (suite *GenesisTestSuite) SetupTest() {
 	suite.app = app.Setup(false, feemarkettypes.DefaultGenesisState())
 	suite.ctx = suite.app.BaseApp.NewContext(false, tmproto.Header{
 		Height:          1,
-		ChainID:         "evmos_9000-1",
+		ChainID:         "Atrix_9000-1",
 		Time:            time.Now().UTC(),
 		ProposerAddress: consAddress.Bytes(),
 

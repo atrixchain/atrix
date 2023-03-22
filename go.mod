@@ -1,4 +1,4 @@
-module github.com/evmos/evmos/v11
+module github.com/Atrix/Atrix/v11
 
 go 1.19
 
@@ -12,8 +12,8 @@ require (
 	github.com/cosmos/gogoproto v1.4.3
 	github.com/cosmos/ibc-go/v6 v6.1.0
 	github.com/ethereum/go-ethereum v1.10.26
-	github.com/evmos/ethermint v0.21.0
-	github.com/evmos/evmos-ledger-go v0.2.1
+	github.com/Atrix/ethermint v0.21.0
+	github.com/Atrix/Atrix-ledger-go v0.2.1
 	github.com/gogo/protobuf v1.3.3
 	github.com/golang/protobuf v1.5.2
 	github.com/gorilla/mux v1.8.0
@@ -216,7 +216,7 @@ replace (
 	// use cosmos keyring
 	github.com/99designs/keyring => github.com/cosmos/keyring v1.1.7-0.20210622111912-ef00f8ac3d76
 	// use Cosmos-SDK fork to enable Ledger functionality
-	github.com/cosmos/cosmos-sdk => github.com/evmos/cosmos-sdk v0.46.9-ledger
+	github.com/cosmos/cosmos-sdk => github.com/Atrix/cosmos-sdk v0.46.9-ledger
 	// Security Advisory https://github.com/advisories/GHSA-h395-qcrw-5vmq
 	github.com/gin-gonic/gin => github.com/gin-gonic/gin v1.7.7
 	// use cosmos flavored protobufs

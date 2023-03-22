@@ -3,7 +3,7 @@
 # Paths
 #
 COSMOS_URL=https://raw.githubusercontent.com/cosmos/cosmos-sdk/main
-ETHERMINT_URL=https://github.com/evmos/ethermint
+ETHERMINT_URL=https://github.com/Atrix/ethermint
 IBC_GO_URL=https://github.com/cosmos/ibc-go.git
 # Formatting script
 FORMAT=./format/format_cosmos_specs.py
@@ -30,7 +30,7 @@ sed 's/\.\/x/\/modules/g' ../x/README.md | sed 's/spec\/README.md//g' | sed 's/\
 #   - x/feemarket/spec
 #
 # Additionally, we are applying formatting to the feemarket overview file to
-# match the rest of the Evmos docs.
+# match the rest of the Atrix docs.
 mkdir ethermint_specs
 cd ethermint_specs || exit
 git init

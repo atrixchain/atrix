@@ -1,18 +1,18 @@
-// Copyright 2022 Evmos Foundation
-// This file is part of the Evmos Network packages.
+// Copyright 2022 Atrix Foundation
+// This file is part of the Atrix Network packages.
 //
-// Evmos is free software: you can redistribute it and/or modify
+// Atrix is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
 //
-// The Evmos packages are distributed in the hope that it will be useful,
+// The Atrix packages are distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 // GNU Lesser General Public License for more details.
 //
 // You should have received a copy of the GNU Lesser General Public License
-// along with the Evmos packages. If not, see https://github.com/evmos/evmos/blob/main/LICENSE
+// along with the Atrix packages. If not, see https://github.com/Atrix/Atrix/blob/main/LICENSE
 
 package testutil
 
@@ -30,10 +30,10 @@ import (
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 	abci "github.com/tendermint/tendermint/abci/types"
 
-	"github.com/evmos/ethermint/crypto/ethsecp256k1"
-	"github.com/evmos/ethermint/encoding"
+	"github.com/Atrix/ethermint/crypto/ethsecp256k1"
+	"github.com/Atrix/ethermint/encoding"
 
-	"github.com/evmos/evmos/v11/app"
+	"github.com/Atrix/Atrix/v11/app"
 )
 
 // SubmitProposal delivers a submit proposal tx for a given gov content.
@@ -41,7 +41,7 @@ import (
 // event.
 func SubmitProposal(
 	ctx sdk.Context,
-	appEvmos *app.Evmos,
+	appAtrix *app.Atrix,
 	pk *ethsecp256k1.PrivKey,
 	content govv1beta1.Content,
 	eventNum int,
@@ -54,7 +54,7 @@ func SubmitProposal(
 	if err != nil {
 		return id, err
 	}
-	res, err := DeliverTx(ctx, appEvmos, pk, msg)
+	res, err := DeliverTx(ctx, appAtrix, pk, msg)
 	if err != nil {
 		return id, err
 	}
@@ -70,7 +70,7 @@ func SubmitProposal(
 // Delegate delivers a delegate tx
 func Delegate(
 	ctx sdk.Context,
-	appEvmos *app.Evmos,
+	appAtrix *app.Atrix,
 	priv *ethsecp256k1.PrivKey,
 	delegateAmount sdk.Coin,
 	validator stakingtypes.Validator,
@@ -83,13 +83,13 @@ func Delegate(
 	}
 
 	delegateMsg := stakingtypes.NewMsgDelegate(accountAddress, val, delegateAmount)
-	return DeliverTx(ctx, appEvmos, priv, delegateMsg)
+	return DeliverTx(ctx, appAtrix, priv, delegateMsg)
 }
 
 // Vote delivers a vote tx with the VoteOption "yes"
 func Vote(
 	ctx sdk.Context,
-	appEvmos *app.Evmos,
+	appAtrix *app.Atrix,
 	priv *ethsecp256k1.PrivKey,
 	proposalID uint64,
 	voteOption govv1beta1.VoteOption,
@@ -97,19 +97,19 @@ func Vote(
 	accountAddress := sdk.AccAddress(priv.PubKey().Address().Bytes())
 
 	voteMsg := govv1beta1.NewMsgVote(accountAddress, proposalID, voteOption)
-	return DeliverTx(ctx, appEvmos, priv, voteMsg)
+	return DeliverTx(ctx, appAtrix, priv, voteMsg)
 }
 
 // DeliverTx delivers a tx for a given set of msgs
 func DeliverTx(
 	ctx sdk.Context,
-	appEvmos *app.Evmos,
+	appAtrix *app.Atrix,
 	priv *ethsecp256k1.PrivKey,
 	msgs ...sdk.Msg,
 ) (abci.ResponseDeliverTx, error) {
 	encodingConfig := encoding.MakeConfig(app.ModuleBasics)
 	accountAddress := sdk.AccAddress(priv.PubKey().Address().Bytes())
-	denom := appEvmos.ClaimsKeeper.GetParams(ctx).ClaimsDenom
+	denom := appAtrix.ClaimsKeeper.GetParams(ctx).ClaimsDenom
 
 	txBuilder := encodingConfig.TxConfig.NewTxBuilder()
 
@@ -119,7 +119,7 @@ func DeliverTx(
 		return abci.ResponseDeliverTx{}, err
 	}
 
-	seq, err := appEvmos.AccountKeeper.GetSequence(ctx, accountAddress)
+	seq, err := appAtrix.AccountKeeper.GetSequence(ctx, accountAddress)
 	if err != nil {
 		return abci.ResponseDeliverTx{}, err
 	}
@@ -142,7 +142,7 @@ func DeliverTx(
 	}
 
 	// Second round: all signer infos are set, so each signer can sign.
-	accNumber := appEvmos.AccountKeeper.GetAccount(ctx, accountAddress).GetAccountNumber()
+	accNumber := appAtrix.AccountKeeper.GetAccount(ctx, accountAddress).GetAccountNumber()
 	signerData := authsigning.SignerData{
 		ChainID:       ctx.ChainID(),
 		AccountNumber: accNumber,
@@ -169,7 +169,7 @@ func DeliverTx(
 	}
 
 	req := abci.RequestDeliverTx{Tx: bz}
-	res := appEvmos.BaseApp.DeliverTx(req)
+	res := appAtrix.BaseApp.DeliverTx(req)
 	if res.Code != 0 {
 		return abci.ResponseDeliverTx{}, errorsmod.Wrapf(errortypes.ErrInvalidRequest, res.Log)
 	}

@@ -1,18 +1,18 @@
-// Copyright 2022 Evmos Foundation
-// This file is part of the Evmos Network packages.
+// Copyright 2022 Atrix Foundation
+// This file is part of the Atrix Network packages.
 //
-// Evmos is free software: you can redistribute it and/or modify
+// Atrix is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
 //
-// The Evmos packages are distributed in the hope that it will be useful,
+// The Atrix packages are distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 // GNU Lesser General Public License for more details.
 //
 // You should have received a copy of the GNU Lesser General Public License
-// along with the Evmos packages. If not, see https://github.com/evmos/evmos/blob/main/LICENSE
+// along with the Atrix packages. If not, see https://github.com/Atrix/Atrix/blob/main/LICENSE
 
 package app
 
@@ -122,59 +122,59 @@ import (
 	icahosttypes "github.com/cosmos/ibc-go/v6/modules/apps/27-interchain-accounts/host/types"
 	icatypes "github.com/cosmos/ibc-go/v6/modules/apps/27-interchain-accounts/types"
 
-	"github.com/evmos/ethermint/encoding"
-	"github.com/evmos/ethermint/ethereum/eip712"
-	srvflags "github.com/evmos/ethermint/server/flags"
-	ethermint "github.com/evmos/ethermint/types"
-	"github.com/evmos/ethermint/x/evm"
-	evmkeeper "github.com/evmos/ethermint/x/evm/keeper"
-	evmtypes "github.com/evmos/ethermint/x/evm/types"
-	"github.com/evmos/ethermint/x/evm/vm/geth"
-	"github.com/evmos/ethermint/x/feemarket"
-	feemarketkeeper "github.com/evmos/ethermint/x/feemarket/keeper"
-	feemarkettypes "github.com/evmos/ethermint/x/feemarket/types"
+	"github.com/Atrix/ethermint/encoding"
+	"github.com/Atrix/ethermint/ethereum/eip712"
+	srvflags "github.com/Atrix/ethermint/server/flags"
+	ethermint "github.com/Atrix/ethermint/types"
+	"github.com/Atrix/ethermint/x/evm"
+	evmkeeper "github.com/Atrix/ethermint/x/evm/keeper"
+	evmtypes "github.com/Atrix/ethermint/x/evm/types"
+	"github.com/Atrix/ethermint/x/evm/vm/geth"
+	"github.com/Atrix/ethermint/x/feemarket"
+	feemarketkeeper "github.com/Atrix/ethermint/x/feemarket/keeper"
+	feemarkettypes "github.com/Atrix/ethermint/x/feemarket/types"
 
 	// unnamed import of statik for swagger UI support
-	_ "github.com/evmos/evmos/v11/client/docs/statik"
+	_ "github.com/Atrix/Atrix/v11/client/docs/statik"
 
-	"github.com/evmos/evmos/v11/app/ante"
-	v10 "github.com/evmos/evmos/v11/app/upgrades/v10"
-	v11 "github.com/evmos/evmos/v11/app/upgrades/v11"
-	v8 "github.com/evmos/evmos/v11/app/upgrades/v8"
-	v81 "github.com/evmos/evmos/v11/app/upgrades/v8_1"
-	v82 "github.com/evmos/evmos/v11/app/upgrades/v8_2"
-	v9 "github.com/evmos/evmos/v11/app/upgrades/v9"
-	v91 "github.com/evmos/evmos/v11/app/upgrades/v9_1"
-	"github.com/evmos/evmos/v11/x/claims"
-	claimskeeper "github.com/evmos/evmos/v11/x/claims/keeper"
-	claimstypes "github.com/evmos/evmos/v11/x/claims/types"
-	"github.com/evmos/evmos/v11/x/epochs"
-	epochskeeper "github.com/evmos/evmos/v11/x/epochs/keeper"
-	epochstypes "github.com/evmos/evmos/v11/x/epochs/types"
-	"github.com/evmos/evmos/v11/x/erc20"
-	erc20client "github.com/evmos/evmos/v11/x/erc20/client"
-	erc20keeper "github.com/evmos/evmos/v11/x/erc20/keeper"
-	erc20types "github.com/evmos/evmos/v11/x/erc20/types"
-	"github.com/evmos/evmos/v11/x/incentives"
-	incentivesclient "github.com/evmos/evmos/v11/x/incentives/client"
-	incentiveskeeper "github.com/evmos/evmos/v11/x/incentives/keeper"
-	incentivestypes "github.com/evmos/evmos/v11/x/incentives/types"
-	"github.com/evmos/evmos/v11/x/inflation"
-	inflationkeeper "github.com/evmos/evmos/v11/x/inflation/keeper"
-	inflationtypes "github.com/evmos/evmos/v11/x/inflation/types"
-	"github.com/evmos/evmos/v11/x/recovery"
-	recoverykeeper "github.com/evmos/evmos/v11/x/recovery/keeper"
-	recoverytypes "github.com/evmos/evmos/v11/x/recovery/types"
-	"github.com/evmos/evmos/v11/x/revenue"
-	revenuekeeper "github.com/evmos/evmos/v11/x/revenue/keeper"
-	revenuetypes "github.com/evmos/evmos/v11/x/revenue/types"
-	"github.com/evmos/evmos/v11/x/vesting"
-	vestingkeeper "github.com/evmos/evmos/v11/x/vesting/keeper"
-	vestingtypes "github.com/evmos/evmos/v11/x/vesting/types"
+	"github.com/Atrix/Atrix/v11/app/ante"
+	v10 "github.com/Atrix/Atrix/v11/app/upgrades/v10"
+	v11 "github.com/Atrix/Atrix/v11/app/upgrades/v11"
+	v8 "github.com/Atrix/Atrix/v11/app/upgrades/v8"
+	v81 "github.com/Atrix/Atrix/v11/app/upgrades/v8_1"
+	v82 "github.com/Atrix/Atrix/v11/app/upgrades/v8_2"
+	v9 "github.com/Atrix/Atrix/v11/app/upgrades/v9"
+	v91 "github.com/Atrix/Atrix/v11/app/upgrades/v9_1"
+	"github.com/Atrix/Atrix/v11/x/claims"
+	claimskeeper "github.com/Atrix/Atrix/v11/x/claims/keeper"
+	claimstypes "github.com/Atrix/Atrix/v11/x/claims/types"
+	"github.com/Atrix/Atrix/v11/x/epochs"
+	epochskeeper "github.com/Atrix/Atrix/v11/x/epochs/keeper"
+	epochstypes "github.com/Atrix/Atrix/v11/x/epochs/types"
+	"github.com/Atrix/Atrix/v11/x/erc20"
+	erc20client "github.com/Atrix/Atrix/v11/x/erc20/client"
+	erc20keeper "github.com/Atrix/Atrix/v11/x/erc20/keeper"
+	erc20types "github.com/Atrix/Atrix/v11/x/erc20/types"
+	"github.com/Atrix/Atrix/v11/x/incentives"
+	incentivesclient "github.com/Atrix/Atrix/v11/x/incentives/client"
+	incentiveskeeper "github.com/Atrix/Atrix/v11/x/incentives/keeper"
+	incentivestypes "github.com/Atrix/Atrix/v11/x/incentives/types"
+	"github.com/Atrix/Atrix/v11/x/inflation"
+	inflationkeeper "github.com/Atrix/Atrix/v11/x/inflation/keeper"
+	inflationtypes "github.com/Atrix/Atrix/v11/x/inflation/types"
+	"github.com/Atrix/Atrix/v11/x/recovery"
+	recoverykeeper "github.com/Atrix/Atrix/v11/x/recovery/keeper"
+	recoverytypes "github.com/Atrix/Atrix/v11/x/recovery/types"
+	"github.com/Atrix/Atrix/v11/x/revenue"
+	revenuekeeper "github.com/Atrix/Atrix/v11/x/revenue/keeper"
+	revenuetypes "github.com/Atrix/Atrix/v11/x/revenue/types"
+	"github.com/Atrix/Atrix/v11/x/vesting"
+	vestingkeeper "github.com/Atrix/Atrix/v11/x/vesting/keeper"
+	vestingtypes "github.com/Atrix/Atrix/v11/x/vesting/types"
 
 	// NOTE: override ICS20 keeper to support IBC transfers of ERC20 tokens
-	"github.com/evmos/evmos/v11/x/ibc/transfer"
-	transferkeeper "github.com/evmos/evmos/v11/x/ibc/transfer/keeper"
+	"github.com/Atrix/Atrix/v11/x/ibc/transfer"
+	transferkeeper "github.com/Atrix/Atrix/v11/x/ibc/transfer/keeper"
 )
 
 func init() {
@@ -183,9 +183,9 @@ func init() {
 		panic(err)
 	}
 
-	DefaultNodeHome = filepath.Join(userHomeDir, ".evmosd")
+	DefaultNodeHome = filepath.Join(userHomeDir, ".Atrixd")
 
-	// manually update the power reduction by replacing micro (u) -> atto (a) evmos
+	// manually update the power reduction by replacing micro (u) -> atto (a) Atrix
 	sdk.DefaultPowerReduction = ethermint.PowerReduction
 	// modify fee market parameter defaults through global
 	feemarkettypes.DefaultMinGasPrice = MainnetMinGasPrices
@@ -195,7 +195,7 @@ func init() {
 }
 
 // Name defines the application binary name
-const Name = "evmosd"
+const Name = "Atrixd"
 
 var (
 	// DefaultNodeHome default home directories for the application daemon
@@ -215,7 +215,7 @@ var (
 			[]govclient.ProposalHandler{
 				paramsclient.ProposalHandler, distrclient.ProposalHandler, upgradeclient.LegacyProposalHandler, upgradeclient.LegacyCancelProposalHandler,
 				ibcclientclient.UpdateClientProposalHandler, ibcclientclient.UpgradeProposalHandler,
-				// Evmos proposal types
+				// Atrix proposal types
 				erc20client.RegisterCoinProposalHandler, erc20client.RegisterERC20ProposalHandler, erc20client.ToggleTokenConversionProposalHandler,
 				incentivesclient.RegisterIncentiveProposalHandler, incentivesclient.CancelIncentiveProposalHandler,
 			},
@@ -266,14 +266,14 @@ var (
 )
 
 var (
-	_ servertypes.Application = (*Evmos)(nil)
-	_ ibctesting.TestingApp   = (*Evmos)(nil)
+	_ servertypes.Application = (*Atrix)(nil)
+	_ ibctesting.TestingApp   = (*Atrix)(nil)
 )
 
-// Evmos implements an extended ABCI application. It is an application
+// Atrix implements an extended ABCI application. It is an application
 // that may process transactions through Ethereum's EVM running atop of
 // Tendermint consensus.
-type Evmos struct {
+type Atrix struct {
 	*baseapp.BaseApp
 
 	// encoding
@@ -314,7 +314,7 @@ type Evmos struct {
 	EvmKeeper       *evmkeeper.Keeper
 	FeeMarketKeeper feemarketkeeper.Keeper
 
-	// Evmos keepers
+	// Atrix keepers
 	InflationKeeper  inflationkeeper.Keeper
 	ClaimsKeeper     *claimskeeper.Keeper
 	Erc20Keeper      erc20keeper.Keeper
@@ -333,8 +333,8 @@ type Evmos struct {
 	tpsCounter *tpsCounter
 }
 
-// NewEvmos returns a reference to a new initialized Ethermint application.
-func NewEvmos(
+// NewAtrix returns a reference to a new initialized Ethermint application.
+func NewAtrix(
 	logger log.Logger,
 	db dbm.DB,
 	traceStore io.Writer,
@@ -345,7 +345,7 @@ func NewEvmos(
 	encodingConfig simappparams.EncodingConfig,
 	appOpts servertypes.AppOptions,
 	baseAppOptions ...func(*baseapp.BaseApp),
-) *Evmos {
+) *Atrix {
 	appCodec := encodingConfig.Codec
 	cdc := encodingConfig.Amino
 	interfaceRegistry := encodingConfig.InterfaceRegistry
@@ -377,7 +377,7 @@ func NewEvmos(
 		icahosttypes.StoreKey,
 		// ethermint keys
 		evmtypes.StoreKey, feemarkettypes.StoreKey,
-		// evmos keys
+		// Atrix keys
 		inflationtypes.StoreKey, erc20types.StoreKey, incentivestypes.StoreKey,
 		epochstypes.StoreKey, claimstypes.StoreKey, vestingtypes.StoreKey,
 		revenuetypes.StoreKey, recoverytypes.StoreKey,
@@ -393,7 +393,7 @@ func NewEvmos(
 		os.Exit(1)
 	}
 
-	app := &Evmos{
+	app := &Atrix{
 		BaseApp:           bApp,
 		cdc:               cdc,
 		appCodec:          appCodec,
@@ -486,7 +486,7 @@ func NewEvmos(
 		&stakingKeeper, govRouter, app.MsgServiceRouter(), govConfig,
 	)
 
-	// Evmos Keeper
+	// Atrix Keeper
 	app.InflationKeeper = inflationkeeper.NewKeeper(
 		keys[inflationtypes.StoreKey], appCodec, authtypes.NewModuleAddress(govtypes.ModuleName),
 		app.AccountKeeper, app.BankKeeper, app.DistrKeeper, &stakingKeeper,
@@ -671,7 +671,7 @@ func NewEvmos(
 		// Ethermint app modules
 		evm.NewAppModule(app.EvmKeeper, app.AccountKeeper, app.GetSubspace(evmtypes.ModuleName)),
 		feemarket.NewAppModule(app.FeeMarketKeeper, app.GetSubspace(feemarkettypes.ModuleName)),
-		// Evmos app modules
+		// Atrix app modules
 		inflation.NewAppModule(app.InflationKeeper, app.AccountKeeper, app.StakingKeeper,
 			app.GetSubspace(inflationtypes.ModuleName)),
 		erc20.NewAppModule(app.Erc20Keeper, app.AccountKeeper,
@@ -751,7 +751,7 @@ func NewEvmos(
 		feegrant.ModuleName,
 		paramstypes.ModuleName,
 		upgradetypes.ModuleName,
-		// Evmos modules
+		// Atrix modules
 		vestingtypes.ModuleName,
 		inflationtypes.ModuleName,
 		erc20types.ModuleName,
@@ -791,7 +791,7 @@ func NewEvmos(
 		feegrant.ModuleName,
 		paramstypes.ModuleName,
 		upgradetypes.ModuleName,
-		// Evmos modules
+		// Atrix modules
 		vestingtypes.ModuleName,
 		inflationtypes.ModuleName,
 		erc20types.ModuleName,
@@ -865,24 +865,24 @@ func NewEvmos(
 }
 
 // Name returns the name of the App
-func (app *Evmos) Name() string { return app.BaseApp.Name() }
+func (app *Atrix) Name() string { return app.BaseApp.Name() }
 
 // BeginBlocker runs the Tendermint ABCI BeginBlock logic. It executes state changes at the beginning
 // of the new block for every registered module. If there is a registered fork at the current height,
 // BeginBlocker will schedule the upgrade plan and perform the state migration (if any).
-func (app *Evmos) BeginBlocker(ctx sdk.Context, req abci.RequestBeginBlock) abci.ResponseBeginBlock {
+func (app *Atrix) BeginBlocker(ctx sdk.Context, req abci.RequestBeginBlock) abci.ResponseBeginBlock {
 	// Perform any scheduled forks before executing the modules logic
 	app.ScheduleForkUpgrade(ctx)
 	return app.mm.BeginBlock(ctx, req)
 }
 
 // EndBlocker updates every end block
-func (app *Evmos) EndBlocker(ctx sdk.Context, req abci.RequestEndBlock) abci.ResponseEndBlock {
+func (app *Atrix) EndBlocker(ctx sdk.Context, req abci.RequestEndBlock) abci.ResponseEndBlock {
 	return app.mm.EndBlock(ctx, req)
 }
 
 // The DeliverTx method is intentionally decomposed to calculate the transactions per second.
-func (app *Evmos) DeliverTx(req abci.RequestDeliverTx) (res abci.ResponseDeliverTx) {
+func (app *Atrix) DeliverTx(req abci.RequestDeliverTx) (res abci.ResponseDeliverTx) {
 	defer func() {
 		// TODO: Record the count along with the code and or reason so as to display
 		// in the transactions per second live dashboards.
@@ -896,7 +896,7 @@ func (app *Evmos) DeliverTx(req abci.RequestDeliverTx) (res abci.ResponseDeliver
 }
 
 // InitChainer updates at chain initialization
-func (app *Evmos) InitChainer(ctx sdk.Context, req abci.RequestInitChain) abci.ResponseInitChain {
+func (app *Atrix) InitChainer(ctx sdk.Context, req abci.RequestInitChain) abci.ResponseInitChain {
 	var genesisState simapp.GenesisState
 	if err := json.Unmarshal(req.AppStateBytes, &genesisState); err != nil {
 		panic(err)
@@ -908,12 +908,12 @@ func (app *Evmos) InitChainer(ctx sdk.Context, req abci.RequestInitChain) abci.R
 }
 
 // LoadHeight loads state at a particular height
-func (app *Evmos) LoadHeight(height int64) error {
+func (app *Atrix) LoadHeight(height int64) error {
 	return app.LoadVersion(height)
 }
 
 // ModuleAccountAddrs returns all the app's module account addresses.
-func (app *Evmos) ModuleAccountAddrs() map[string]bool {
+func (app *Atrix) ModuleAccountAddrs() map[string]bool {
 	modAccAddrs := make(map[string]bool)
 
 	accs := make([]string, 0, len(maccPerms))
@@ -931,7 +931,7 @@ func (app *Evmos) ModuleAccountAddrs() map[string]bool {
 
 // BlockedAddrs returns all the app's module account addresses that are not
 // allowed to receive external tokens.
-func (app *Evmos) BlockedAddrs() map[string]bool {
+func (app *Atrix) BlockedAddrs() map[string]bool {
 	blockedAddrs := make(map[string]bool)
 
 	accs := make([]string, 0, len(maccPerms))
@@ -947,59 +947,59 @@ func (app *Evmos) BlockedAddrs() map[string]bool {
 	return blockedAddrs
 }
 
-// LegacyAmino returns Evmos's amino codec.
+// LegacyAmino returns Atrix's amino codec.
 //
 // NOTE: This is solely to be used for testing purposes as it may be desirable
 // for modules to register their own custom testing types.
-func (app *Evmos) LegacyAmino() *codec.LegacyAmino {
+func (app *Atrix) LegacyAmino() *codec.LegacyAmino {
 	return app.cdc
 }
 
-// AppCodec returns Evmos's app codec.
+// AppCodec returns Atrix's app codec.
 //
 // NOTE: This is solely to be used for testing purposes as it may be desirable
 // for modules to register their own custom testing types.
-func (app *Evmos) AppCodec() codec.Codec {
+func (app *Atrix) AppCodec() codec.Codec {
 	return app.appCodec
 }
 
-// InterfaceRegistry returns Evmos's InterfaceRegistry
-func (app *Evmos) InterfaceRegistry() types.InterfaceRegistry {
+// InterfaceRegistry returns Atrix's InterfaceRegistry
+func (app *Atrix) InterfaceRegistry() types.InterfaceRegistry {
 	return app.interfaceRegistry
 }
 
 // GetKey returns the KVStoreKey for the provided store key.
 //
 // NOTE: This is solely to be used for testing purposes.
-func (app *Evmos) GetKey(storeKey string) *storetypes.KVStoreKey {
+func (app *Atrix) GetKey(storeKey string) *storetypes.KVStoreKey {
 	return app.keys[storeKey]
 }
 
 // GetTKey returns the TransientStoreKey for the provided store key.
 //
 // NOTE: This is solely to be used for testing purposes.
-func (app *Evmos) GetTKey(storeKey string) *storetypes.TransientStoreKey {
+func (app *Atrix) GetTKey(storeKey string) *storetypes.TransientStoreKey {
 	return app.tkeys[storeKey]
 }
 
 // GetMemKey returns the MemStoreKey for the provided mem key.
 //
 // NOTE: This is solely used for testing purposes.
-func (app *Evmos) GetMemKey(storeKey string) *storetypes.MemoryStoreKey {
+func (app *Atrix) GetMemKey(storeKey string) *storetypes.MemoryStoreKey {
 	return app.memKeys[storeKey]
 }
 
 // GetSubspace returns a param subspace for a given module name.
 //
 // NOTE: This is solely to be used for testing purposes.
-func (app *Evmos) GetSubspace(moduleName string) paramstypes.Subspace {
+func (app *Atrix) GetSubspace(moduleName string) paramstypes.Subspace {
 	subspace, _ := app.ParamsKeeper.GetSubspace(moduleName)
 	return subspace
 }
 
 // RegisterAPIRoutes registers all application module routes with the provided
 // API server.
-func (app *Evmos) RegisterAPIRoutes(apiSvr *api.Server, apiConfig config.APIConfig) {
+func (app *Atrix) RegisterAPIRoutes(apiSvr *api.Server, apiConfig config.APIConfig) {
 	clientCtx := apiSvr.ClientCtx
 
 	// Register new tx routes from grpc-gateway.
@@ -1018,12 +1018,12 @@ func (app *Evmos) RegisterAPIRoutes(apiSvr *api.Server, apiConfig config.APIConf
 	}
 }
 
-func (app *Evmos) RegisterTxService(clientCtx client.Context) {
+func (app *Atrix) RegisterTxService(clientCtx client.Context) {
 	authtx.RegisterTxService(app.BaseApp.GRPCQueryRouter(), clientCtx, app.BaseApp.Simulate, app.interfaceRegistry)
 }
 
 // RegisterTendermintService implements the Application.RegisterTendermintService method.
-func (app *Evmos) RegisterTendermintService(clientCtx client.Context) {
+func (app *Atrix) RegisterTendermintService(clientCtx client.Context) {
 	tmservice.RegisterTendermintService(
 		clientCtx,
 		app.BaseApp.GRPCQueryRouter(),
@@ -1034,39 +1034,39 @@ func (app *Evmos) RegisterTendermintService(clientCtx client.Context) {
 
 // RegisterNodeService registers the node gRPC service on the provided
 // application gRPC query router.
-func (app *Evmos) RegisterNodeService(clientCtx client.Context) {
+func (app *Atrix) RegisterNodeService(clientCtx client.Context) {
 	node.RegisterNodeService(clientCtx, app.GRPCQueryRouter())
 }
 
 // IBC Go TestingApp functions
 
 // GetBaseApp implements the TestingApp interface.
-func (app *Evmos) GetBaseApp() *baseapp.BaseApp {
+func (app *Atrix) GetBaseApp() *baseapp.BaseApp {
 	return app.BaseApp
 }
 
 // GetStakingKeeper implements the TestingApp interface.
-func (app *Evmos) GetStakingKeeper() ibctestingtypes.StakingKeeper {
+func (app *Atrix) GetStakingKeeper() ibctestingtypes.StakingKeeper {
 	return app.StakingKeeper
 }
 
 // GetStakingKeeperSDK implements the TestingApp interface.
-func (app *Evmos) GetStakingKeeperSDK() stakingkeeper.Keeper {
+func (app *Atrix) GetStakingKeeperSDK() stakingkeeper.Keeper {
 	return app.StakingKeeper
 }
 
 // GetIBCKeeper implements the TestingApp interface.
-func (app *Evmos) GetIBCKeeper() *ibckeeper.Keeper {
+func (app *Atrix) GetIBCKeeper() *ibckeeper.Keeper {
 	return app.IBCKeeper
 }
 
 // GetScopedIBCKeeper implements the TestingApp interface.
-func (app *Evmos) GetScopedIBCKeeper() capabilitykeeper.ScopedKeeper {
+func (app *Atrix) GetScopedIBCKeeper() capabilitykeeper.ScopedKeeper {
 	return app.ScopedIBCKeeper
 }
 
 // GetTxConfig implements the TestingApp interface.
-func (app *Evmos) GetTxConfig() client.TxConfig {
+func (app *Atrix) GetTxConfig() client.TxConfig {
 	cfg := encoding.MakeConfig(ModuleBasics)
 	return cfg.TxConfig
 }
@@ -1112,7 +1112,7 @@ func initParamsKeeper(
 	// ethermint subspaces
 	paramsKeeper.Subspace(evmtypes.ModuleName).WithKeyTable(evmtypes.ParamKeyTable()) //nolint: staticcheck
 	paramsKeeper.Subspace(feemarkettypes.ModuleName).WithKeyTable(feemarkettypes.ParamKeyTable())
-	// evmos subspaces
+	// Atrix subspaces
 	paramsKeeper.Subspace(inflationtypes.ModuleName)
 	paramsKeeper.Subspace(erc20types.ModuleName)
 	paramsKeeper.Subspace(claimstypes.ModuleName)
@@ -1122,7 +1122,7 @@ func initParamsKeeper(
 	return paramsKeeper
 }
 
-func (app *Evmos) setupUpgradeHandlers() {
+func (app *Atrix) setupUpgradeHandlers() {
 	// v8 upgrade handler
 	app.UpgradeKeeper.SetUpgradeHandler(
 		v8.UpgradeName,

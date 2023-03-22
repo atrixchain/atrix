@@ -15,20 +15,20 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/evmos/ethermint/crypto/ethsecp256k1"
-	feemarkettypes "github.com/evmos/ethermint/x/feemarket/types"
+	"github.com/Atrix/ethermint/crypto/ethsecp256k1"
+	feemarkettypes "github.com/Atrix/ethermint/x/feemarket/types"
 
-	"github.com/evmos/evmos/v11/app"
-	v9 "github.com/evmos/evmos/v11/app/upgrades/v9_1"
-	evmostypes "github.com/evmos/evmos/v11/types"
-	"github.com/evmos/evmos/v11/x/erc20/types"
+	"github.com/Atrix/Atrix/v11/app"
+	v9 "github.com/Atrix/Atrix/v11/app/upgrades/v9_1"
+	Atrixtypes "github.com/Atrix/Atrix/v11/types"
+	"github.com/Atrix/Atrix/v11/x/erc20/types"
 )
 
 type UpgradeTestSuite struct {
 	suite.Suite
 
 	ctx         sdk.Context
-	app         *app.Evmos
+	app         *app.Atrix
 	consAddress sdk.ConsAddress
 }
 
@@ -88,7 +88,7 @@ func (suite *UpgradeTestSuite) TestMigrateFaucetBalance() {
 	}{
 		{
 			"Mainnet - sucess",
-			evmostypes.MainnetChainID + "-4",
+			Atrixtypes.MainnetChainID + "-4",
 			func() {
 				// send funds to the community pool
 				priv, err := ethsecp256k1.GenerateKey()
@@ -96,20 +96,20 @@ func (suite *UpgradeTestSuite) TestMigrateFaucetBalance() {
 				address := common.BytesToAddress(priv.PubKey().Address().Bytes())
 				sender := sdk.AccAddress(address.Bytes())
 				res, _ := sdk.NewIntFromString(v9.MaxRecover)
-				coins := sdk.NewCoins(sdk.NewCoin("aevmos", res))
+				coins := sdk.NewCoins(sdk.NewCoin("aAtrix", res))
 				suite.app.BankKeeper.MintCoins(suite.ctx, types.ModuleName, coins)
 				suite.app.BankKeeper.SendCoinsFromModuleToAccount(suite.ctx, types.ModuleName, sender, coins)
 				err = suite.app.DistrKeeper.FundCommunityPool(suite.ctx, coins, sender)
 				suite.Require().NoError(err)
 
 				balanceBefore := suite.app.DistrKeeper.GetFeePoolCommunityCoins(suite.ctx)
-				suite.Require().Equal(balanceBefore.AmountOf("aevmos"), sdk.NewDecFromInt(res))
+				suite.Require().Equal(balanceBefore.AmountOf("aAtrix"), sdk.NewDecFromInt(res))
 			},
 			true,
 		},
 		{
 			"Mainnet - first account > MaxRecover",
-			evmostypes.MainnetChainID + "-4",
+			Atrixtypes.MainnetChainID + "-4",
 			func() {
 				// send funds to the community pool
 				priv, err := ethsecp256k1.GenerateKey()
@@ -117,14 +117,14 @@ func (suite *UpgradeTestSuite) TestMigrateFaucetBalance() {
 				address := common.BytesToAddress(priv.PubKey().Address().Bytes())
 				sender := sdk.AccAddress(address.Bytes())
 				res, _ := sdk.NewIntFromString(v9.MaxRecover)
-				coins := sdk.NewCoins(sdk.NewCoin("aevmos", res))
+				coins := sdk.NewCoins(sdk.NewCoin("aAtrix", res))
 				suite.app.BankKeeper.MintCoins(suite.ctx, types.ModuleName, coins)
 				suite.app.BankKeeper.SendCoinsFromModuleToAccount(suite.ctx, types.ModuleName, sender, coins)
 				err = suite.app.DistrKeeper.FundCommunityPool(suite.ctx, coins, sender)
 				suite.Require().NoError(err)
 
 				balanceBefore := suite.app.DistrKeeper.GetFeePoolCommunityCoins(suite.ctx)
-				suite.Require().Equal(balanceBefore.AmountOf("aevmos"), sdk.NewDecFromInt(res))
+				suite.Require().Equal(balanceBefore.AmountOf("aAtrix"), sdk.NewDecFromInt(res))
 
 				v9.Accounts[0][1] = v9.MaxRecover
 			},
@@ -132,7 +132,7 @@ func (suite *UpgradeTestSuite) TestMigrateFaucetBalance() {
 		},
 		{
 			"Mainnet - middle account > MaxRecover",
-			evmostypes.MainnetChainID + "-4",
+			Atrixtypes.MainnetChainID + "-4",
 			func() {
 				// send funds to the community pool
 				priv, err := ethsecp256k1.GenerateKey()
@@ -140,14 +140,14 @@ func (suite *UpgradeTestSuite) TestMigrateFaucetBalance() {
 				address := common.BytesToAddress(priv.PubKey().Address().Bytes())
 				sender := sdk.AccAddress(address.Bytes())
 				res, _ := sdk.NewIntFromString(v9.MaxRecover)
-				coins := sdk.NewCoins(sdk.NewCoin("aevmos", res))
+				coins := sdk.NewCoins(sdk.NewCoin("aAtrix", res))
 				suite.app.BankKeeper.MintCoins(suite.ctx, types.ModuleName, coins)
 				suite.app.BankKeeper.SendCoinsFromModuleToAccount(suite.ctx, types.ModuleName, sender, coins)
 				err = suite.app.DistrKeeper.FundCommunityPool(suite.ctx, coins, sender)
 				suite.Require().NoError(err)
 
 				balanceBefore := suite.app.DistrKeeper.GetFeePoolCommunityCoins(suite.ctx)
-				suite.Require().Equal(balanceBefore.AmountOf("aevmos"), sdk.NewDecFromInt(res))
+				suite.Require().Equal(balanceBefore.AmountOf("aAtrix"), sdk.NewDecFromInt(res))
 
 				v9.Accounts[1000][1] = v9.MaxRecover
 			},
@@ -155,7 +155,7 @@ func (suite *UpgradeTestSuite) TestMigrateFaucetBalance() {
 		},
 		{
 			"Mainnet - fail communityFund is empty",
-			evmostypes.MainnetChainID + "-4",
+			Atrixtypes.MainnetChainID + "-4",
 			func() {
 			},
 			false,
@@ -176,7 +176,7 @@ func (suite *UpgradeTestSuite) TestMigrateFaucetBalance() {
 				for i := range v9.Accounts {
 					addr := sdk.MustAccAddressFromBech32(v9.Accounts[i][0])
 					res, _ := sdk.NewIntFromString(v9.Accounts[i][1])
-					balance := suite.app.BankKeeper.GetBalance(suite.ctx, addr, "aevmos")
+					balance := suite.app.BankKeeper.GetBalance(suite.ctx, addr, "aAtrix")
 					suite.Require().Equal(balance.Amount, res)
 				}
 
@@ -185,7 +185,7 @@ func (suite *UpgradeTestSuite) TestMigrateFaucetBalance() {
 			} else {
 				for i := range v9.Accounts {
 					addr := sdk.MustAccAddressFromBech32(v9.Accounts[i][0])
-					balance := suite.app.BankKeeper.GetBalance(suite.ctx, addr, "aevmos")
+					balance := suite.app.BankKeeper.GetBalance(suite.ctx, addr, "aAtrix")
 					suite.Require().Equal(balance.Amount, sdk.NewInt(0))
 				}
 			}

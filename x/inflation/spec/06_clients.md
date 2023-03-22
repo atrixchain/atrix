@@ -9,8 +9,8 @@ REST.
 
 ## CLI
 
-Find below a list of `evmosd` commands added with the `x/inflation` module. You
-can obtain the full list by using the `evmosd -h` command.
+Find below a list of `Atrixd` commands added with the `x/inflation` module. You
+can obtain the full list by using the `Atrixd -h` command.
 
 ### Queries
 
@@ -21,7 +21,7 @@ The `query` commands allow users to query `inflation` state.
 Allows users to query the current inflation period.
 
 ```bash
-evmosd query inflation period [flags]
+Atrixd query inflation period [flags]
 ```
 
 **`epoch-mint-provision`**
@@ -29,7 +29,7 @@ evmosd query inflation period [flags]
 Allows users to query the current inflation epoch provisions value.
 
 ```bash
-evmosd query inflation epoch-mint-provision [flags]
+Atrixd query inflation epoch-mint-provision [flags]
 ```
 
 **`skipped-epochs`**
@@ -37,7 +37,7 @@ evmosd query inflation epoch-mint-provision [flags]
 Allows users to query the current number of skipped epochs.
 
 ```bash
-evmosd query inflation skipped-epochs [flags]
+Atrixd query inflation skipped-epochs [flags]
 ```
 
 **`total-supply`**
@@ -45,7 +45,7 @@ evmosd query inflation skipped-epochs [flags]
 Allows users to query the total supply of tokens in circulation.
 
 ```bash
-evmosd query inflation total-supply [flags]
+Atrixd query inflation total-supply [flags]
 ```
 
 **`inflation-rate`**
@@ -53,7 +53,7 @@ evmosd query inflation total-supply [flags]
 Allows users to query the inflation rate of the current period.
 
 ```bash
-evmosd query inflation inflation-rate [flags]
+Atrixd query inflation inflation-rate [flags]
 ```
 
 **`params`**
@@ -61,7 +61,7 @@ evmosd query inflation inflation-rate [flags]
 Allows users to query the current inflation parameters.
 
 ```bash
-evmosd query inflation params [flags]
+Atrixd query inflation params [flags]
 ```
 
 ### Proposals
@@ -74,7 +74,7 @@ using the governance module CLI:
 Allows users to submit a `ParameterChangeProposal`.
 
 ```bash
-evmosd tx gov submit-legacy-proposal param-change [proposal-file] [flags]
+Atrixd tx gov submit-legacy-proposal param-change [proposal-file] [flags]
 ```
 
 ## gRPC
@@ -83,15 +83,15 @@ evmosd tx gov submit-legacy-proposal param-change [proposal-file] [flags]
 
 | Verb   | Method                                        | Description                                   |
 | ------ | --------------------------------------------- | --------------------------------------------- |
-| `gRPC` | `evmos.inflation.v1.Query/Period`             | Gets current inflation period                 |
-| `gRPC` | `evmos.inflation.v1.Query/EpochMintProvision` | Gets current inflation epoch provisions value |
-| `gRPC` | `evmos.inflation.v1.Query/Params`             | Gets current inflation parameters             |
-| `gRPC` | `evmos.inflation.v1.Query/SkippedEpochs`      | Gets current number of skipped epochs         |
-| `gRPC` | `evmos.inflation.v1.Query/TotalSupply`        | Gets current total supply                     |
-| `gRPC` | `evmos.inflation.v1.Query/InflationRate`      | Gets current inflation rate                   |
-| `GET`  | `/evmos/inflation/v1/period`                  | Gets current inflation period                 |
-| `GET`  | `/evmos/inflation/v1/epoch_mint_provision`    | Gets current inflation epoch provisions value |
-| `GET`  | `/evmos/inflation/v1/skipped_epochs`          | Gets current number of skipped epochs         |
-| `GET`  | `/evmos/inflation/v1/total_supply`          | Gets current total supply                     |
-| `GET`  | `/evmos/inflation/v1/inflation_rate`          | Gets current inflation rate                   |
-| `GET`  | `/evmos/inflation/v1/params`                  | Gets current inflation parameters             |
+| `gRPC` | `Atrix.inflation.v1.Query/Period`             | Gets current inflation period                 |
+| `gRPC` | `Atrix.inflation.v1.Query/EpochMintProvision` | Gets current inflation epoch provisions value |
+| `gRPC` | `Atrix.inflation.v1.Query/Params`             | Gets current inflation parameters             |
+| `gRPC` | `Atrix.inflation.v1.Query/SkippedEpochs`      | Gets current number of skipped epochs         |
+| `gRPC` | `Atrix.inflation.v1.Query/TotalSupply`        | Gets current total supply                     |
+| `gRPC` | `Atrix.inflation.v1.Query/InflationRate`      | Gets current inflation rate                   |
+| `GET`  | `/Atrix/inflation/v1/period`                  | Gets current inflation period                 |
+| `GET`  | `/Atrix/inflation/v1/epoch_mint_provision`    | Gets current inflation epoch provisions value |
+| `GET`  | `/Atrix/inflation/v1/skipped_epochs`          | Gets current number of skipped epochs         |
+| `GET`  | `/Atrix/inflation/v1/total_supply`          | Gets current total supply                     |
+| `GET`  | `/Atrix/inflation/v1/inflation_rate`          | Gets current inflation rate                   |
+| `GET`  | `/Atrix/inflation/v1/params`                  | Gets current inflation parameters             |

@@ -7,15 +7,15 @@ parent:
 
 # `recovery`
 
-Recover tokens that are stuck on unsupported Evmos accounts.
+Recover tokens that are stuck on unsupported Atrix accounts.
 
 ## Abstract
 
-This document specifies the  `x/recovery` module of the Evmos Hub.
+This document specifies the  `x/recovery` module of the Atrix Hub.
 
-The `x/recovery` module enables users on Evmos to recover locked funds that were transferred to accounts whose keys are not supported on Evmos. This happened in particular after the initial Evmos launch (`v1.1.2`), where users transferred tokens to a `secp256k1` Evmos address via IBC in order to [claim their airdrop](https://docs.evmos.org/modules/claims/). To be EVM compatible, [keys on Evmos](https://docs.evmos.org/users/technical_concepts/accounts.html#evmos-accounts) are generated using the `eth_secp256k1` key type which results in a different address derivation than e.g. the `secp256k1` key type used by other Cosmos chains.
+The `x/recovery` module enables users on Atrix to recover locked funds that were transferred to accounts whose keys are not supported on Atrix. This happened in particular after the initial Atrix launch (`v1.1.2`), where users transferred tokens to a `secp256k1` Atrix address via IBC in order to [claim their airdrop](https://docs.Atrix.org/modules/claims/). To be EVM compatible, [keys on Atrix](https://docs.Atrix.org/users/technical_concepts/accounts.html#Atrix-accounts) are generated using the `eth_secp256k1` key type which results in a different address derivation than e.g. the `secp256k1` key type used by other Cosmos chains.
 
-At the time of Evmos’ relaunch, the value of locked tokens on unsupported accounts sits at $36,291.28 worth of OSMO and $268.86 worth of ATOM tokens according to the [Mintscan](https://www.mintscan.io/evmos/assets) block explorer. With the `x/recovery` module, users can recover these tokens back to their own addresses in the originating chains by performing IBC transfers from authorized IBC channels (i.e Osmosis for OSMO, Cosmos Hub for ATOM).
+At the time of Atrix’ relaunch, the value of locked tokens on unsupported accounts sits at $36,291.28 worth of OSMO and $268.86 worth of ATOM tokens according to the [Mintscan](https://www.mintscan.io/Atrix/assets) block explorer. With the `x/recovery` module, users can recover these tokens back to their own addresses in the originating chains by performing IBC transfers from authorized IBC channels (i.e Osmosis for OSMO, Cosmos Hub for ATOM).
 
 ## Contents
 

@@ -1,4 +1,4 @@
 all:
-	docker build --no-cache --tag evmos/node ../.. -f evmos/Dockerfile
+	docker build --no-cache --tag Atrix/node ../.. -f Atrix/Dockerfile
 
 .PHONY: all

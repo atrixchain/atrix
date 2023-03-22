@@ -1,18 +1,18 @@
-// Copyright 2022 Evmos Foundation
-// This file is part of the Evmos Network packages.
+// Copyright 2022 Atrix Foundation
+// This file is part of the Atrix Network packages.
 //
-// Evmos is free software: you can redistribute it and/or modify
+// Atrix is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
 //
-// The Evmos packages are distributed in the hope that it will be useful,
+// The Atrix packages are distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 // GNU Lesser General Public License for more details.
 //
 // You should have received a copy of the GNU Lesser General Public License
-// along with the Evmos packages. If not, see https://github.com/evmos/evmos/blob/main/LICENSE
+// along with the Atrix packages. If not, see https://github.com/Atrix/Atrix/blob/main/LICENSE
 
 package keeper
 
@@ -32,9 +32,9 @@ import (
 	host "github.com/cosmos/ibc-go/v6/modules/core/24-host"
 	"github.com/cosmos/ibc-go/v6/modules/core/exported"
 
-	"github.com/evmos/evmos/v11/ibc"
-	evmos "github.com/evmos/evmos/v11/types"
-	"github.com/evmos/evmos/v11/x/recovery/types"
+	"github.com/Atrix/Atrix/v11/ibc"
+	Atrix "github.com/Atrix/Atrix/v11/types"
+	"github.com/Atrix/Atrix/v11/x/recovery/types"
 )
 
 // OnRecvPacket performs an IBC receive callback. It returns the tokens that
@@ -43,7 +43,7 @@ import (
 //
 // First transfer from authorized source chain:
 //   - sends back IBC tokens which originated from the source chain
-//   - sends over all Evmos native tokens
+//   - sends over all Atrix native tokens
 //
 // Second transfer from a different authorized source chain:
 //   - only sends back IBC tokens which originated from the source chain
@@ -67,7 +67,7 @@ func (k Keeper) OnRecvPacket(
 		return ack
 	}
 
-	// Get addresses in `evmos1` and the original bech32 format
+	// Get addresses in `Atrix1` and the original bech32 format
 	sender, recipient, senderBech32, recipientBech32, err := ibc.GetTransferSenderRecipient(packet)
 	if err != nil {
 		return channeltypes.NewErrorAcknowledgement(err)
@@ -85,7 +85,7 @@ func (k Keeper) OnRecvPacket(
 	}
 
 	// Check if sender != recipient, as recovery is only possible for transfers to
-	// a sender's own account on Evmos (sender == recipient)
+	// a sender's own account on Atrix (sender == recipient)
 	if !sender.Equals(recipient) {
 		// Continue to the next IBC middleware by returning the original ACK.
 		return ack
@@ -106,7 +106,7 @@ func (k Keeper) OnRecvPacket(
 	// Check if recipient pubkey is a supported key (eth_secp256k1, amino multisig,
 	// ed25519). Continue and return success ACK as the funds are not stuck on
 	// chain for supported keys
-	if account != nil && evmos.IsSupportedKey(account.GetPubKey()) {
+	if account != nil && Atrix.IsSupportedKey(account.GetPubKey()) {
 		return ack
 	}
 
@@ -153,7 +153,7 @@ func (k Keeper) OnRecvPacket(
 			SourcePort:       packet.DestinationPort,    // packet destination port is now the source
 			SourceChannel:    packet.DestinationChannel, // packet destination channel is now the source
 			Token:            coin,                      // balance of the coin
-			Sender:           recipient.String(),        // recipient is the address in the Evmos chain
+			Sender:           recipient.String(),        // recipient is the address in the Atrix chain
 			Receiver:         senderBech32,              // transfer to your own account address on the source chain
 			TimeoutHeight:    clienttypes.ZeroHeight(),  // timeout height disabled
 			TimeoutTimestamp: timeout,                   // timeout timestamp is 4 hours from now
@@ -239,7 +239,7 @@ func (k Keeper) OnRecvPacket(
 }
 
 // GetIBCDenomDestinationIdentifiers returns the destination port and channel of
-// the IBC denomination, i.e port and channel on Evmos for the voucher. It
+// the IBC denomination, i.e port and channel on Atrix for the voucher. It
 // returns an error if:
 //   - the denomination is invalid
 //   - the denom trace is not found on the store

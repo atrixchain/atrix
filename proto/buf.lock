@@ -14,7 +14,7 @@ deps:
     repository: gogo-proto
     commit: 34d970b699f84aa382f3c29773a60836
   - remote: buf.build
-    owner: evmos
+    owner: Atrix
     repository: ethermint
     commit: f0f1df1cd49a49d9b03eadd4235481af
   - remote: buf.build

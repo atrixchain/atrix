@@ -17,10 +17,10 @@ import (
 	tmversion "github.com/tendermint/tendermint/proto/tendermint/version"
 	"github.com/tendermint/tendermint/version"
 
-	evm "github.com/evmos/ethermint/x/evm/types"
+	evm "github.com/Atrix/ethermint/x/evm/types"
 
-	"github.com/evmos/evmos/v11/app"
-	"github.com/evmos/evmos/v11/x/epochs/types"
+	"github.com/Atrix/Atrix/v11/app"
+	"github.com/Atrix/Atrix/v11/x/epochs/types"
 )
 
 var denomMint = evm.DefaultEVMDenom
@@ -29,7 +29,7 @@ type KeeperTestSuite struct {
 	suite.Suite
 
 	ctx            sdk.Context
-	app            *app.Evmos
+	app            *app.Atrix
 	queryClientEvm evm.QueryClient
 	queryClient    types.QueryClient
 	consAddress    sdk.ConsAddress
@@ -60,7 +60,7 @@ func (suite *KeeperTestSuite) DoSetupTest(t require.TestingT) {
 	// setup context
 	suite.ctx = suite.app.BaseApp.NewContext(checkTx, tmproto.Header{
 		Height:          1,
-		ChainID:         "evmos_9001-1",
+		ChainID:         "Atrix_9001-1",
 		Time:            time.Now().UTC(),
 		ProposerAddress: suite.consAddress.Bytes(),
 

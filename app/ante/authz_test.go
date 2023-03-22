@@ -13,9 +13,9 @@ import (
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 
-	evmtypes "github.com/evmos/ethermint/x/evm/types"
+	evmtypes "github.com/Atrix/ethermint/x/evm/types"
 
-	"github.com/evmos/evmos/v11/app/ante"
+	"github.com/Atrix/Atrix/v11/app/ante"
 )
 
 func TestAuthzLimiterDecorator(t *testing.T) {

@@ -10,15 +10,15 @@ import (
 
 	"github.com/stretchr/testify/suite"
 
-	"github.com/evmos/evmos/v11/tests/e2e/upgrade"
+	"github.com/Atrix/Atrix/v11/tests/e2e/upgrade"
 )
 
 const (
-	localRepository       = "evmos"
+	localRepository       = "Atrix"
 	localVersionTag       = "latest"
-	defaultChainID        = "evmos_9000-1"
-	defaultManagerNetwork = "evmos-local"
-	tharsisRepo           = "tharsishq/evmos"
+	defaultChainID        = "Atrix_9000-1"
+	defaultManagerNetwork = "Atrix-local"
+	tharsisRepo           = "tharsishq/Atrix"
 	firstUpgradeHeight    = 25
 
 	relatedBuildPath = "../../build/"
@@ -164,7 +164,7 @@ func (s *IntegrationTestSuite) upgrade() {
 	buildDir := strings.Split(s.upgradeParams.MountPath, ":")[0]
 
 	s.T().Log("exporting state to local...")
-	// export node .evmosd to local build/
+	// export node .Atrixd to local build/
 	err = s.upgradeManager.ExportState(buildDir)
 	s.Require().NoError(err, "can't export node container state to local")
 
@@ -180,7 +180,7 @@ func (s *IntegrationTestSuite) upgrade() {
 
 	node := upgrade.NewNode(s.upgradeParams.TargetRepo, s.upgradeParams.TargetVersion)
 	node.Mount(s.upgradeParams.MountPath)
-	node.SetCmd([]string{"evmosd", "start", fmt.Sprintf("--chain-id=%s", s.upgradeParams.ChainID)})
+	node.SetCmd([]string{"Atrixd", "start", fmt.Sprintf("--chain-id=%s", s.upgradeParams.ChainID)})
 	err = s.upgradeManager.RunNode(node)
 	s.Require().NoError(err, "can't mount and run upgraded node container")
 

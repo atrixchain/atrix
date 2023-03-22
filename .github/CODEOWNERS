@@ -1,12 +1,12 @@
 # CODEOWNERS: https://help.github.com/articles/about-codeowners/
 
 # Primary (global) repo maintainers
-*       @evmos/core-engineering
+*       @Atrix/core-engineering
 
 # Documentation
 docs/ @danburck
 
-# Evmos Modules
+# Atrix Modules
 x/claims/ @ramacarlucho
 x/epochs/ @ramacarlucho
 x/erc20/ @ramacarlucho @hanchon

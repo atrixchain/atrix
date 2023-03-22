@@ -2,53 +2,53 @@ version: '3'
 
 services:
   node0:
-    container_name: evmosnode0
-    image: "evmos/node"
+    container_name: Atrixnode0
+    image: "Atrix/node"
     ports:
       - "26656-26657:26656-26657"
     volumes:
-      - ./build/node0/evmosd:/evmos:Z
+      - ./build/node0/Atrixd:/Atrix:Z
     command:
-      - /evmosd start --home /evmos
+      - /Atrixd start --home /Atrix
     networks:
       localnet:
         ipv4_address: 192.167.10.2
 
   node1:
-    container_name: evmosnode1
-    image: "evmos/node"
+    container_name: Atrixnode1
+    image: "Atrix/node"
     ports:
       - "26659-26660:26656-26657"
     volumes:
-      - ./build/node1/evmosd:/evmos:Z
+      - ./build/node1/Atrixd:/Atrix:Z
     command:
-      - /evmosd start --home /evmos
+      - /Atrixd start --home /Atrix
     networks:
       localnet:
         ipv4_address: 192.167.10.3
 
   node2:
-    container_name: evmosnode2
-    image: "evmos/node"
+    container_name: Atrixnode2
+    image: "Atrix/node"
     ports:
       - "26661-26662:26656-26657"
     volumes:
-      - ./build/node2/evmosd:/evmos:Z
+      - ./build/node2/Atrixd:/Atrix:Z
     command:
-      - /evmosd start --home /evmos
+      - /Atrixd start --home /Atrix
     networks:
       localnet:
         ipv4_address: 192.167.10.4
 
   node3:
-    container_name: evmosnode3
-    image: "evmos/node"
+    container_name: Atrixnode3
+    image: "Atrix/node"
     ports:
       - "26663-26664:26656-26657"
     volumes:
-      - ./build/node3/evmosd:/evmos:Z
+      - ./build/node3/Atrixd:/Atrix:Z
     command:
-      - /evmosd start --home /evmos
+      - /Atrixd start --home /Atrix
     networks:
       localnet:
         ipv4_address: 192.167.10.5

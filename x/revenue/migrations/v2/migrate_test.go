@@ -5,14 +5,14 @@ import (
 	paramtypes "github.com/cosmos/cosmos-sdk/x/params/types"
 	"testing"
 
-	"github.com/evmos/ethermint/encoding"
-	v2 "github.com/evmos/evmos/v11/x/revenue/migrations/v2"
-	v2types "github.com/evmos/evmos/v11/x/revenue/migrations/v2/types"
-	"github.com/evmos/evmos/v11/x/revenue/types"
+	"github.com/Atrix/ethermint/encoding"
+	v2 "github.com/Atrix/Atrix/v11/x/revenue/migrations/v2"
+	v2types "github.com/Atrix/Atrix/v11/x/revenue/migrations/v2/types"
+	"github.com/Atrix/Atrix/v11/x/revenue/types"
 
 	"github.com/cosmos/cosmos-sdk/testutil"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/evmos/ethermint/app"
+	"github.com/Atrix/ethermint/app"
 	"github.com/stretchr/testify/require"
 )
 

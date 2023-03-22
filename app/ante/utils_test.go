@@ -21,16 +21,16 @@ import (
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/signer/core/apitypes"
-	cryptocodec "github.com/evmos/ethermint/crypto/codec"
-	"github.com/evmos/ethermint/crypto/ethsecp256k1"
-	"github.com/evmos/ethermint/encoding"
-	"github.com/evmos/ethermint/ethereum/eip712"
-	"github.com/evmos/ethermint/tests"
-	"github.com/evmos/ethermint/types"
-	evmtypes "github.com/evmos/ethermint/x/evm/types"
-	feemarkettypes "github.com/evmos/ethermint/x/feemarket/types"
-	"github.com/evmos/evmos/v11/app"
-	claimstypes "github.com/evmos/evmos/v11/x/claims/types"
+	cryptocodec "github.com/Atrix/ethermint/crypto/codec"
+	"github.com/Atrix/ethermint/crypto/ethsecp256k1"
+	"github.com/Atrix/ethermint/encoding"
+	"github.com/Atrix/ethermint/ethereum/eip712"
+	"github.com/Atrix/ethermint/tests"
+	"github.com/Atrix/ethermint/types"
+	evmtypes "github.com/Atrix/ethermint/x/evm/types"
+	feemarkettypes "github.com/Atrix/ethermint/x/feemarket/types"
+	"github.com/Atrix/Atrix/v11/app"
+	claimstypes "github.com/Atrix/Atrix/v11/x/claims/types"
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
 	abci "github.com/tendermint/tendermint/abci/types"
@@ -49,7 +49,7 @@ type AnteTestSuite struct {
 	suite.Suite
 
 	ctx   sdk.Context
-	app   *app.Evmos
+	app   *app.Atrix
 	denom string
 }
 
@@ -73,7 +73,7 @@ func (suite *AnteTestSuite) SetupTest(isCheckTx bool) {
 	suite.app = app.Setup(isCheckTx, feemarkettypes.DefaultGenesisState())
 	suite.ctx = suite.app.BaseApp.NewContext(isCheckTx, tmproto.Header{
 		Height:          1,
-		ChainID:         "evmos_9001-1",
+		ChainID:         "Atrix_9001-1",
 		Time:            time.Now().UTC(),
 		ProposerAddress: consAddress.Bytes(),
 
@@ -272,7 +272,7 @@ func createTx(priv *ethsecp256k1.PrivKey, msgs ...sdk.Msg) (sdk.Tx, error) {
 	}
 
 	signerData := authsigning.SignerData{
-		ChainID:       "evmos_9000-1",
+		ChainID:       "Atrix_9000-1",
 		AccountNumber: 0,
 		Sequence:      0,
 	}
@@ -313,7 +313,7 @@ func createEIP712CosmosTx(
 	gas := uint64(200000)
 
 	fee := legacytx.NewStdFee(gas, amount)
-	data := legacytx.StdSignBytes("evmos_9000-1", 0, 0, 0, fee, msgs, "", nil)
+	data := legacytx.StdSignBytes("Atrix_9000-1", 0, 0, 0, fee, msgs, "", nil)
 	typedData, err := eip712.WrapTxToTypedData(ethermintCodec, 9000, msgs[0], data, &eip712.FeeDelegationOptions{
 		FeePayer: from,
 	})
