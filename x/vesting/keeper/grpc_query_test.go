@@ -6,9 +6,9 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 
-	"github.com/evmos/ethermint/tests"
-	"github.com/evmos/evmos/v11/testutil"
-	"github.com/evmos/evmos/v11/x/vesting/types"
+	"github.com/Atrix/ethermint/tests"
+	"github.com/Atrix/Atrix/v11/testutil"
+	"github.com/Atrix/Atrix/v11/x/vesting/types"
 )
 
 func (suite *KeeperTestSuite) TestBalances() {
@@ -34,7 +34,7 @@ func (suite *KeeperTestSuite) TestBalances() {
 			"invalid address",
 			func() {
 				req = &types.QueryBalancesRequest{
-					Address: "evmos1",
+					Address: "Atrix1",
 				}
 			},
 			false,

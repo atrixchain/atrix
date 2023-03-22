@@ -1,7 +1,7 @@
 {
   "name": "docs",
   "version": "1.0.0",
-  "description": "Evmos Documentation",
+  "description": "Atrix Documentation",
   "main": "index.js",
   "scripts": {
     "serve": "trap 'exit 0' SIGINT; vuepress dev --no-cache",
@@ -13,7 +13,7 @@
     "postbuild": "./post.sh"
   },
   "keywords": [
-    "evmos",
+    "Atrix",
     "cosmos",
     "ethereum",
     "blockchain",
@@ -23,13 +23,13 @@
   "author": "Tharsis",
   "license": "ISC",
   "dependencies": {
-    "@cosmos-ui/vue": "https://github.com/evmos/docs-ui/#master",
+    "@cosmos-ui/vue": "https://github.com/Atrix/docs-ui/#master",
     "entities": "^2.0.3",
     "markdown-it": "^12.3.2",
     "markdown-it-katex": "^2.0.3",
     "sass": "^1.53.0",
     "vue-loader": "^16.8.3",
-    "vuepress-theme-cosmos": "https://github.com/evmos/vuepress-theme-cosmos/#updated-dep",
+    "vuepress-theme-cosmos": "https://github.com/Atrix/vuepress-theme-cosmos/#updated-dep",
     "webpack": "^4.46.0"
   },
   "devDependencies": {
@@ -37,7 +37,7 @@
     "watchpack": "^2.3.1"
   },
   "resolutions": {
-    "@cosmos-ui/vue": "@evmos/docs-ui@*",
+    "@cosmos-ui/vue": "@Atrix/docs-ui@*",
     "**/node-sass": "node-sass@*",
     "serialize-javascript": "^4.0.0"
   }

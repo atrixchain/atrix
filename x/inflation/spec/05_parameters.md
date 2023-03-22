@@ -9,7 +9,7 @@ can be modified via governance.
 
 | Key                                   | Type                   | Default Value                                                                 |
 | ------------------------              | ---------------------- | ----------------------------------------------------------------------------- |
-| `ParamStoreKeyMintDenom`              | string                 | `evm.DefaultEVMDenom` // “aevmos”                                             |
+| `ParamStoreKeyMintDenom`              | string                 | `evm.DefaultEVMDenom` // “aAtrix”                                             |
 | `ParamStoreKeyExponentialCalculation` | ExponentialCalculation | `A: sdk.NewDec(int64(300_000_000))`                                           |
 |                                       |                        | `R: sdk.NewDecWithPrec(50, 2)`                                                |
 |                                       |                        | `C: sdk.NewDec(int64(9_375_000))`                                             |
@@ -40,13 +40,13 @@ The `ParamStoreKeyInflationDistribution` parameter defines the distribution in w
 inflation is allocated through minting on each epoch (`stakingRewards`,
 `usageIncentives`,  `CommunityPool`). The `x/inflation` excludes the team
 vesting distribution, as team vesting is minted once at genesis. To reflect this
-the distribution from the Evmos Token Model is recalculated into a distribution
+the distribution from the Atrix Token Model is recalculated into a distribution
 that excludes team vesting. Note, that this does not change the inflation
-proposed in the Evmos Token Model. Each `InflationDistribution` can be
+proposed in the Atrix Token Model. Each `InflationDistribution` can be
 calculated like this:
 
 ```markdown
-stakingRewards = evmosTokenModelDistribution / (1 - teamVestingDistribution)
+stakingRewards = AtrixTokenModelDistribution / (1 - teamVestingDistribution)
 0.5333333      = 40%                         / (1 - 25%)
 ```
 

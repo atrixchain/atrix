@@ -1,29 +1,29 @@
-// Copyright 2022 Evmos Foundation
-// This file is part of the Evmos Network packages.
+// Copyright 2022 Atrix Foundation
+// This file is part of the Atrix Network packages.
 //
-// Evmos is free software: you can redistribute it and/or modify
+// Atrix is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
 //
-// The Evmos packages are distributed in the hope that it will be useful,
+// The Atrix packages are distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 // GNU Lesser General Public License for more details.
 //
 // You should have received a copy of the GNU Lesser General Public License
-// along with the Evmos packages. If not, see https://github.com/evmos/evmos/blob/main/LICENSE
+// along with the Atrix packages. If not, see https://github.com/Atrix/Atrix/blob/main/LICENSE
 
 package keeper
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	ethermint "github.com/evmos/ethermint/types"
+	ethermint "github.com/Atrix/ethermint/types"
 
-	evmos "github.com/evmos/evmos/v11/types"
-	incentivestypes "github.com/evmos/evmos/v11/x/incentives/types"
-	"github.com/evmos/evmos/v11/x/inflation/types"
+	Atrix "github.com/Atrix/Atrix/v11/types"
+	incentivestypes "github.com/Atrix/Atrix/v11/x/incentives/types"
+	"github.com/Atrix/Atrix/v11/x/inflation/types"
 )
 
 // 200M token at year 4 allocated to the team
@@ -134,7 +134,7 @@ func (k Keeper) GetProportions(
 func (k Keeper) BondedRatio(ctx sdk.Context) sdk.Dec {
 	stakeSupply := k.stakingKeeper.StakingTokenSupply(ctx)
 
-	isMainnet := evmos.IsMainnet(ctx.ChainID())
+	isMainnet := Atrix.IsMainnet(ctx.ChainID())
 
 	if !stakeSupply.IsPositive() || (isMainnet && stakeSupply.LTE(teamAlloc)) {
 		return sdk.ZeroDec()
@@ -155,7 +155,7 @@ func (k Keeper) GetCirculatingSupply(ctx sdk.Context, mintDenom string) sdk.Dec 
 	teamAllocation := sdk.NewDecFromInt(teamAlloc)
 
 	// Consider team allocation only on mainnet chain id
-	if evmos.IsMainnet(ctx.ChainID()) {
+	if Atrix.IsMainnet(ctx.ChainID()) {
 		circulatingSupply = circulatingSupply.Sub(teamAllocation)
 	}
 

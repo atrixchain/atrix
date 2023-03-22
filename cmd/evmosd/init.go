@@ -1,18 +1,18 @@
-// Copyright 2022 Evmos Foundation
-// This file is part of the Evmos Network packages.
+// Copyright 2022 Atrix Foundation
+// This file is part of the Atrix Network packages.
 //
-// Evmos is free software: you can redistribute it and/or modify
+// Atrix is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
 //
-// The Evmos packages are distributed in the hope that it will be useful,
+// The Atrix packages are distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 // GNU Lesser General Public License for more details.
 //
 // You should have received a copy of the GNU Lesser General Public License
-// along with the Evmos packages. If not, see https://github.com/evmos/evmos/blob/main/LICENSE
+// along with the Atrix packages. If not, see https://github.com/Atrix/Atrix/blob/main/LICENSE
 
 package main
 
@@ -99,9 +99,9 @@ func InitCmd(mbm module.BasicManager, defaultNodeHome string) *cobra.Command {
 
 			// Set default seeds
 			seeds := []string{
-				"40f4fac63da8b1ce8f850b0fa0f79b2699d2ce72@seed.evmos.jerrychong.com:26656",                 // jerrychong
-				"e3e11fca4ecf4035a751f3fea90e3a821e274487@bd-evmos-mainnet-seed-node-01.bdnodes.net:26656", // blockdaemon
-				"fc86e7e75c5d2e4699535e1b1bec98ae55b16826@bd-evmos-mainnet-seed-node-02.bdnodes.net:26656", // blockdaemon
+				"40f4fac63da8b1ce8f850b0fa0f79b2699d2ce72@seed.Atrix.jerrychong.com:26656",                 // jerrychong
+				"e3e11fca4ecf4035a751f3fea90e3a821e274487@bd-Atrix-mainnet-seed-node-01.bdnodes.net:26656", // blockdaemon
+				"fc86e7e75c5d2e4699535e1b1bec98ae55b16826@bd-Atrix-mainnet-seed-node-02.bdnodes.net:26656", // blockdaemon
 			}
 			config.P2P.Seeds = strings.Join(seeds, ",")
 
@@ -112,7 +112,7 @@ func InitCmd(mbm module.BasicManager, defaultNodeHome string) *cobra.Command {
 
 			chainID, _ := cmd.Flags().GetString(flags.FlagChainID)
 			if chainID == "" {
-				chainID = fmt.Sprintf("evmos_9000-%v", tmrand.Str(6))
+				chainID = fmt.Sprintf("Atrix_9000-%v", tmrand.Str(6))
 			}
 
 			// Get bip39 mnemonic

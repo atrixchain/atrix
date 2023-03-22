@@ -4,9 +4,9 @@ import (
 	"fmt"
 
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/evmos/ethermint/tests"
+	"github.com/Atrix/ethermint/tests"
 
-	"github.com/evmos/evmos/v11/x/incentives/types"
+	"github.com/Atrix/Atrix/v11/x/incentives/types"
 )
 
 func (suite *KeeperTestSuite) TestGetIncentivesGasMeters() {

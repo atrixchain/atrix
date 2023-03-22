@@ -74,7 +74,7 @@ func TestParamsValidate(t *testing.T) {
 			Params{
 				DurationOfDecay:    DefaultDurationOfDecay,
 				DurationUntilDecay: DefaultDurationUntilDecay,
-				ClaimsDenom:        "tevmos",
+				ClaimsDenom:        "tAtrix",
 				AuthorizedChannels: DefaultAuthorizedChannels,
 				EVMChannels:        DefaultEVMChannels,
 			},
@@ -82,7 +82,7 @@ func TestParamsValidate(t *testing.T) {
 		},
 		{
 			"success - constructor",
-			NewParams(true, "tevmos", time.Unix(0, 0), DefaultDurationOfDecay, DefaultDurationUntilDecay, DefaultAuthorizedChannels, DefaultEVMChannels),
+			NewParams(true, "tAtrix", time.Unix(0, 0), DefaultDurationOfDecay, DefaultDurationUntilDecay, DefaultAuthorizedChannels, DefaultEVMChannels),
 			false,
 		},
 	}
@@ -131,7 +131,7 @@ func TestParamsvalidateDuration(t *testing.T) {
 }
 
 func TestParamsValidateDenom(t *testing.T) {
-	err := validateDenom("aevmos")
+	err := validateDenom("aAtrix")
 	require.NoError(t, err)
 	err = validateDenom(false)
 	require.Error(t, err)

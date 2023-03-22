@@ -1,18 +1,18 @@
-// Copyright 2022 Evmos Foundation
-// This file is part of the Evmos Network packages.
+// Copyright 2022 Atrix Foundation
+// This file is part of the Atrix Network packages.
 //
-// Evmos is free software: you can redistribute it and/or modify
+// Atrix is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
 //
-// The Evmos packages are distributed in the hope that it will be useful,
+// The Atrix packages are distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 // GNU Lesser General Public License for more details.
 //
 // You should have received a copy of the GNU Lesser General Public License
-// along with the Evmos packages. If not, see https://github.com/evmos/evmos/blob/main/LICENSE
+// along with the Atrix packages. If not, see https://github.com/Atrix/Atrix/blob/main/LICENSE
 
 package keeper
 
@@ -27,9 +27,9 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/query"
 	"github.com/ethereum/go-ethereum/common"
-	ethermint "github.com/evmos/ethermint/types"
+	ethermint "github.com/Atrix/ethermint/types"
 
-	"github.com/evmos/evmos/v11/x/revenue/types"
+	"github.com/Atrix/Atrix/v11/x/revenue/types"
 )
 
 var _ types.QueryServer = Keeper{}
@@ -137,7 +137,7 @@ func (k Keeper) DeployerRevenues( // nolint: dupl
 	if err != nil {
 		return nil, status.Errorf(
 			codes.InvalidArgument,
-			"invalid format for deployer %s, should be bech32 ('evmos...')", req.DeployerAddress,
+			"invalid format for deployer %s, should be bech32 ('Atrix...')", req.DeployerAddress,
 		)
 	}
 
@@ -183,7 +183,7 @@ func (k Keeper) WithdrawerRevenues( // nolint: dupl
 	if err != nil {
 		return nil, status.Errorf(
 			codes.InvalidArgument,
-			"invalid format for withdraw addr %s, should be bech32 ('evmos...')", req.WithdrawerAddress,
+			"invalid format for withdraw addr %s, should be bech32 ('Atrix...')", req.WithdrawerAddress,
 		)
 	}
 

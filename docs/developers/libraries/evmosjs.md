@@ -2,19 +2,19 @@
 order: 1
 -->
 
-# EvmosJS
+# AtrixJS
 
-Learn about the EvmosJS Library for connecting clients to Evmos. {synopsis}
+Learn about the AtrixJS Library for connecting clients to Atrix. {synopsis}
 
-[`evmosjs`](https://github.com/evmos/evmosjs) is a JavaScript and TypeScript client library for [Evmos](https://github.com/evmos/evmos) and [Ethermint](https://github.com/evmos/ethermint) nodes.
+[`Atrixjs`](https://github.com/Atrix/Atrixjs) is a JavaScript and TypeScript client library for [Atrix](https://github.com/Atrix/Atrix) and [Ethermint](https://github.com/Atrix/ethermint) nodes.
 
 ## Tools
 
-- **Address converter:** convert between `eth` and `evmos` addresses
-- **Basic transaction generator**: used to create Evmos transactions
-- **`EIP-712` transaction generator**: used to create `EIP-712` signed Evmos transactions
-- **Protobuf files**: used to create Cosmos Hub and Evmos transactions
-- **REST provider**: used to query the Evmos REST API and interact with Evmos nodes
+- **Address converter:** convert between `eth` and `Atrix` addresses
+- **Basic transaction generator**: used to create Atrix transactions
+- **`EIP-712` transaction generator**: used to create `EIP-712` signed Atrix transactions
+- **Protobuf files**: used to create Cosmos Hub and Atrix transactions
+- **REST provider**: used to query the Atrix REST API and interact with Atrix nodes
 
 ## Package List
 

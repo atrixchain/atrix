@@ -9,11 +9,11 @@ import (
 	distrtypes "github.com/cosmos/cosmos-sdk/x/distribution/types"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/evmos/ethermint/tests"
-	ethermint "github.com/evmos/ethermint/types"
-	"github.com/evmos/evmos/v11/testutil"
-	"github.com/evmos/evmos/v11/x/claims/types"
-	vestingtypes "github.com/evmos/evmos/v11/x/vesting/types"
+	"github.com/Atrix/ethermint/tests"
+	ethermint "github.com/Atrix/ethermint/types"
+	"github.com/Atrix/Atrix/v11/testutil"
+	"github.com/Atrix/Atrix/v11/x/claims/types"
+	vestingtypes "github.com/Atrix/Atrix/v11/x/vesting/types"
 )
 
 func (suite *KeeperTestSuite) TestEndBlock() {

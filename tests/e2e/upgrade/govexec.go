@@ -1,18 +1,18 @@
-// Copyright 2022 Evmos Foundation
-// This file is part of the Evmos Network packages.
+// Copyright 2022 Atrix Foundation
+// This file is part of the Atrix Network packages.
 //
-// Evmos is free software: you can redistribute it and/or modify
+// Atrix is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
 //
-// The Evmos packages are distributed in the hope that it will be useful,
+// The Atrix packages are distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 // GNU Lesser General Public License for more details.
 //
 // You should have received a copy of the GNU Lesser General Public License
-// along with the Evmos packages. If not, see https://github.com/evmos/evmos/blob/main/LICENSE
+// along with the Atrix packages. If not, see https://github.com/Atrix/Atrix/blob/main/LICENSE
 
 package upgrade
 
@@ -56,14 +56,14 @@ func (m *Manager) CreateExec(cmd []string, containerID string) (string, error) {
 // CreateSubmitProposalExec creates a gov tx to submit an upgrade proposal to the chain
 func (m *Manager) CreateSubmitProposalExec(targetVersion, chainID string, upgradeHeight uint) (string, error) {
 	cmd := []string{
-		"evmosd",
+		"Atrixd",
 		"tx",
 		"gov",
 		"submit-legacy-proposal",
 		"software-upgrade",
 		targetVersion,
 		"--title=\"TEST\"",
-		"--deposit=500000aevmos",
+		"--deposit=500000aAtrix",
 		"--description=\"Test upgrade proposal\"",
 		fmt.Sprintf("--upgrade-height=%d", upgradeHeight),
 		"--upgrade-info=\"\"",
@@ -74,7 +74,7 @@ func (m *Manager) CreateSubmitProposalExec(targetVersion, chainID string, upgrad
 		"--yes",
 		"--keyring-backend=test",
 		"--log_format=json",
-		"--fees=500aevmos",
+		"--fees=500aAtrix",
 		"--gas=500000",
 	}
 	// increment proposal counter to use proposal number for deposit && voting
@@ -85,19 +85,19 @@ func (m *Manager) CreateSubmitProposalExec(targetVersion, chainID string, upgrad
 // CreateDepositProposalExec creates a gov tx to deposit for the current upgrade proposal
 func (m *Manager) CreateDepositProposalExec(chainID string) (string, error) {
 	cmd := []string{
-		"evmosd",
+		"Atrixd",
 		"tx",
 		"gov",
 		"deposit",
 		fmt.Sprint(m.proposalCounter),
-		"10000000aevmos",
+		"10000000aAtrix",
 		"--from=mykey",
 		fmt.Sprintf("--chain-id=%s", chainID),
 		"-b=block",
 		"--yes",
 		"--keyring-backend=test",
 		"--log_format=json",
-		"--fees=500aevmos",
+		"--fees=500aAtrix",
 		"--gas=500000",
 	}
 
@@ -107,7 +107,7 @@ func (m *Manager) CreateDepositProposalExec(chainID string) (string, error) {
 // CreateVoteProposalExec creates gov tx to vote 'yes' on the current upgrade proposal
 func (m *Manager) CreateVoteProposalExec(chainID string) (string, error) {
 	cmd := []string{
-		"evmosd",
+		"Atrixd",
 		"tx",
 		"gov",
 		"vote",
@@ -119,7 +119,7 @@ func (m *Manager) CreateVoteProposalExec(chainID string) (string, error) {
 		"--yes",
 		"--keyring-backend=test",
 		"--log_format=json",
-		"--fees=500aevmos",
+		"--fees=500aAtrix",
 		"--gas=500000",
 	}
 	return m.CreateExec(cmd, m.ContainerID())

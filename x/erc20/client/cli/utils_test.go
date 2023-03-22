@@ -3,7 +3,7 @@ package cli
 import (
 	"testing"
 
-	"github.com/evmos/evmos/v11/x/erc20/types"
+	"github.com/Atrix/Atrix/v11/x/erc20/types"
 	"github.com/stretchr/testify/require"
 )
 

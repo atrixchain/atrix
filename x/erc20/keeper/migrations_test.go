@@ -7,11 +7,11 @@ import (
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
 	paramtypes "github.com/cosmos/cosmos-sdk/x/params/types"
-	"github.com/evmos/ethermint/encoding"
-	"github.com/evmos/evmos/v11/app"
-	erc20keeper "github.com/evmos/evmos/v11/x/erc20/keeper"
-	v3types "github.com/evmos/evmos/v11/x/erc20/migrations/v3/types"
-	"github.com/evmos/evmos/v11/x/erc20/types"
+	"github.com/Atrix/ethermint/encoding"
+	"github.com/Atrix/Atrix/v11/app"
+	erc20keeper "github.com/Atrix/Atrix/v11/x/erc20/keeper"
+	v3types "github.com/Atrix/Atrix/v11/x/erc20/migrations/v3/types"
+	"github.com/Atrix/Atrix/v11/x/erc20/types"
 )
 
 type mockSubspace struct {

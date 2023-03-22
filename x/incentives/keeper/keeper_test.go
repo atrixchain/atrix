@@ -29,17 +29,17 @@ import (
 	"github.com/tendermint/tendermint/version"
 
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
-	"github.com/evmos/ethermint/crypto/ethsecp256k1"
-	"github.com/evmos/ethermint/encoding"
-	"github.com/evmos/ethermint/server/config"
-	"github.com/evmos/ethermint/tests"
-	ethermint "github.com/evmos/ethermint/types"
-	evm "github.com/evmos/ethermint/x/evm/types"
+	"github.com/Atrix/ethermint/crypto/ethsecp256k1"
+	"github.com/Atrix/ethermint/encoding"
+	"github.com/Atrix/ethermint/server/config"
+	"github.com/Atrix/ethermint/tests"
+	ethermint "github.com/Atrix/ethermint/types"
+	evm "github.com/Atrix/ethermint/x/evm/types"
 
-	"github.com/evmos/evmos/v11/app"
-	"github.com/evmos/evmos/v11/contracts"
-	epochstypes "github.com/evmos/evmos/v11/x/epochs/types"
-	"github.com/evmos/evmos/v11/x/incentives/types"
+	"github.com/Atrix/Atrix/v11/app"
+	"github.com/Atrix/Atrix/v11/contracts"
+	epochstypes "github.com/Atrix/Atrix/v11/x/epochs/types"
+	"github.com/Atrix/Atrix/v11/x/incentives/types"
 )
 
 var (
@@ -72,7 +72,7 @@ type KeeperTestSuite struct {
 	suite.Suite
 
 	ctx              sdk.Context
-	app              *app.Evmos
+	app              *app.Atrix
 	queryClientEvm   evm.QueryClient
 	queryClient      types.QueryClient
 	address          common.Address
@@ -119,7 +119,7 @@ func (suite *KeeperTestSuite) DoSetupTest(t require.TestingT) {
 	// Set Context
 	suite.ctx = suite.app.BaseApp.NewContext(checkTx, tmproto.Header{
 		Height:          1,
-		ChainID:         "evmos_9001-1",
+		ChainID:         "Atrix_9001-1",
 		Time:            time.Now().UTC(),
 		ProposerAddress: suite.consAddress.Bytes(),
 

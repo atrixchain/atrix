@@ -9,9 +9,9 @@ import (
 	sdkvesting "github.com/cosmos/cosmos-sdk/x/auth/vesting/types"
 	"github.com/cosmos/cosmos-sdk/x/authz"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
-	"github.com/evmos/ethermint/app"
-	"github.com/evmos/ethermint/encoding"
-	evmtypes "github.com/evmos/ethermint/x/evm/types"
+	"github.com/Atrix/ethermint/app"
+	"github.com/Atrix/ethermint/encoding"
+	evmtypes "github.com/Atrix/ethermint/x/evm/types"
 	abci "github.com/tendermint/tendermint/abci/types"
 )
 

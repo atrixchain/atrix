@@ -11,10 +11,10 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/evmos/ethermint/tests"
-	"github.com/evmos/ethermint/x/evm/statedb"
+	"github.com/Atrix/ethermint/tests"
+	"github.com/Atrix/ethermint/x/evm/statedb"
 
-	"github.com/evmos/evmos/v11/x/revenue/types"
+	"github.com/Atrix/Atrix/v11/x/revenue/types"
 )
 
 func (suite *KeeperTestSuite) TestRegisterRevenue() {

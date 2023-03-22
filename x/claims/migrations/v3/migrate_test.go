@@ -7,11 +7,11 @@ import (
 
 	"github.com/cosmos/cosmos-sdk/testutil"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/evmos/ethermint/encoding"
-	"github.com/evmos/evmos/v11/app"
-	v3 "github.com/evmos/evmos/v11/x/claims/migrations/v3"
-	v3types "github.com/evmos/evmos/v11/x/claims/migrations/v3/types"
-	"github.com/evmos/evmos/v11/x/claims/types"
+	"github.com/Atrix/ethermint/encoding"
+	"github.com/Atrix/Atrix/v11/app"
+	v3 "github.com/Atrix/Atrix/v11/x/claims/migrations/v3"
+	v3types "github.com/Atrix/Atrix/v11/x/claims/migrations/v3/types"
+	"github.com/Atrix/Atrix/v11/x/claims/types"
 	"github.com/stretchr/testify/require"
 )
 

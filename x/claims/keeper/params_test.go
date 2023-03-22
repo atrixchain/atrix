@@ -1,7 +1,7 @@
 package keeper_test
 
 import (
-	"github.com/evmos/evmos/v11/x/claims/types"
+	"github.com/Atrix/Atrix/v11/x/claims/types"
 )
 
 func (suite *KeeperTestSuite) TestParams() {

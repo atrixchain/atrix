@@ -5,9 +5,9 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
-	ethermint "github.com/evmos/ethermint/types"
-	incentivestypes "github.com/evmos/evmos/v11/x/incentives/types"
-	"github.com/evmos/evmos/v11/x/inflation/types"
+	ethermint "github.com/Atrix/ethermint/types"
+	incentivestypes "github.com/Atrix/Atrix/v11/x/incentives/types"
+	"github.com/Atrix/Atrix/v11/x/inflation/types"
 )
 
 func (suite *KeeperTestSuite) TestMintAndAllocateInflation() {
@@ -122,7 +122,7 @@ func (suite *KeeperTestSuite) TestGetCirculatingSupplyAndInflationRate() {
 			suite.SetupTest() // reset
 
 			// Team allocation is only set on mainnet
-			suite.ctx = suite.ctx.WithChainID("evmos_9001-1")
+			suite.ctx = suite.ctx.WithChainID("Atrix_9001-1")
 			tc.malleate()
 
 			// Mint coins to increase supply
@@ -174,9 +174,9 @@ func (suite *KeeperTestSuite) TestBondedRatio() {
 
 			// Team allocation is only set on mainnet
 			if tc.isMainnet {
-				suite.ctx = suite.ctx.WithChainID("evmos_9001-1")
+				suite.ctx = suite.ctx.WithChainID("Atrix_9001-1")
 			} else {
-				suite.ctx = suite.ctx.WithChainID("evmos_9999-666")
+				suite.ctx = suite.ctx.WithChainID("Atrix_9999-666")
 			}
 			tc.malleate()
 

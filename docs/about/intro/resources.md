@@ -4,7 +4,7 @@ order: 3
 
 # Resources
 
-Learn about Evmos with the list of official resources. {synopsis}
+Learn about Atrix with the list of official resources. {synopsis}
 
 ::: tip
 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧
@@ -14,11 +14,11 @@ This documentation page is currently under work in progress.
 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧
 :::
 
-- Documentation (this site): [https://docs.evmos.org/](https://docs.evmos.org/)
-- Open Source Codebase: [https://github.com/evmos/evmos](https://github.com/evmos/evmos)
-- Website: [https://evmos.org/](https://evmos.org/)
-- Blog: [https://evmos.blog/](https://evmos.blog/)
-- Ethermint: [https://github.com/evmos/ethermint](https://github.com/evmos/ethermint)
+- Documentation (this site): [https://docs.Atrix.org/](https://docs.Atrix.org/)
+- Open Source Codebase: [https://github.com/Atrix/Atrix](https://github.com/Atrix/Atrix)
+- Website: [https://Atrix.org/](https://Atrix.org/)
+- Blog: [https://Atrix.blog/](https://Atrix.blog/)
+- Ethermint: [https://github.com/Atrix/ethermint](https://github.com/Atrix/ethermint)
 
 ## Workshops and Videos
 
@@ -53,4 +53,4 @@ Note: most of these articles are outdated as they refer to the previous Ethermin
 
 ## Next {hide}
 
-Learn how to run an Evmos [node](./../../validators/quickstart/run_node.md) {hide}
+Learn how to run an Atrix [node](./../../validators/quickstart/run_node.md) {hide}

@@ -1,6 +1,6 @@
 module.exports = {
   theme: "cosmos",
-  title: "Evmos Documentation",
+  title: "Atrix Documentation",
   locales: {
     "/": {
       lang: "en-US",
@@ -64,21 +64,21 @@ module.exports = {
     // ['link', { rel: "apple-touch-icon-precomposed", href: "/apple-touch-icon-precomposed.png" }],
   ],
   themeConfig: {
-    repo: "evmos/evmos",
-    docsRepo: "evmos/evmos",
+    repo: "Atrix/Atrix",
+    docsRepo: "Atrix/Atrix",
     docsBranch: "main",
     docsDir: "docs",
     editLinks: true,
     custom: true,
     project: {
-      name: "Evmos",
-      denom: "Evmos",
-      ticker: "EVMOS",
-      binary: "evmosd",
-      testnet_denom: "tEvmos",
-      testnet_ticker: "tEVMOS",
-      rpc_url: "https://eth.bd.evmos.org:8545",
-      rpc_url_testnet: "https://eth.bd.evmos.dev:8545",
+      name: "Atrix",
+      denom: "Atrix",
+      ticker: "Atrix",
+      binary: "Atrixd",
+      testnet_denom: "tAtrix",
+      testnet_ticker: "tAtrix",
+      rpc_url: "https://eth.bd.Atrix.org:8545",
+      rpc_url_testnet: "https://eth.bd.Atrix.dev:8545",
       rpc_url_local: "http://localhost:8545/",
       chain_id: "9001",
       testnet_chain_id: "9000",
@@ -87,18 +87,18 @@ module.exports = {
       testnet_version: "v10.0.0-rc4",
       version_number: "2",
       testnet_version_number: "4",
-      testnet_evm_explorer_url: "https://evm.evmos.dev",
+      testnet_evm_explorer_url: "https://evm.Atrix.dev",
       evm_explorer_url: "https://escan.live",
-      testnet_cosmos_explorer_url: "https://testnet.mintscan.io/evmos-testnet",
-      cosmos_explorer_url: "https://www.mintscan.io/evmos",
+      testnet_cosmos_explorer_url: "https://testnet.mintscan.io/Atrix-testnet",
+      cosmos_explorer_url: "https://www.mintscan.io/Atrix",
     },
     logo: {
-      src: "/evmos-black.svg",
+      src: "/Atrix-black.svg",
     },
     algolia: {
       id: process.env.ALGOLIA_ID || '',
       key: process.env.ALGOLIA_KEY || '',
-      index: "evmos",
+      index: "Atrix",
     },
     topbar: {
       banner: false,
@@ -107,7 +107,7 @@ module.exports = {
       auto: false,
       nav: [
         {
-          title: "About Evmos",
+          title: "About Atrix",
           children: [
             {
               title: "Introduction",
@@ -115,8 +115,8 @@ module.exports = {
               path: "/about/intro",
             },
             {
-              title: "Evmos Ecosystem",
-              path: "https://evmos.org/ecosystem",
+              title: "Atrix Ecosystem",
+              path: "https://Atrix.org/ecosystem",
             },
           ],
         },
@@ -139,7 +139,7 @@ module.exports = {
               path: "/users/keys",
             },
             {
-              title: "Evmos Governance",
+              title: "Atrix Governance",
               directory: true,
               path: "/users/governance",
             },
@@ -200,7 +200,7 @@ module.exports = {
             },
             {
               title: "Cosmos gRPC & REST",
-              path: "https://api.evmos.dev/",
+              path: "https://api.Atrix.dev/",
             },
             {
               title: "Tendermint RPC",
@@ -227,15 +227,15 @@ module.exports = {
               path: "/protocol/ibc",
             },
             {
-              title: "Evmos Go API",
-              path: "https://pkg.go.dev/github.com/evmos/evmos",
+              title: "Atrix Go API",
+              path: "https://pkg.go.dev/github.com/Atrix/Atrix",
             },
             {
               title: "Ethermint Library Go API",
-              path: "https://pkg.go.dev/github.com/evmos/ethermint",
+              path: "https://pkg.go.dev/github.com/Atrix/ethermint",
             },
             {
-              title: "Evmos Protobuf",
+              title: "Atrix Protobuf",
               directory: false,
               path: "/protocol/proto-docs",
             },
@@ -305,7 +305,7 @@ module.exports = {
             },
             {
               title: "Mintscan",
-              path: "https://www.mintscan.io/evmos/",
+              path: "https://www.mintscan.io/Atrix/",
             },
             {
               title: "Escan",
@@ -319,14 +319,14 @@ module.exports = {
       title: "Help & Support",
       chat: {
         title: "Discord Channel",
-        text: "Chat with Evmos users and team on Discord.",
-        url: "https://discord.gg/evmos",
+        text: "Chat with Atrix users and team on Discord.",
+        url: "https://discord.gg/Atrix",
         bg: "linear-gradient(103.75deg, #1B1E36 0%, #22253F 100%)",
       },
       forum: {
         title: "Commonwealth Forum",
-        text: "Join the Evmos Commonwealth forum",
-        url: "https://commonwealth.im/evmos",
+        text: "Join the Atrix Commonwealth forum",
+        url: "https://commonwealth.im/Atrix",
         bg: "linear-gradient(221.79deg, #3D6B99 -1.08%, #336699 95.88%)",
       },
       github: {
@@ -336,23 +336,23 @@ module.exports = {
       },
     },
     footer: {
-      logo: "/evmos-black.svg",
+      logo: "/Atrix-black.svg",
       textLink: {
-        text: "evmos.org",
-        url: "https://evmos.org",
+        text: "Atrix.org",
+        url: "https://Atrix.org",
       },
       services: [
         {
           service: "github",
-          url: "https://github.com/evmos/evmos",
+          url: "https://github.com/Atrix/Atrix",
         },
         {
           service: "twitter",
-          url: "https://twitter.com/EvmosOrg",
+          url: "https://twitter.com/AtrixOrg",
         },
         {
           service: "telegram",
-          url: "https://t.me/EvmosOrg",
+          url: "https://t.me/AtrixOrg",
         },
         {
           service: "linkedin",
@@ -360,7 +360,7 @@ module.exports = {
         },
         {
           service: "medium",
-          url: "https://evmos.blog/",
+          url: "https://Atrix.blog/",
         },
       ],
       smallprint: "This website is maintained by Tharsis Labs Ltd.",
@@ -386,21 +386,21 @@ module.exports = {
           title: "Community",
           children: [
             {
-              title: "Evmos Discord Community",
-              url: "https://discord.gg/evmos",
+              title: "Atrix Discord Community",
+              url: "https://discord.gg/Atrix",
             },
             {
-              title: "Evmos Commonwealth Forum",
-              url: "https://commonwealth.im/evmos",
+              title: "Atrix Commonwealth Forum",
+              url: "https://commonwealth.im/Atrix",
             },
           ],
         },
         {
-          title: "Evmos",
+          title: "Atrix",
           children: [
             {
-              title: "Jobs at Evmos",
-              url: "https://boards.eu.greenhouse.io/evmos",
+              title: "Jobs at Atrix",
+              url: "https://boards.eu.greenhouse.io/Atrix",
             },
           ],
         },

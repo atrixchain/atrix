@@ -18,19 +18,19 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/spf13/cobra"
 
-	"github.com/evmos/ethermint/crypto/hd"
-	"github.com/evmos/ethermint/tests"
-	"github.com/evmos/evmos/v11/app"
-	"github.com/evmos/evmos/v11/tests/integration/ledger/mocks"
+	"github.com/Atrix/ethermint/crypto/hd"
+	"github.com/Atrix/ethermint/tests"
+	"github.com/Atrix/Atrix/v11/app"
+	"github.com/Atrix/Atrix/v11/tests/integration/ledger/mocks"
 	"github.com/stretchr/testify/suite"
 	"github.com/tendermint/tendermint/crypto/tmhash"
 	"github.com/tendermint/tendermint/version"
 
 	cosmosledger "github.com/cosmos/cosmos-sdk/crypto/ledger"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	clientkeys "github.com/evmos/ethermint/client/keys"
-	feemarkettypes "github.com/evmos/ethermint/x/feemarket/types"
-	evmoskeyring "github.com/evmos/evmos/v11/crypto/keyring"
+	clientkeys "github.com/Atrix/ethermint/client/keys"
+	feemarkettypes "github.com/Atrix/ethermint/x/feemarket/types"
+	Atrixkeyring "github.com/Atrix/Atrix/v11/crypto/keyring"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 	tmversion "github.com/tendermint/tendermint/proto/tendermint/version"
 	rpcclientmock "github.com/tendermint/tendermint/rpc/client/mock"
@@ -44,7 +44,7 @@ var s *LedgerTestSuite
 type LedgerTestSuite struct {
 	suite.Suite
 
-	app *app.Evmos
+	app *app.Atrix
 	ctx sdk.Context
 
 	ledger       *mocks.SECP256K1
@@ -61,7 +61,7 @@ func TestLedger(t *testing.T) {
 	suite.Run(t, s)
 
 	RegisterFailHandler(Fail)
-	RunSpecs(t, "Evmosd Suite")
+	RunSpecs(t, "Atrixd Suite")
 }
 
 func (suite *LedgerTestSuite) SetupTest() {
@@ -80,14 +80,14 @@ func (suite *LedgerTestSuite) SetupTest() {
 	suite.accAddr = sdk.AccAddress(ethAddr.Bytes())
 }
 
-func (suite *LedgerTestSuite) SetupEvmosApp() {
+func (suite *LedgerTestSuite) SetupAtrixApp() {
 	consAddress := sdk.ConsAddress(tests.GenerateAddress().Bytes())
 
 	// init app
 	suite.app = app.Setup(false, feemarkettypes.DefaultGenesisState())
 	suite.ctx = suite.app.BaseApp.NewContext(false, tmproto.Header{
 		Height:          1,
-		ChainID:         "evmos_9001-1",
+		ChainID:         "Atrix_9001-1",
 		Time:            time.Now().UTC(),
 		ProposerAddress: consAddress.Bytes(),
 
@@ -132,7 +132,7 @@ func (suite *LedgerTestSuite) NewKeyringAndCtxs(krHome string, input io.Reader, 
 		WithUseLedger(true).
 		WithKeyring(kr).
 		WithClient(mocks.MockTendermintRPC{Client: rpcclientmock.Client{}}).
-		WithChainID("evmos_9000-13")
+		WithChainID("Atrix_9000-13")
 
 	srvCtx := server.NewDefaultContext()
 	ctx := context.Background()
@@ -167,12 +167,12 @@ func (suite *LedgerTestSuite) ethermintAddKeyCmd() *cobra.Command {
 
 func (suite *LedgerTestSuite) MockKeyringOption() keyring.Option {
 	return func(options *keyring.Options) {
-		options.SupportedAlgos = evmoskeyring.SupportedAlgorithms
-		options.SupportedAlgosLedger = evmoskeyring.SupportedAlgorithmsLedger
+		options.SupportedAlgos = Atrixkeyring.SupportedAlgorithms
+		options.SupportedAlgosLedger = Atrixkeyring.SupportedAlgorithmsLedger
 		options.LedgerDerivation = func() (cosmosledger.SECP256K1, error) { return suite.ledger, nil }
-		options.LedgerCreateKey = evmoskeyring.CreatePubkey
-		options.LedgerAppName = evmoskeyring.AppName
-		options.LedgerSigSkipDERConv = evmoskeyring.SkipDERConversion
+		options.LedgerCreateKey = Atrixkeyring.CreatePubkey
+		options.LedgerAppName = Atrixkeyring.AppName
+		options.LedgerSigSkipDERConv = Atrixkeyring.SkipDERConversion
 	}
 }
 
