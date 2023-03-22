@@ -15,7 +15,7 @@ require (
 	github.com/Atrix/ethermint v0.21.0
 	github.com/Atrix/Atrix-ledger-go v0.2.1
 	github.com/gogo/protobuf v1.3.3
-	github.com/golang/protobuf v1.5.2
+	github.com/golang/protobuf v1.5.3
 	github.com/gorilla/mux v1.8.0
 	github.com/grpc-ecosystem/grpc-gateway v1.16.0
 	github.com/hashicorp/go-version v1.6.0
